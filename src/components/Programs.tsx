@@ -1,33 +1,27 @@
 const PROGRAMS = [
   {
-    title: "KIDS",
-    subtitle: "U6 - U9",
-    description: "축구를 처음 만나는 아이들을 위해",
+    title: "프로",
+    subtitle: "프로 선수 지망",
+    description: "프로가 만드는 프로",
   },
   {
-    title: "ELITE YOUTH",
-    subtitle: "U10 - U18",
-    description: "더 높은 목표를 향한 체계적인 성장",
+    title: "아카데미",
+    subtitle: "유소년 육성",
+    description: "축구를 처음 만나는 아이들부터 전문 육성까지",
   },
   {
-    title: "WOMEN'S",
-    subtitle: "여성 클래스",
+    title: "여성 취미반",
+    subtitle: "성인 여성 클래스",
     description: "축구를 즐기는 모든 여성분들을 위해",
   },
   {
-    title: "MEN'S",
-    subtitle: "성인 클래스",
+    title: "남성 취미반",
+    subtitle: "성인 남성 클래스",
     description: "축구를 통한 건강한 라이프스타일",
   },
   {
-    title: "PRO 1:1",
-    subtitle: "프로 선수 지망",
-    description: "꿈을 향한 전문 트레이닝",
-    badge: "모집중",
-  },
-  {
-    title: "PRIVATE 1:1",
-    subtitle: "개인 맞춤 레슨",
+    title: "1:1 개인 레슨",
+    subtitle: "맞춤 트레이닝",
     description: "나에게 집중하는 프리미엄 레슨",
     badge: "NEW",
   },
@@ -46,7 +40,7 @@ export default function Programs() {
         연령과 목표에 맞춘 체계적인 커리큘럼으로 축구를 통해 한 단계 더 성장할 수 있도록 지도합니다.
       </p>
 
-      <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+      <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
         {PROGRAMS.map((program) => (
           <div
             key={program.title}
