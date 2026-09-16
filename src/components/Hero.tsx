@@ -5,17 +5,17 @@ export default function Hero() {
         DOUBLE J SPORTS ACADEMY
       </p>
 
-      <h1 className="mt-4 text-4xl font-extrabold leading-tight md:text-6xl">
+      <h1 className="mt-4 text-4xl font-black leading-none tracking-tight md:text-7xl">
         TRAIN LIKE A PRO
         <br />
         <span className="text-blue-400">GROW YOUR WAY</span>
       </h1>
 
       <p className="mt-4 text-base text-gray-200 md:text-lg">
-        축구를 통해, 더 큰 가능성을 만납니다.
+        축구를 처음 시작하는 순간부터, 프로 무대를 향해 다음 단계를 준비하는 선수까지.
       </p>
-      <p className="mt-2 whitespace-nowrap text-sm text-gray-300">
-        더블제이는 단순한 기술 지도가 아닌, 아이의 성장을 함께 만드는 축구 아카데미입니다.
+      <p className="mt-2 text-sm text-gray-300">
+        더블제이는 각자의 목표와 수준에 맞는 트레이닝을 제공합니다.
       </p>
 
       <div className="mt-8 flex gap-3">
