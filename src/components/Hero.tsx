@@ -1,5 +1,13 @@
+"use client";
+
+import { useState } from "react";
+import ApplyModal from "./ApplyModal";
+
 export default function Hero() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
+    <>
     <section className="relative flex min-h-[520px] flex-col justify-center overflow-hidden bg-brand-navy px-6 py-16 text-white md:px-16">
       <p className="text-xs font-bold tracking-widest text-blue-400">
         DOUBLE J SPORTS ACADEMY
@@ -19,16 +27,17 @@ export default function Hero() {
       </p>
 
       <div className="mt-8 flex gap-3">
-        <a
-          href="https://double-j-sports.vercel.app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={() => setModalOpen(true)}
           className="rounded-full bg-white px-6 py-3 text-sm font-bold text-brand-navy hover:opacity-90"
         >
           체험수업신청하기 →
-        </a>
+        </button>
       </div>
 
     </section>
+
+      <ApplyModal open={modalOpen} onClose={() => setModalOpen(false)} />
+    </>
   );
 }
