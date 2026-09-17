@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const PROGRAM_OPTIONS = ["프로", "아카데미", "여성 취미반", "남성 취미반", "1:1 개인 레슨"];
+const PROGRAM_OPTIONS = ["프로", "아카데미", "여성 취미반", "남성 취미반", "1:1 개인 코칭"];
 
 export default function ApplyModal({
   open,

@@ -20,7 +20,7 @@ const PROGRAMS = [
     description: "축구를 통한 건강한 라이프스타일",
   },
   {
-    title: "1:1 개인 레슨",
+    title: "1:1 개인 코칭",
     subtitle: "맞춤 트레이닝",
     description: "나에게 집중하는 프리미엄 레슨",
     badge: "NEW",

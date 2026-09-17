@@ -6,7 +6,7 @@ export default function Page() {
       <Header />
       <main className="flex min-h-[400px] flex-col items-center justify-center gap-3 px-6 py-24 text-center">
         <p className="text-xs font-bold tracking-widest text-brand-blue">"PROGRAM"</p>
-        <h1 className="text-2xl font-bold text-brand-navy">"1:1 개인 레슨"</h1>
+        <h1 className="text-2xl font-bold text-brand-navy">"1:1 개인 코칭"</h1>
         <p className="text-sm text-gray-500">페이지 준비중입니다.</p>
       </main>
     </div>

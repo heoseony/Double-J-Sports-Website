@@ -18,7 +18,7 @@ export default function Difference() {
         더블제이의 성장관리 시스템은 아이의 훈련, 기록, 피드백, 변화를 한눈에 확인할 수 있도록 설계되어 있습니다.
       </p>
 
-      <div className="mt-12 flex flex-wrap items-center justify-center gap-6 md:justify-start md:gap-10">
+      <div className="mt-12 flex flex-wrap items-center justify-center gap-6 md:justify-between md:gap-6">
         {STEPS.map((step, i) => (
           <div key={step.label} className="flex items-center gap-6 md:gap-10">
             <div className="flex flex-col items-center gap-3">
