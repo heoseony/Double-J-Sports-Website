@@ -77,29 +77,6 @@ export default function CoachesPage() {
 <h2 className="mt-1 text-2xl font-black text-gray-900">
                 {leader.name}
 </h2>
-              {leader.desc && (
-<p className="mt-3 text-sm leading-relaxed text-gray-500">{leader.desc}</p>
-              )}
-              {"badges" in leader && leader.badges && (
-<div className="mt-4 flex flex-wrap gap-1.5">
-                  {leader.badges.map((badge) => (
-<span
-                      key={badge}
-                      className="rounded-full bg-blue-50 px-2.5 py-1 text-[10px] font-bold text-brand-blue"
->
-                      {badge}
-</span>
-                  ))}
-</div>
-              )}
-              {"cta" in leader && leader.cta && (
-<button className="mt-4 w-fit rounded-full bg-brand-navy px-4 py-2 text-xs font-bold text-white">
-                  {leader.cta}
-</button>
-              )}
-              {"signature" in leader && leader.signature && (
-<p className="mt-4 font-serif text-base italic text-gray-400">Jung Yeon-woong</p>
-              )}
               {"career" in leader && leader.career && (
 <div className="mt-4"><span className="inline-block rounded-full border border-gray-300 px-3 py-1 text-xs font-bold text-gray-700">학력 및 경력</span>
 <ul className="mt-3 space-y-2 text-sm leading-relaxed text-gray-600">

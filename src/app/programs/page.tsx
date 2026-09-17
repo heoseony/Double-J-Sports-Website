@@ -56,11 +56,6 @@ export default function ProgramsPage() {
                 <h2 className="text-2xl font-black text-brand-navy md:text-3xl">
                   {program.title}
                 </h2>
-                {program.badge && (
-                  <span className="rounded-full bg-brand-red px-2 py-0.5 text-xs font-bold text-white">
-                    {program.badge}
-                  </span>
-                )}
               </div>
             </div>
             <p className="whitespace-pre-line text-base leading-relaxed text-gray-600 md:text-lg">
