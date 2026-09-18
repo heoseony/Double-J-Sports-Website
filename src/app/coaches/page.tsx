@@ -28,14 +28,16 @@ const LEADERS = [
       "Syugakukan High School (일본)",
       "Soka University (일본)",
       "TuRU Düsseldorf 1880 (독일)",
+      "(현) 독일 분데스리가 프로선수 및 유스선수 개인레슨 트레이너",
+      "독일 DFB C 라이센스",
     ],
   },
 ];
 
 const COACHES = [
   { name: "정치현 코치", tags: ["", ""], desc: "" },
-  { name: "조훈 코치", tags: ["", ""], desc: "" },
-  { name: "피터 코치", tags: ["", ""], desc: "", photo: "/images/peter-coach.png" },
+  { name: "조훈 코치", tags: ["", ""], desc: "", photo: "/images/cho-hoon.png" },
+  { name: "피터 코치", tags: ["", ""], desc: "", photo: "/images/peter-coach-v2.png" },
 ];
 
 export default function CoachesPage() {
