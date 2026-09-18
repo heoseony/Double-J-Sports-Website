@@ -48,7 +48,7 @@ export default function CoachesPage() {
 <section className="relative flex h-[280px] items-center overflow-hidden bg-brand-navy px-6 py-12 md:h-[440px] md:px-16 md:py-16">
 
 <Image
-          src="/images/coaches-hero-v2.png"
+          src="/images/coaches-hero-v3.png"
           alt="Double J Sports Academy Coaches"
           fill
           className="object-cover"
