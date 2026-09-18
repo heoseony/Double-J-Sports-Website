@@ -23,7 +23,6 @@ const PROGRAMS = [
     title: "1:1 개인 코칭",
     subtitle: "맞춤 트레이닝",
     description: "나에게 집중하는 프리미엄 레슨",
-    badge: "NEW",
   },
 ];
 
@@ -46,11 +45,6 @@ export default function Programs() {
             key={program.title}
             className="relative rounded-2xl border border-gray-200 p-5"
           >
-            {program.badge && (
-              <span className="absolute right-3 top-3 rounded-full bg-brand-red px-2 py-1 text-[10px] font-bold text-white">
-                {program.badge}
-              </span>
-            )}
             <p className="text-lg font-bold text-brand-navy">{program.title}</p>
             <p className="mt-1 text-xs font-semibold text-gray-500">{program.subtitle}</p>
             <p className="mt-3 text-xs text-gray-600">{program.description}</p>
