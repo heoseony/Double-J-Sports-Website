@@ -11,7 +11,7 @@ export default function Hero() {
     <>
     <section className="relative flex h-[400px] flex-col justify-center overflow-hidden bg-brand-navy px-6 py-16 text-white md:h-[520px] md:px-16">
       <Image
-        src="/images/hero-main.png"
+        src="/images/hero-main-v2.png"
         alt="Double J Sports Academy"
         fill
         priority
