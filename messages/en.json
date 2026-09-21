@@ -1,0 +1,189 @@
+{
+  "Header": {
+    "nav": {
+      "about": "ABOUT",
+      "program": "PROGRAM",
+      "coach": "COACHES",
+      "location": "LOCATION",
+      "gallery": "GALLERY",
+      "notice": "NOTICE"
+    },
+    "aboutChildren": {
+      "greeting": "Greeting",
+      "vision": "Vision & Philosophy"
+    },
+    "booking": "Book a Class →"
+  },
+  "Footer": {
+    "tagline": "DOUBLE J SPORTS ACADEMY",
+    "copyright": "© 2026 DOUBLE J SPORTS ACADEMY. All rights reserved."
+  },
+  "Hero": {
+    "bodyLine1": "From your first touch of the ball to your next step toward the professional game.",
+    "bodyLine2": "Double J provides training tailored to each player's goals and level.",
+    "cta": "Book a Trial Session →"
+  },
+  "HomePrograms": {
+    "heading": "Programs for Every Goal",
+    "intro": "Structured programs tailored to each player's age and goals, helping them grow through football.",
+    "items": {
+      "pro": { "title": "Pro", "subtitle": "Aspiring Professionals", "description": "Built by Pros. Made for Future Pros." },
+      "academy": { "title": "Academy", "subtitle": "Youth Development", "description": "From first kicks to player development" },
+      "women": { "title": "Women's Football", "subtitle": "Adult Women's Program", "description": "For women who simply love the game." },
+      "men": { "title": "Men's Football", "subtitle": "Adult Men's Program", "description": "Stay active and enjoy football." },
+      "private": { "title": "1-on-1 Coaching", "subtitle": "Personalized Training", "description": "Individual coaching focused entirely on you." }
+    }
+  },
+  "ProgramsPage": {
+    "heading1": "A Program Built",
+    "heading2": "for Your Level and Goals",
+    "items": {
+      "pro": { "title": "Pro", "subtitle": "PRO", "desc": "Pros made by pros.\nA specialized training program for players aiming for the professional stage." },
+      "academy": { "title": "Academy", "subtitle": "ACADEMY", "desc": "From fundamentals to match play, a youth football program that grows through a structured curriculum." },
+      "women": { "title": "Women's Class", "subtitle": "WOMEN", "desc": "A women-only football class you can enjoy without pressure." },
+      "men": { "title": "Men's Class", "subtitle": "MEN", "desc": "A men's football class built for enjoyment, without compromising on training detail." },
+      "private": { "title": "1:1 Private Coaching", "subtitle": "PRIVATE", "desc": "One-on-one training tailored to your individual level and goals." }
+    }
+  },
+  "HomeLocations": {
+    "heading": "Find Us in Frankfurt and Düsseldorf.",
+    "intro": "Experience Double J coaching in both locations.",
+    "viewButton": "View Location →",
+    "items": {
+      "frankfurt": { "name": "Frankfurt" },
+      "dusseldorf": { "name": "Düsseldorf" }
+    }
+  },
+  "LocationsPage": {
+    "heading1": "Our Locations in",
+    "heading2": "Frankfurt and Düsseldorf",
+    "addressLabel": "Address",
+    "viewButton": "View Location →",
+    "items": {
+      "frankfurt": { "name": "Frankfurt" },
+      "dusseldorf": { "name": "Düsseldorf" }
+    }
+  },
+  "ApplyModal": {
+    "title": "Apply for a Trial Class",
+    "namePlaceholder": "Name",
+    "contactPlaceholder": "Contact (phone number or email)",
+    "countryPlaceholder": "Country (e.g. South Korea, Germany)",
+    "messagePlaceholder": "Message (optional)",
+    "submit": "Submit",
+    "programs": {
+      "pro": "Pro",
+      "academy": "Academy",
+      "women": "Women's Class",
+      "men": "Men's Class",
+      "private": "1:1 Private Coaching"
+    }
+  },
+  "GreetingPage": {
+    "h1Line1": "For Everyone",
+    "h1Line2": "Who Loves Football,",
+    "h1Line3": "A Chance to Learn the Game the Right Way.",
+    "body1": "At Double J Sports Academy, we welcome everyone—from children kicking a ball for the first time to players looking to improve and those preparing for the next step toward the professional game. Whatever your goal, you'll find training designed to help you get there.",
+    "h2Line1": "Wherever You Start,",
+    "h2Line2": "Whatever Your Goal,",
+    "h2Line3": "Everyone Deserves the Chance to Experience Great Coaching.",
+    "body2": "Drawing on the experience of our former professional players and coaches currently active in Europe, we provide training tailored to each player's level and goals—from strong fundamentals and match-focused training to advanced player development.",
+    "closingBody": "Train the professional way,\nand grow through football that's your own."
+  },
+  "Gallery": {
+    "categories": {
+      "all": "All",
+      "kids": "Kids",
+      "elite": "Elite",
+      "women": "Women",
+      "men": "Men",
+      "event": "Events"
+    },
+    "noPosts": "No posts yet.",
+    "noTitle": "Untitled",
+    "noMedia": "No media yet."
+  },
+  "Notices": {
+    "heading": "Notices",
+    "tableTitle": "Title",
+    "tableDate": "Date",
+    "empty": "No notices yet."
+  },
+  "CoachesPage": {
+    "heroLine1": "Experienced Coaching.",
+    "heroLine2": "A Better Path to Growth.",
+    "credentialsLabel": "Playing & Coaching Career",
+    "staffHeading": "Coaching Staff",
+    "leaders": {
+      "jungYeonUng": {
+        "name": "Yeonwoong Jung — Director",
+        "career": [
+          "Jeonbuk Hyundai U12",
+          "Gwangmyeong Gwangdeok Elementary School",
+          "Pohang Steelers U15",
+          "Daejeon Citizen U18",
+          "Daejeon Citizen (K League 1) — First player from the club's youth system to sign a professional contract",
+          "V-Varen Nagasaki (Japan J.League)",
+          "KSV Hessen Kassel (Germany Regionalliga)",
+          "Siegburg SV 04 (Germany)",
+          "TuRU Düsseldorf 1880 (Germany)",
+          "Currently providing individual training to Bundesliga professional and youth players in Germany",
+          "DFB C Licence"
+        ]
+      },
+      "jungYeonHwang": {
+        "name": "Yeonhwang Jung — Head Coach",
+        "career": [
+          "Jeonbuk Hyundai Motors U-12 (Korea K League 1)",
+          "Daejeon Citizen U-15 (Korea K League 1)",
+          "Daejeon Citizen U-18 (Korea K League 1)",
+          "Syugakukan High School (Japan)",
+          "Soka University (Japan)",
+          "TuRU Düsseldorf 1880 (Germany)",
+          "Currently providing individual training to Bundesliga professional and youth players in Germany",
+          "DFB C Licence"
+        ]
+      }
+    },
+    "coaches": {
+      "jungChiHyun": "Chihyun Jung — Coach",
+      "choHoon": "Hoon Cho — Coach",
+      "peter": "Peter — Coach"
+    }
+  },
+  "ComingSoon": {
+    "notice": "This page is coming soon.",
+    "pages": {
+      "locationsFrankfurt": { "category": "LOCATION", "title": "Frankfurt Location" },
+      "locationsDusseldorf": { "category": "LOCATION", "title": "Düsseldorf Location" },
+      "programsAcademy": { "category": "PROGRAM", "title": "Academy" },
+      "programsMen": { "category": "PROGRAM", "title": "Men's Class" },
+      "programsPro": { "category": "PROGRAM", "title": "Pro" },
+      "programsPrivate": { "category": "PROGRAM", "title": "1:1 Private Coaching" },
+      "programsWomen": { "category": "PROGRAM", "title": "Women's Class" }
+    }
+  },
+  "VisionPage": {
+    "titleLine1": "Beyond football,",
+    "titleLine2": "we help players grow.",
+    "body": "At Double J Sports Academy, we help players learn football the right way, regardless of their level or experience.\nBuilt on the experience of our professional coaching staff and the distinctive coaching of our active trainers,\nwe create an environment where every player can grow toward their own goals.",
+    "pillars": {
+      "training": {
+        "title": "SYSTEMATIC TRAINING",
+        "desc": "Structured training\ntailored to goals and skill level"
+      },
+      "match": {
+        "title": "MATCH EXPERIENCE",
+        "desc": "Diverse match experience\nconnecting training to real games"
+      },
+      "growth": {
+        "title": "PERSONAL GROWTH",
+        "desc": "Dedicated management that follows\neach player's individual growth"
+      },
+      "pro": {
+        "title": "PRO EXPERIENCE",
+        "desc": "A distinctive curriculum\nshaped by professional experience"
+      }
+    }
+  }
+}

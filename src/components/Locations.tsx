@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
-const LOCATIONS = [
+const LOCATION_KEYS = [
   {
-    nameKr: "프랑크푸르트점",
+    key: "frankfurt",
     nameEn: "FRANKFURT",
     address: "Burgwiesenhalle, Oberursel-Bommersheim, Germany",
     image: "/images/location-frankfurt.jpg",
@@ -11,7 +12,7 @@ const LOCATIONS = [
       encodeURIComponent("Burgwiesenhalle, Oberursel-Bommersheim, Germany"),
   },
   {
-    nameKr: "뒤셀도르프점",
+    key: "dusseldorf",
     nameEn: "DÜSSELDORF",
     address: "TuRU Düsseldorf 1880 e.V., Düsseldorf, Germany",
     image: "/images/location-dusseldorf.jpg",
@@ -19,25 +20,27 @@ const LOCATIONS = [
       "https://www.google.com/maps/search/?api=1&query=" +
       encodeURIComponent("TuRU Düsseldorf 1880 e.V., Düsseldorf, Germany"),
   },
-];
+] as const;
 
-export default function Locations() {
+export default async function Locations() {
+  const t = await getTranslations("HomeLocations");
+
   return (
 <section className="px-6 py-20 md:px-16">
 <p className="text-xs font-bold tracking-widest text-brand-blue">
         OUR LOCATIONS
 </p>
 <h2 className="mt-3 text-3xl font-bold text-brand-navy md:text-4xl">
-        프랑크푸르트와 뒤셀도르프에서 만날 수 있습니다.
+        {t("heading")}
 </h2>
 <p className="mt-4 max-w-xl text-sm text-gray-600">
-        두 도시에서 더블제이의 전문적인 코칭을 경험하세요.
+        {t("intro")}
 </p>
 
 <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
-        {LOCATIONS.map((loc) => (
+        {LOCATION_KEYS.map((loc) => (
           <div
-            key={loc.nameEn}
+            key={loc.key}
             className="relative flex h-56 flex-col justify-end overflow-hidden rounded-2xl"
           >
             <div className="absolute inset-0 bg-gray-800">
@@ -47,7 +50,7 @@ export default function Locations() {
 
             <div className="relative z-10 p-6 text-white">
               <p className="text-xs font-bold tracking-widest text-white/70">{loc.nameEn}</p>
-              <p className="mt-1 text-xl font-bold">{loc.nameKr}</p>
+              <p className="mt-1 text-xl font-bold">{t(`items.${loc.key}.name`)}</p>
               <p className="mt-1 text-xs text-white/80">{loc.address}</p>
               <a
                 href={loc.mapUrl}
@@ -55,7 +58,7 @@ export default function Locations() {
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-gray-900 hover:opacity-90"
               >
-                위치 보기 →
+                {t("viewButton")}
               </a>
             </div>
           </div>

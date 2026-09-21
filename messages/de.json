@@ -1,0 +1,189 @@
+{
+  "Header": {
+    "nav": {
+      "about": "ABOUT",
+      "program": "PROGRAM",
+      "coach": "COACHES",
+      "location": "LOCATION",
+      "gallery": "GALLERY",
+      "notice": "NOTICE"
+    },
+    "aboutChildren": {
+      "greeting": "Willkommen",
+      "vision": "Vision & Philosophie"
+    },
+    "booking": "Kurs buchen →"
+  },
+  "Footer": {
+    "tagline": "DOUBLE J SPORTS ACADEMY",
+    "copyright": "© 2026 DOUBLE J SPORTS ACADEMY. All rights reserved."
+  },
+  "Hero": {
+    "bodyLine1": "Vom ersten Ballkontakt bis zum nächsten Schritt in Richtung Profifußball.",
+    "bodyLine2": "Wir trainieren dich passend zu deinem Ziel und deinem Niveau.",
+    "cta": "Probetraining anfragen →"
+  },
+  "HomePrograms": {
+    "heading": "Programme für jedes Ziel",
+    "intro": "Strukturierte Trainingsprogramme, abgestimmt auf Alter und Ziel – damit du durch Fußball weiterkommst.",
+    "items": {
+      "pro": { "title": "Pro", "subtitle": "Angehende Profis", "description": "Von Profis ausgebildet" },
+      "academy": { "title": "Akademie", "subtitle": "Jugendförderung", "description": "Vom ersten Ballkontakt bis zur professionellen Ausbildung" },
+      "women": { "title": "Fußballtraining für Frauen", "subtitle": "Für erwachsene Spielerinnen", "description": "Für alle Frauen, die einfach Fußball spielen möchten" },
+      "men": { "title": "Fußballtraining für Männer", "subtitle": "Für erwachsene Spieler", "description": "Fit bleiben und Fußball genießen" },
+      "private": { "title": "1:1 Einzeltraining", "subtitle": "Individuelles Training", "description": "Eine Premium-Trainingseinheit ganz auf dich zugeschnitten" }
+    }
+  },
+  "ProgramsPage": {
+    "heading1": "Das passende Programm",
+    "heading2": "für dein Niveau und deine Ziele",
+    "items": {
+      "pro": { "title": "Pro", "subtitle": "PRO", "desc": "Von Profis ausgebildet.\nEin spezialisiertes Trainingsprogramm für Spieler mit dem Ziel Profifußball." },
+      "academy": { "title": "Akademie", "subtitle": "ACADEMY", "desc": "Vom Grundlagentraining bis zum Spiel – unser Jugendprogramm mit klar strukturiertem Trainingsplan." },
+      "women": { "title": "Fußballtraining für Frauen", "subtitle": "WOMEN", "desc": "Fußballtraining nur für Frauen, das du ganz ohne Leistungsdruck genießen kannst." },
+      "men": { "title": "Fußballtraining für Männer", "subtitle": "MEN", "desc": "Fußballtraining für Männer, bei dem der Spaß im Vordergrund steht – ohne Abstriche bei der Trainingsqualität." },
+      "private": { "title": "1:1 Einzeltraining", "subtitle": "PRIVATE", "desc": "Maßgeschneidertes 1:1-Training, abgestimmt auf dein Niveau und deine Ziele." }
+    }
+  },
+  "HomeLocations": {
+    "heading": "Wir sind in Frankfurt und Düsseldorf für dich da.",
+    "intro": "Erlebe das professionelle Coaching von Double J in beiden Städten.",
+    "viewButton": "Standort ansehen →",
+    "items": {
+      "frankfurt": { "name": "Frankfurt" },
+      "dusseldorf": { "name": "Düsseldorf" }
+    }
+  },
+  "LocationsPage": {
+    "heading1": "Du findest uns in",
+    "heading2": "Frankfurt und Düsseldorf.",
+    "addressLabel": "Adresse",
+    "viewButton": "Standort ansehen →",
+    "items": {
+      "frankfurt": { "name": "Frankfurt" },
+      "dusseldorf": { "name": "Düsseldorf" }
+    }
+  },
+  "ApplyModal": {
+    "title": "Zum Probetraining anmelden",
+    "namePlaceholder": "Name",
+    "contactPlaceholder": "Kontakt (Telefonnummer oder E-Mail)",
+    "countryPlaceholder": "Land (z. B. Südkorea, Deutschland)",
+    "messagePlaceholder": "Nachricht (optional)",
+    "submit": "Absenden",
+    "programs": {
+      "pro": "Pro",
+      "academy": "Akademie",
+      "women": "Fußballtraining für Frauen",
+      "men": "Fußballtraining für Männer",
+      "private": "1:1 Einzeltraining"
+    }
+  },
+  "GreetingPage": {
+    "h1Line1": "Für alle,",
+    "h1Line2": "die Fußball lieben:",
+    "h1Line3": "die Chance, ihn von Grund auf richtig zu lernen.",
+    "body1": "Bei der Double J Sports Academy ist jeder willkommen – vom ersten Ballkontakt im Kindesalter bis zum ambitionierten Spieler auf dem Weg zum Profifußball. Egal ob du gerade erst anfängst oder dich stetig verbessern willst: Wir bieten dir Training, das zu deinem Ziel passt.",
+    "h2Line1": "Egal, wo du stehst",
+    "h2Line2": "oder welches Ziel du hast –",
+    "h2Line3": "gutes Training sollte allen offenstehen.",
+    "body2": "Unsere Trainer bringen Erfahrung als ehemalige Profispieler und als aktive Coaches in Europa mit. Diese Erfahrung geben wir direkt an dich weiter: von soliden Grundlagen über spielnahes Training bis zur professionellen Spielerentwicklung – immer abgestimmt auf dein Niveau und deine Ziele.",
+    "closingBody": "Trainiere auf die Art eines Profis\nund wachse mit deinem eigenen Fußball."
+  },
+  "Gallery": {
+    "categories": {
+      "all": "Alle",
+      "kids": "Kids",
+      "elite": "Elite",
+      "women": "Frauen",
+      "men": "Männer",
+      "event": "Events"
+    },
+    "noPosts": "Noch keine Beiträge.",
+    "noTitle": "Ohne Titel",
+    "noMedia": "Noch keine Medien."
+  },
+  "Notices": {
+    "heading": "Aktuelles",
+    "tableTitle": "Titel",
+    "tableDate": "Datum",
+    "empty": "Noch keine Einträge."
+  },
+  "CoachesPage": {
+    "heroLine1": "Erfahrung, die man spürt.",
+    "heroLine2": "Coaching, das dich weiterbringt.",
+    "credentialsLabel": "Werdegang & Karriere",
+    "staffHeading": "Trainerteam",
+    "leaders": {
+      "jungYeonUng": {
+        "name": "Yeonwoong Jung – Akademieleiter",
+        "career": [
+          "Jeonbuk Hyundai U12",
+          "Gwangmyeong Gwangdeok Grundschule",
+          "Pohang Steelers U15",
+          "Daejeon Citizen U18",
+          "Daejeon Citizen (Südkorea K League 1) – erster Jugendspieler des Vereins mit Profivertrag",
+          "V-Varen Nagasaki (Japan J.League)",
+          "KSV Hessen Kassel (Deutschland, Regionalliga)",
+          "Siegburg SV 04 (Deutschland)",
+          "TuRU Düsseldorf 1880 (Deutschland)",
+          "Aktuell Individualtrainer für Bundesliga-Profis und Nachwuchsspieler in Deutschland",
+          "DFB C-Lizenz"
+        ]
+      },
+      "jungYeonHwang": {
+        "name": "Yeonhwang Jung – Cheftrainer",
+        "career": [
+          "Jeonbuk Hyundai Motors U-12 (Südkorea K League 1)",
+          "Daejeon Citizen U-15 (Südkorea K League 1)",
+          "Daejeon Citizen U-18 (Südkorea K League 1)",
+          "Syugakukan High School (Japan)",
+          "Soka University (Japan)",
+          "TuRU Düsseldorf 1880 (Deutschland)",
+          "Aktuell Individualtrainer für Bundesliga-Profis und Nachwuchsspieler in Deutschland",
+          "DFB C-Lizenz"
+        ]
+      }
+    },
+    "coaches": {
+      "jungChiHyun": "Chihyun Jung – Trainer",
+      "choHoon": "Hoon Cho – Trainer",
+      "peter": "Peter – Trainer"
+    }
+  },
+  "ComingSoon": {
+    "notice": "Diese Seite wird bald verfügbar sein.",
+    "pages": {
+      "locationsFrankfurt": { "category": "LOCATION", "title": "Standort Frankfurt" },
+      "locationsDusseldorf": { "category": "LOCATION", "title": "Standort Düsseldorf" },
+      "programsAcademy": { "category": "PROGRAM", "title": "Akademie" },
+      "programsMen": { "category": "PROGRAM", "title": "Fußballtraining für Männer" },
+      "programsPro": { "category": "PROGRAM", "title": "Pro" },
+      "programsPrivate": { "category": "PROGRAM", "title": "1:1 Einzeltraining" },
+      "programsWomen": { "category": "PROGRAM", "title": "Fußballtraining für Frauen" }
+    }
+  },
+  "VisionPage": {
+    "titleLine1": "Mehr als Fußball –",
+    "titleLine2": "wir fördern echte Entwicklung.",
+    "body": "Bei der Double J Sports Academy lernst du Fußball richtig – unabhängig von deinem Niveau oder deiner Erfahrung. Mit dem Know-how ehemaliger Profitrainer und dem Coaching aktiver Trainer schaffen wir ein Umfeld, in dem du dich nach deinen eigenen Zielen weiterentwickeln kannst.",
+    "pillars": {
+      "training": {
+        "title": "SYSTEMATIC TRAINING",
+        "desc": "Strukturiertes Training,\nabgestimmt auf Ziel und Niveau"
+      },
+      "match": {
+        "title": "MATCH EXPERIENCE",
+        "desc": "Vielfältige Spielerfahrung,\ndie Training mit echten Spielen verbindet"
+      },
+      "growth": {
+        "title": "PERSONAL GROWTH",
+        "desc": "Individuelle Betreuung für die\nEntwicklung jedes Spielers"
+      },
+      "pro": {
+        "title": "PRO EXPERIENCE",
+        "desc": "Ein einzigartiges Trainingskonzept,\ngeprägt von Profi-Erfahrung"
+      }
+    }
+  }
+}

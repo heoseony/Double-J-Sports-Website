@@ -1,37 +1,41 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 
-const FOOTER_LINKS = [
-  { label: "ABOUT", href: "/about" },
-  { label: "PROGRAM", href: "/programs" },
-  { label: "COACH", href: "/coaches" },
-  { label: "LOCATION", href: "/locations" },
-  { label: "GALLERY", href: "/gallery" },
-  { label: "NOTICE", href: "/notices" },
-];
+const FOOTER_LINK_KEYS = [
+  { key: "about", href: "/about" },
+  { key: "program", href: "/programs" },
+  { key: "coach", href: "/coaches" },
+  { key: "location", href: "/locations" },
+  { key: "gallery", href: "/gallery" },
+  { key: "notice", href: "/notices" },
+] as const;
 
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations("Header");
+  const tf = await getTranslations("Footer");
+
   return (
     <footer className="bg-white px-6 py-10 md:px-16">
       <div className="flex flex-col items-center justify-between gap-6 border-t border-gray-100 pt-8 md:flex-row">
         <div className="text-sm font-bold text-brand-navy">
-          DOUBLE J SPORTS ACADEMY
+          {tf("tagline")}
         </div>
 
         <nav className="flex flex-wrap justify-center gap-4">
-          {FOOTER_LINKS.map((item) => (
+          {FOOTER_LINK_KEYS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className="text-xs font-semibold text-gray-500 hover:text-brand-navy"
             >
-              {item.label}
+              {t(`nav.${item.key}`)}
             </Link>
           ))}
         </nav>
       </div>
 
       <p className="mt-6 text-center text-[11px] text-gray-400">
-        © 2026 DOUBLE J SPORTS ACADEMY. All rights reserved.
+        {tf("copyright")}
       </p>
     </footer>
   );

@@ -1,24 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 
-const NAV_ITEMS = [
-  {
-    label: "ABOUT",
-    href: "/about",
-    children: [
-      { label: "인사말", href: "/about/greeting" },
-      { label: "비전&철학", href: "/about/vision" },
-    ],
-  },
-  { label: "PROGRAM", href: "/programs", children: [] },
-  { label: "COACH", href: "/coaches", children: [] },
-  { label: "LOCATION", href: "/locations", children: [] },
-  { label: "GALLERY", href: "/gallery", children: [] },
-  { label: "NOTICE", href: "/notices", children: [] },
-];
+const NAV_KEYS = [
+  { key: "about", href: "/about", children: [
+    { key: "greeting", href: "/about/greeting" },
+    { key: "vision", href: "/about/vision" },
+  ] },
+  { key: "program", href: "/programs", children: [] },
+  { key: "coach", href: "/coaches", children: [] },
+  { key: "location", href: "/locations", children: [] },
+  { key: "gallery", href: "/gallery", children: [] },
+  { key: "notice", href: "/notices", children: [] },
+] as const;
 
 const INSTAGRAM_ACCOUNTS = [
   { label: "더블제이스포츠", handle: "@double_j_sports2021", href: "https://www.instagram.com/double_j_sports2021/" },
@@ -30,18 +27,27 @@ const YOUTUBE_URL = "https://www.youtube.com/@Double_J_Sports";
 const TIKTOK_URL = "https://www.tiktok.com/@double.j.sports";
 const BOOKING_URL = "https://double-j-sports.vercel.app";
 
+const LOCALES = ["ko", "en", "de", "ja"] as const;
+const LANG_LABELS: Record<(typeof LOCALES)[number], string> = {
+  ko: "한국어",
+  en: "English",
+  de: "Deutsch",
+  ja: "日本語",
+};
+
 export default function Header() {
+  const t = useTranslations("Header");
+  const locale = useLocale() as (typeof LOCALES)[number];
+  const pathname = usePathname();
+  const router = useRouter();
+
   const [openMenu, setOpenMenu] = useState<string | null>(null);
-  const [lang, setLang] = useState<"ko" | "en" | "de" | "ja">("ko");
   const [langOpen, setLangOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const LANG_LABELS: Record<"ko" | "en" | "de" | "ja", string> = {
-    ko: "한국어",
-    en: "English",
-    de: "Deutsch",
-    ja: "日本語",
-  };
+  function switchLocale(code: (typeof LOCALES)[number]) {
+    router.replace(pathname, { locale: code });
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
@@ -55,21 +61,21 @@ export default function Header() {
         </Link>
 
         <nav className="hidden gap-6 md:flex">
-          {NAV_ITEMS.map((item) => (
+          {NAV_KEYS.map((item) => (
             <div
               key={item.href}
               className="relative"
-              onMouseEnter={() => setOpenMenu(item.label)}
+              onMouseEnter={() => setOpenMenu(item.key)}
               onMouseLeave={() => setOpenMenu(null)}
             >
               <Link
                 href={item.href}
                 className="block py-2 text-sm font-bold text-gray-700 hover:text-brand-navy"
               >
-                {item.label}
+                {t(`nav.${item.key}`)}
               </Link>
 
-              {item.children.length > 0 && openMenu === item.label && (
+              {item.children.length > 0 && openMenu === item.key && (
                 <div className="absolute left-0 top-full min-w-[160px] rounded-lg border border-gray-100 bg-white py-2 shadow-lg">
                   {item.children.map((child) => (
                     <Link
@@ -77,7 +83,7 @@ export default function Header() {
                       href={child.href}
                       className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-navy"
                     >
-                      {child.label}
+                      {t(`aboutChildren.${child.key}`)}
                     </Link>
                   ))}
                 </div>
@@ -149,19 +155,19 @@ export default function Header() {
               className="flex items-center gap-1 rounded-full border border-gray-300 px-3 py-1.5 text-xs font-bold text-brand-navy hover:border-brand-navy"
             >
               <span>🌐</span>
-              {LANG_LABELS[lang]}
+              {LANG_LABELS[locale]}
               <span className={`text-[10px] transition-transform ${langOpen ? "rotate-180" : ""}`}>▾</span>
             </button>
             {langOpen && (
               <div className="absolute right-0 top-full z-50 mt-2 w-32 overflow-hidden rounded-xl border border-gray-200 bg-white text-xs font-bold shadow-lg">
-                {(["ko", "en", "de", "ja"] as const).map((code) => (
+                {LOCALES.map((code) => (
                   <button
                     key={code}
                     onClick={() => {
-                      setLang(code);
+                      switchLocale(code);
                       setLangOpen(false);
                     }}
-                    className={`block w-full px-4 py-2 text-left ${lang === code ? "bg-brand-navy text-white" : "text-gray-600 hover:bg-gray-50"}`}
+                    className={`block w-full px-4 py-2 text-left ${locale === code ? "bg-brand-navy text-white" : "text-gray-600 hover:bg-gray-50"}`}
                   >
                     {LANG_LABELS[code]}
                   </button>
@@ -176,7 +182,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="rounded-full bg-brand-navy px-4 py-2 text-sm font-medium text-white hover:opacity-90"
           >
-            수업 예약하기 →
+            {t("booking")}
           </a>
         </div>
       </div>
@@ -200,14 +206,14 @@ export default function Header() {
           </div>
 
           <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-6 py-4">
-            {NAV_ITEMS.map((item) => (
+            {NAV_KEYS.map((item) => (
               <div key={item.href} className="border-b border-gray-100 py-2">
                 <Link
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
                   className="block py-2 text-base font-bold text-gray-800"
                 >
-                  {item.label}
+                  {t(`nav.${item.key}`)}
                 </Link>
                 {item.children.length > 0 && (
                   <div className="ml-3 flex flex-col gap-1 pb-2">
@@ -218,7 +224,7 @@ export default function Header() {
                         onClick={() => setMobileOpen(false)}
                         className="py-1.5 text-sm text-gray-500"
                       >
-                        {child.label}
+                        {t(`aboutChildren.${child.key}`)}
                       </Link>
                     ))}
                   </div>
@@ -243,11 +249,11 @@ export default function Header() {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {(["ko", "en", "de", "ja"] as const).map((code) => (
+              {LOCALES.map((code) => (
                 <button
                   key={code}
-                  onClick={() => setLang(code)}
-                  className={`rounded-full border px-3 py-1.5 text-xs font-bold ${lang === code ? "border-brand-navy bg-brand-navy text-white" : "border-gray-300 text-gray-600"}`}
+                  onClick={() => switchLocale(code)}
+                  className={`rounded-full border px-3 py-1.5 text-xs font-bold ${locale === code ? "border-brand-navy bg-brand-navy text-white" : "border-gray-300 text-gray-600"}`}
                 >
                   {LANG_LABELS[code]}
                 </button>
@@ -260,7 +266,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="rounded-full bg-brand-navy px-4 py-3 text-center text-sm font-medium text-white"
             >
-              수업 예약하기 →
+              {t("booking")}
             </a>
           </div>
         </div>

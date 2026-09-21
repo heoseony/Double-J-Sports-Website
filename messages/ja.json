@@ -1,0 +1,189 @@
+{
+  "Header": {
+    "nav": {
+      "about": "ABOUT",
+      "program": "PROGRAM",
+      "coach": "COACHES",
+      "location": "LOCATION",
+      "gallery": "GALLERY",
+      "notice": "NOTICE"
+    },
+    "aboutChildren": {
+      "greeting": "ご挨拶",
+      "vision": "ビジョン＆理念"
+    },
+    "booking": "レッスン予約 →"
+  },
+  "Footer": {
+    "tagline": "DOUBLE J SPORTS ACADEMY",
+    "copyright": "© 2026 DOUBLE J SPORTS ACADEMY. All rights reserved."
+  },
+  "Hero": {
+    "bodyLine1": "初めてボールに触れる子どもから、プロを目指して次のステップへ進む選手まで。",
+    "bodyLine2": "ダブルジェイは、一人ひとりの目標とレベルに合わせたトレーニングを提供します。",
+    "cta": "体験トレーニングに申し込む →"
+  },
+  "HomePrograms": {
+    "heading": "一人ひとりの目標に合わせたプログラム",
+    "intro": "年齢や目標に合わせた体系的なカリキュラムで、一人ひとりの成長をサポートします。",
+    "items": {
+      "pro": { "title": "プロ", "subtitle": "プロ選手を目指す方へ", "description": "プロを目指すための専門トレーニング" },
+      "academy": { "title": "アカデミー", "subtitle": "ユース育成", "description": "初めてボールに触れる子どもから、本格的な選手育成まで" },
+      "women": { "title": "女性クラス", "subtitle": "大人の女性向けクラス", "description": "サッカーを楽しみたいすべての女性に" },
+      "men": { "title": "男性クラス", "subtitle": "大人の男性向けクラス", "description": "楽しみながら、サッカーでアクティブに。" },
+      "private": { "title": "マンツーマンコーチング", "subtitle": "オーダーメイドトレーニング", "description": "一人ひとりのレベルと目標に合わせたオーダーメイドトレーニング" }
+    }
+  },
+  "ProgramsPage": {
+    "heading1": "レベルと目標に合わせた",
+    "heading2": "ダブルジェイのプログラム",
+    "items": {
+      "pro": { "title": "プロ", "subtitle": "PRO", "desc": "プロを目指す選手のための専門トレーニングプログラムです。" },
+      "academy": { "title": "アカデミー", "subtitle": "ACADEMY", "desc": "基礎から実戦まで、体系的なカリキュラムで成長するユースサッカープログラムです。" },
+      "women": { "title": "女性クラス", "subtitle": "WOMEN", "desc": "気軽に楽しみながら学べる女性専用サッカークラスです。" },
+      "men": { "title": "男性クラス", "subtitle": "MEN", "desc": "趣味として楽しみつつも、トレーニングの質にはこだわる男性サッカークラスです。" },
+      "private": { "title": "マンツーマンコーチング", "subtitle": "PRIVATE", "desc": "一人ひとりのレベルと目標に合わせたオーダーメイドトレーニングです。" }
+    }
+  },
+  "HomeLocations": {
+    "heading": "フランクフルトとデュッセルドルフの2拠点で展開しています。",
+    "intro": "2つの拠点で、ダブルジェイの本格的なコーチングを体験してください。",
+    "viewButton": "アクセスを見る →",
+    "items": {
+      "frankfurt": { "name": "フランクフルト" },
+      "dusseldorf": { "name": "デュッセルドルフ" }
+    }
+  },
+  "LocationsPage": {
+    "heading1": "フランクフルトとデュッセルドルフの",
+    "heading2": "2拠点で展開しています。",
+    "addressLabel": "住所",
+    "viewButton": "アクセスを見る →",
+    "items": {
+      "frankfurt": { "name": "フランクフルト校" },
+      "dusseldorf": { "name": "デュッセルドルフ校" }
+    }
+  },
+  "ApplyModal": {
+    "title": "体験レッスン申し込み",
+    "namePlaceholder": "お名前",
+    "contactPlaceholder": "連絡先(電話番号またはメール)",
+    "countryPlaceholder": "国(例: 韓国、ドイツ)",
+    "messagePlaceholder": "お問い合わせ内容(任意)",
+    "submit": "申し込む",
+    "programs": {
+      "pro": "プロ",
+      "academy": "アカデミー",
+      "women": "女性クラス",
+      "men": "男性クラス",
+      "private": "1:1 個人コーチング"
+    }
+  },
+  "GreetingPage": {
+    "h1Line1": "サッカーが好きな",
+    "h1Line2": "すべての人に、",
+    "h1Line3": "正しく学べる機会を。",
+    "body1": "ダブルジェイスポーツアカデミーは、\n初めてボールに触れる子どもから、もっと上手くなりたい方、\nそしてプロを目指して次のステップへ進む選手まで、\n一人ひとりが自分の目標に合ったトレーニングを受けられる場所です。",
+    "h2Line1": "スタート地点や目標が違っても、",
+    "h2Line2": "質の高いトレーニングを受ける機会は、",
+    "h2Line3": "誰にでもあるべきだと考えています。",
+    "body2": "プロ選手出身の指導者と、ヨーロッパで現役として活躍するコーチ陣の経験をもとに、\n確かな基礎から実戦的なトレーニング、本格的な選手育成まで、\n一人ひとりのレベルと目標に合わせて指導します。",
+    "closingBody": "プロのやり方でトレーニングし、\n自分だけのサッカーで成長する。"
+  },
+  "Gallery": {
+    "categories": {
+      "all": "すべて",
+      "kids": "キッズ",
+      "elite": "エリート",
+      "women": "ウィメンズ",
+      "men": "メンズ",
+      "event": "イベント"
+    },
+    "noPosts": "登録された投稿がありません。",
+    "noTitle": "無題",
+    "noMedia": "登録されたメディアがありません。"
+  },
+  "Notices": {
+    "heading": "お知らせ",
+    "tableTitle": "タイトル",
+    "tableDate": "登録日",
+    "empty": "登録されたお知らせがありません。"
+  },
+  "CoachesPage": {
+    "heroLine1": "経験が違えば、",
+    "heroLine2": "成長へのアプローチも変わる。",
+    "credentialsLabel": "経歴",
+    "staffHeading": "コーチングスタッフ",
+    "leaders": {
+      "jungYeonUng": {
+        "name": "정연웅 — ディレクター",
+        "career": [
+          "チョンブク・ヒョンデ U12",
+          "クァンミョン・クァンドク小学校",
+          "ポハン・スティーラーズ U15",
+          "テジョン・シチズン U18",
+          "テジョン・シチズン(韓国Kリーグ1) 球団史上初のユース出身プロ契約選手",
+          "V・ファーレン長崎(日本Jリーグ)",
+          "KSVヘッセン・カッセル(ドイツ・レギオナルリーガ)",
+          "ジークブルクSV04(ドイツ)",
+          "TuRUデュッセルドルフ1880(ドイツ)",
+          "現在、ドイツでブンデスリーガ所属のプロ選手・ユース選手への個人指導を担当",
+          "ドイツサッカー連盟(DFB) Cライセンス"
+        ]
+      },
+      "jungYeonHwang": {
+        "name": "정연황 — ヘッドコーチ",
+        "career": [
+          "チョンブク・ヒョンデモータース U-12(韓国Kリーグ1)",
+          "テジョン・シチズン U-15(韓国Kリーグ1)",
+          "テジョン・シチズン U-18(韓国Kリーグ1)",
+          "秀学館高等学校(日本)",
+          "創価大学(日本)",
+          "TuRUデュッセルドルフ1880(ドイツ)",
+          "現在、ドイツでブンデスリーガ所属のプロ選手・ユース選手への個人指導を担当",
+          "ドイツサッカー連盟(DFB) Cライセンス"
+        ]
+      }
+    },
+    "coaches": {
+      "jungChiHyun": "정치현 — コーチ",
+      "choHoon": "조훈 — コーチ",
+      "peter": "피터 — コーチ"
+    }
+  },
+  "ComingSoon": {
+    "notice": "このページは準備中です。",
+    "pages": {
+      "locationsFrankfurt": { "category": "LOCATION", "title": "フランクフルト校" },
+      "locationsDusseldorf": { "category": "LOCATION", "title": "デュッセルドルフ校" },
+      "programsAcademy": { "category": "PROGRAM", "title": "アカデミー" },
+      "programsMen": { "category": "PROGRAM", "title": "男性クラス" },
+      "programsPro": { "category": "PROGRAM", "title": "プロ" },
+      "programsPrivate": { "category": "PROGRAM", "title": "1:1 個人コーチング" },
+      "programsWomen": { "category": "PROGRAM", "title": "女性クラス" }
+    }
+  },
+  "VisionPage": {
+    "titleLine1": "サッカーを超えて、",
+    "titleLine2": "さらなる成長へ。",
+    "body": "ダブルジェイスポーツアカデミーは、レベルや経験に関係なく、\n誰もが基礎からしっかりサッカーを学べるよう指導します。\nプロ出身監督陣の経験と現役指導者ならではのコーチングをもとに、\n一人ひとりの目標に合わせて成長できる環境をつくります。",
+    "pillars": {
+      "training": {
+        "title": "SYSTEMATIC TRAINING",
+        "desc": "目標とレベルに合わせた\n体系的なトレーニング"
+      },
+      "match": {
+        "title": "MATCH EXPERIENCE",
+        "desc": "トレーニングと実戦をつなぐ\n多彩な試合経験"
+      },
+      "growth": {
+        "title": "PERSONAL GROWTH",
+        "desc": "選手一人ひとりの成長に\n寄り添うサポート"
+      },
+      "pro": {
+        "title": "PRO EXPERIENCE",
+        "desc": "プロの経験から生まれた\n独自のカリキュラム"
+      }
+    }
+  }
+}
