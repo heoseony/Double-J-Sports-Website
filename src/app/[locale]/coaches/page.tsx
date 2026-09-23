@@ -53,7 +53,10 @@ export default async function CoachesPage() {
               )}
 </div>
 <div className="flex flex-col justify-start">
-<h2 className="mt-1 text-2xl font-black text-gray-900">
+<span className="inline-block w-fit rounded-full bg-brand-navy px-3 py-1 text-xs font-bold text-white">
+                {t(`leaders.${leader.key}.role`)}
+</span>
+<h2 className="mt-2 text-2xl font-black text-gray-900">
                 {t(`leaders.${leader.key}.name`)}
 </h2>
 <div className="mt-4"><span className="inline-block rounded-full border border-gray-300 px-3 py-1 text-xs font-bold text-gray-700">{t("credentialsLabel")}</span>
@@ -80,11 +83,14 @@ export default async function CoachesPage() {
 <div key={coach.key}>
 <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-200">
               {coach.photo && (
-                <Image src={coach.photo} alt={t(`coaches.${coach.key}`)} fill className="object-cover" />
+                <Image src={coach.photo} alt={t(`coaches.${coach.key}.name`)} fill className="object-cover" />
               )}
 </div>
 <p className="mt-2 text-center text-sm font-bold text-gray-900">
-                {t(`coaches.${coach.key}`)}
+                {t(`coaches.${coach.key}.name`)}
+</p>
+<p className="text-center text-xs text-gray-500">
+                {t(`coaches.${coach.key}.role`)}
 </p>
 </div>
           ))}

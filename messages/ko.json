@@ -116,7 +116,8 @@
     "staffHeading": "코칭 스태프",
     "leaders": {
       "jungYeonUng": {
-        "name": "정연웅 대표",
+        "name": "정연웅",
+        "role": "대표",
         "career": [
           "전북현대 U12",
           "광명광덕초등",
@@ -132,7 +133,8 @@
         ]
       },
       "jungYeonHwang": {
-        "name": "정연황 감독",
+        "name": "정연황",
+        "role": "감독",
         "career": [
           "전북현대모터스 U-12 (한국 K-1리그)",
           "대전시티즌 U-15 (한국 K-1리그)",
@@ -146,9 +148,9 @@
       }
     },
     "coaches": {
-      "jungChiHyun": "정치현 코치",
-      "choHoon": "조훈 코치",
-      "peter": "피터 코치"
+      "jungChiHyun": { "name": "정치현", "role": "코치" },
+      "choHoon": { "name": "조훈", "role": "코치" },
+      "peter": { "name": "피터", "role": "코치" }
     }
   },
   "ComingSoon": {

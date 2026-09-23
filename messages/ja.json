@@ -116,7 +116,8 @@
     "staffHeading": "コーチングスタッフ",
     "leaders": {
       "jungYeonUng": {
-        "name": "정연웅 — ディレクター",
+        "name": "ジョン・ヨンウン",
+        "role": "ディレクター",
         "career": [
           "チョンブク・ヒョンデ U12",
           "クァンミョン・クァンドク小学校",
@@ -132,7 +133,8 @@
         ]
       },
       "jungYeonHwang": {
-        "name": "정연황 — ヘッドコーチ",
+        "name": "ジョン・ヨンファン",
+        "role": "ヘッドコーチ",
         "career": [
           "チョンブク・ヒョンデモータース U-12(韓国Kリーグ1)",
           "テジョン・シチズン U-15(韓国Kリーグ1)",
@@ -146,9 +148,9 @@
       }
     },
     "coaches": {
-      "jungChiHyun": "정치현 — コーチ",
-      "choHoon": "조훈 — コーチ",
-      "peter": "피터 — コーチ"
+      "jungChiHyun": { "name": "ジョン・チヒョン", "role": "コーチ" },
+      "choHoon": { "name": "チョ・フン", "role": "コーチ" },
+      "peter": { "name": "Peter", "role": "コーチ" }
     }
   },
   "ComingSoon": {

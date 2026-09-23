@@ -116,7 +116,8 @@
     "staffHeading": "Coaching Staff",
     "leaders": {
       "jungYeonUng": {
-        "name": "Yeonwoong Jung — Director",
+        "name": "Yeonwoong Jung",
+        "role": "Director",
         "career": [
           "Jeonbuk Hyundai U12",
           "Gwangmyeong Gwangdeok Elementary School",
@@ -132,7 +133,8 @@
         ]
       },
       "jungYeonHwang": {
-        "name": "Yeonhwang Jung — Head Coach",
+        "name": "Yeonhwang Jung",
+        "role": "Head Coach",
         "career": [
           "Jeonbuk Hyundai Motors U-12 (Korea K League 1)",
           "Daejeon Citizen U-15 (Korea K League 1)",
@@ -146,9 +148,9 @@
       }
     },
     "coaches": {
-      "jungChiHyun": "Chihyun Jung — Coach",
-      "choHoon": "Hoon Cho — Coach",
-      "peter": "Peter — Coach"
+      "jungChiHyun": { "name": "Chihyun Jung", "role": "Coach" },
+      "choHoon": { "name": "Hoon Cho", "role": "Coach" },
+      "peter": { "name": "Peter", "role": "Coach" }
     }
   },
   "ComingSoon": {
