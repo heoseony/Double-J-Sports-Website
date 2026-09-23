@@ -152,7 +152,7 @@ export default function Header() {
             <a href={NAVER_BLOG_URL} target="_blank" rel="noopener noreferrer" aria-label="Naver Blog" className="text-gray-400 hover:text-brand-navy">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2"/>
-                <path d="M8 7H11.2L14.5 13.2V7H17V17H13.8L10.5 10.8V17H8V7Z" fill="currentColor"/>
+                <text x="12" y="16.5" textAnchor="middle" fontSize="12" fontWeight="700" fontFamily="Arial, sans-serif" fill="currentColor">B</text>
               </svg>
             </a>
           </div>
@@ -257,7 +257,7 @@ export default function Header() {
               <a href={NAVER_BLOG_URL} target="_blank" rel="noopener noreferrer" aria-label="Naver Blog" className="text-gray-400">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M8 7H11.2L14.5 13.2V7H17V17H13.8L10.5 10.8V17H8V7Z" fill="currentColor"/>
+                  <text x="12" y="16.5" textAnchor="middle" fontSize="12" fontWeight="700" fontFamily="Arial, sans-serif" fill="currentColor">B</text>
                 </svg>
               </a>
             </div>
