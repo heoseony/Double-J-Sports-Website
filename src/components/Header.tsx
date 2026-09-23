@@ -25,6 +25,7 @@ const INSTAGRAM_ACCOUNTS = [
 
 const YOUTUBE_URL = "https://www.youtube.com/@Double_J_Sports";
 const TIKTOK_URL = "https://www.tiktok.com/@double.j.sports";
+const NAVER_BLOG_URL = "https://blog.naver.com/doublejacademy";
 const BOOKING_URL = "https://double-j-sports.vercel.app";
 
 const LOCALES = ["ko", "en", "de", "ja"] as const;
@@ -147,6 +148,13 @@ export default function Header() {
                 <path d="M15 3C15.3 5.2 16.8 6.9 19 7.2V10C17.5 10 16.1 9.5 15 8.6V15.5C15 18.5 12.6 21 9.5 21C6.4 21 4 18.5 4 15.5C4 12.5 6.4 10 9.5 10C9.8 10 10.1 10 10.4 10.1V13.2C10.1 13.1 9.8 13 9.5 13C8.1 13 7 14.1 7 15.5C7 16.9 8.1 18 9.5 18C10.9 18 12 16.9 12 15.5V3H15Z" fill="currentColor"/>
               </svg>
             </a>
+
+            <a href={NAVER_BLOG_URL} target="_blank" rel="noopener noreferrer" aria-label="Naver Blog" className="text-gray-400 hover:text-brand-navy">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2"/>
+                <path d="M8 7H11.2L14.5 13.2V7H17V17H13.8L10.5 10.8V17H8V7Z" fill="currentColor"/>
+              </svg>
+            </a>
           </div>
 
           <div className="relative">
@@ -244,6 +252,12 @@ export default function Header() {
               <a href={TIKTOK_URL} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-gray-400">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15 3C15.3 5.2 16.8 6.9 19 7.2V10C17.5 10 16.1 9.5 15 8.6V15.5C15 18.5 12.6 21 9.5 21C6.4 21 4 18.5 4 15.5C4 12.5 6.4 10 9.5 10C9.8 10 10.1 10 10.4 10.1V13.2C10.1 13.1 9.8 13 9.5 13C8.1 13 7 14.1 7 15.5C7 16.9 8.1 18 9.5 18C10.9 18 12 16.9 12 15.5V3H15Z" fill="currentColor"/>
+                </svg>
+              </a>
+              <a href={NAVER_BLOG_URL} target="_blank" rel="noopener noreferrer" aria-label="Naver Blog" className="text-gray-400">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M8 7H11.2L14.5 13.2V7H17V17H13.8L10.5 10.8V17H8V7Z" fill="currentColor"/>
                 </svg>
               </a>
             </div>
