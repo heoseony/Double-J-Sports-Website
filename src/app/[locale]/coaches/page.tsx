@@ -4,13 +4,13 @@ import { getTranslations } from "next-intl/server";
 
 const LEADER_KEYS = [
   { key: "jungYeonUng", photo: undefined as string | undefined },
-  { key: "jungYeonHwang", photo: "/images/jung-yeonhwang-v3.jpg" },
+  { key: "jungYeonHwang", photo: "/images/jung-yeonhwang-v5.jpg" },
 ] as const;
 
 const COACH_KEYS = [
-  { key: "jungChiHyun", photo: "/images/jung-chihyun-v1.jpg" },
-  { key: "choHoon", photo: "/images/cho-hoon-v2.jpg" },
-  { key: "peter", photo: "/images/peter-coach-v3.jpg" },
+  { key: "jungChiHyun", photo: "/images/jung-chihyun-v3.jpg" },
+  { key: "choHoon", photo: "/images/cho-hoon-v4.jpg" },
+  { key: "peter", photo: "/images/peter-coach-v5.jpg" },
 ] as const;
 
 export default async function CoachesPage() {
@@ -47,7 +47,7 @@ export default async function CoachesPage() {
             key={leader.key}
             className="flex gap-6 overflow-hidden rounded-2xl bg-gray-50 p-6"
 >
-<div className="relative aspect-square w-[32%] shrink-0 self-stretch overflow-hidden rounded-xl bg-gray-200">
+<div className="relative aspect-[3/4] w-[32%] shrink-0 self-start overflow-hidden rounded-xl bg-gray-200">
               {leader.photo && (
                 <Image src={leader.photo} alt={t(`leaders.${leader.key}.name`)} fill className="object-cover" />
               )}
