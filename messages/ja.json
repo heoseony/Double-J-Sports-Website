@@ -60,8 +60,8 @@
     "addressLabel": "住所",
     "viewButton": "アクセスを見る →",
     "items": {
-      "frankfurt": { "name": "フランクフルト校" },
-      "dusseldorf": { "name": "デュッセルドルフ校" }
+      "frankfurt": { "name": "フランクフルト" },
+      "dusseldorf": { "name": "デュッセルドルフ" }
     }
   },
   "ApplyModal": {
@@ -156,8 +156,8 @@
   "ComingSoon": {
     "notice": "このページは準備中です。",
     "pages": {
-      "locationsFrankfurt": { "category": "LOCATION", "title": "フランクフルト校" },
-      "locationsDusseldorf": { "category": "LOCATION", "title": "デュッセルドルフ校" },
+      "locationsFrankfurt": { "category": "LOCATION", "title": "フランクフルト" },
+      "locationsDusseldorf": { "category": "LOCATION", "title": "デュッセルドルフ" },
       "programsAcademy": { "category": "PROGRAM", "title": "アカデミー" },
       "programsMen": { "category": "PROGRAM", "title": "男性クラス" },
       "programsPro": { "category": "PROGRAM", "title": "プロ" },
