@@ -4,13 +4,13 @@ import { getTranslations } from "next-intl/server";
 
 const LEADER_KEYS = [
   { key: "jungYeonUng", photo: undefined as string | undefined },
-  { key: "jungYeonHwang", photo: "/images/jung-yeonhwang-v2.png" },
+  { key: "jungYeonHwang", photo: "/images/jung-yeonhwang-v3.jpg" },
 ] as const;
 
 const COACH_KEYS = [
-  { key: "jungChiHyun", photo: undefined as string | undefined },
-  { key: "choHoon", photo: "/images/cho-hoon.png" },
-  { key: "peter", photo: "/images/peter-coach-v2.png" },
+  { key: "jungChiHyun", photo: "/images/jung-chihyun-v1.jpg" },
+  { key: "choHoon", photo: "/images/cho-hoon-v2.jpg" },
+  { key: "peter", photo: "/images/peter-coach-v3.jpg" },
 ] as const;
 
 export default async function CoachesPage() {
