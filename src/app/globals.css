@@ -59,3 +59,13 @@ body {
     overflow-wrap: break-word;
   }
 }
+
+/* MOBILE-BODY: 모바일 글자 전체 축소 (되돌리려면 이 블록 전체 삭제). 숫자 15px 를 바꾸면 크기 조절 가능 */
+@media (max-width: 767px) {
+  html {
+    font-size: 15px;
+  }
+  p, li {
+    letter-spacing: -0.01em;
+  }
+}
