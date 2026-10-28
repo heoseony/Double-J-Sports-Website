@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import ProtectedPhoto from "@/components/ProtectedPhoto";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
@@ -49,7 +50,7 @@ export default async function CoachesPage() {
 >
 <div className="relative aspect-[3/4] w-[32%] shrink-0 self-start overflow-hidden rounded-xl bg-gray-200">
               {leader.photo && (
-                <Image src={leader.photo} alt={t(`leaders.${leader.key}.name`)} fill className="object-cover" />
+                <ProtectedPhoto src={leader.photo} alt={t(`leaders.${leader.key}.name`)} fill className="object-cover" />
               )}
 </div>
 <div className="flex flex-col justify-start">
@@ -83,7 +84,7 @@ export default async function CoachesPage() {
 <div key={coach.key}>
 <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-200">
               {coach.photo && (
-                <Image src={coach.photo} alt={t(`coaches.${coach.key}.name`)} fill className="object-cover" />
+                <ProtectedPhoto src={coach.photo} alt={t(`coaches.${coach.key}.name`)} fill className="object-cover" />
               )}
 </div>
 <p className="mt-2 text-center text-sm font-bold text-gray-900">
