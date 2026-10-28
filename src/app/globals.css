@@ -30,3 +30,16 @@ body {
   font-family: "Pretendard", Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
+
+/* PC-FIXED-WIDTH: PC 화면에서는 폭 고정 (되돌리려면 이 블록 전체 삭제) */
+@media (min-width: 768px) {
+  html {
+    overflow-x: auto;
+  }
+  body {
+    min-width: 1280px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
