@@ -46,22 +46,22 @@ export default async function CoachesPage() {
           return (
 <div
             key={leader.key}
-            className="flex gap-6 overflow-hidden rounded-2xl bg-gray-50 p-6"
+            className="flex gap-6 md:gap-8 overflow-hidden rounded-2xl bg-gray-50 p-6 md:p-8"
 >
-<div className="relative aspect-[3/4] w-[32%] shrink-0 self-start overflow-hidden rounded-xl bg-gray-200">
+<div className="relative aspect-[3/4] w-[32%] md:w-[38%] shrink-0 self-start overflow-hidden rounded-xl bg-gray-200">
               {leader.photo && (
                 <ProtectedPhoto src={leader.photo} alt={t(`leaders.${leader.key}.name`)} fill className="object-cover" />
               )}
 </div>
 <div className="flex flex-col justify-start">
-<span className="inline-block w-fit rounded-full bg-brand-navy px-3 py-1 text-xs font-bold text-white">
+<span className="inline-block w-fit rounded-full bg-brand-navy px-3 py-1 text-xs md:text-sm font-bold text-white">
                 {t(`leaders.${leader.key}.role`)}
 </span>
-<h2 className="mt-2 text-2xl font-black text-gray-900">
+<h2 className="mt-2 text-2xl md:text-3xl font-black text-gray-900">
                 {t(`leaders.${leader.key}.name`)}
 </h2>
 <div className="mt-4"><span className="inline-block rounded-full border border-gray-300 px-3 py-1 text-xs font-bold text-gray-700">{t("credentialsLabel")}</span>
-<ul className="mt-3 space-y-2 text-sm leading-relaxed text-gray-600">
+<ul className="mt-3 space-y-2 text-sm md:text-base leading-relaxed text-gray-600">
                     {career.map((line) => (
 <li key={line}>{line}</li>
                     ))}
