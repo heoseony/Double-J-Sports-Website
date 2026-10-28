@@ -3,8 +3,8 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 const LEADER_KEYS = [
-  { key: "jungYeonUng", photo: undefined as string | undefined },
-  { key: "jungYeonHwang", photo: "/images/jung-yeonhwang-v6.jpg" },
+  { key: "jungYeonUng", photo: "/images/jung-yeonung-v1.jpg" },
+  { key: "jungYeonHwang", photo: "/images/jung-yeonhwang-v7.jpg" },
 ] as const;
 
 const COACH_KEYS = [
