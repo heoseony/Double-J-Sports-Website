@@ -40,15 +40,15 @@ export default async function CoachesPage() {
 </div>
 </section>
 
-<section className="grid grid-cols-1 gap-6 px-6 py-10 md:grid-cols-2 md:px-16">
+<section className="grid grid-cols-1 gap-6 px-6 py-10 md:grid-cols-2 md:px-10">
         {LEADER_KEYS.map((leader) => {
           const career = t.raw(`leaders.${leader.key}.career`) as string[];
           return (
 <div
             key={leader.key}
-            className="flex gap-6 md:gap-8 overflow-hidden rounded-2xl bg-gray-50 p-6 md:p-8"
+            className="flex gap-6 overflow-hidden rounded-2xl bg-gray-50 p-6"
 >
-<div className="relative aspect-[3/4] w-[32%] md:w-[38%] shrink-0 self-start overflow-hidden rounded-xl bg-gray-200">
+<div className="relative aspect-[3/4] w-[32%] md:w-[42%] shrink-0 self-start overflow-hidden rounded-xl bg-gray-200">
               {leader.photo && (
                 <ProtectedPhoto src={leader.photo} alt={t(`leaders.${leader.key}.name`)} fill className="object-cover" />
               )}
@@ -61,7 +61,7 @@ export default async function CoachesPage() {
                 {t(`leaders.${leader.key}.name`)}
 </h2>
 <div className="mt-4"><span className="inline-block rounded-full border border-gray-300 px-3 py-1 text-xs font-bold text-gray-700">{t("credentialsLabel")}</span>
-<ul className="mt-3 space-y-2 text-sm md:text-base leading-relaxed text-gray-600">
+<ul className="mt-3 space-y-2 text-sm leading-relaxed text-gray-600">
                     {career.map((line) => (
 <li key={line}>{line}</li>
                     ))}
