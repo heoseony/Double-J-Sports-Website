@@ -48,9 +48,9 @@ export default async function CoachesPage() {
             key={leader.key}
             className="flex gap-6 overflow-hidden rounded-2xl bg-gray-50 p-6"
 >
-<div className="relative aspect-[3/4] w-[32%] md:w-[42%] shrink-0 self-start overflow-hidden rounded-xl bg-gray-200">
+<div className="relative aspect-[3/4] w-[32%] md:w-[42%] shrink-0 self-start md:self-stretch overflow-hidden rounded-xl bg-gray-200">
               {leader.photo && (
-                <ProtectedPhoto src={leader.photo} alt={t(`leaders.${leader.key}.name`)} fill className="object-cover" />
+                <ProtectedPhoto src={leader.photo} alt={t(`leaders.${leader.key}.name`)} fill className="object-cover object-top" />
               )}
 </div>
 <div className="flex flex-col justify-start">
