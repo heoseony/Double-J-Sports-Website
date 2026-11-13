@@ -27,22 +27,62 @@
     "heading": "모든 가능성을 위한 맞춤형 프로그램",
     "intro": "연령과 목표에 맞춘 체계적인 커리큘럼으로 축구를 통해 한 단계 더 성장할 수 있도록 지도합니다.",
     "items": {
-      "pro": { "title": "프로", "subtitle": "프로 선수 지망", "description": "프로가 만드는 프로" },
-      "academy": { "title": "아카데미", "subtitle": "유소년 육성", "description": "축구를 처음 만나는 아이들부터 전문 육성까지" },
-      "women": { "title": "여성 취미반", "subtitle": "성인 여성 클래스", "description": "축구를 즐기는 모든 여성분들을 위해" },
-      "men": { "title": "남성 취미반", "subtitle": "성인 남성 클래스", "description": "축구를 통한 건강한 라이프스타일" },
-      "private": { "title": "1:1 개인 코칭", "subtitle": "맞춤 트레이닝", "description": "나에게 집중하는 프리미엄 레슨" }
+      "pro": {
+        "title": "프로",
+        "subtitle": "프로 선수 지망",
+        "description": "프로가 만드는 프로"
+      },
+      "academy": {
+        "title": "아카데미",
+        "subtitle": "유소년 육성",
+        "description": "축구를 처음 만나는 아이들부터 전문 육성까지"
+      },
+      "women": {
+        "title": "여성 취미반",
+        "subtitle": "성인 여성 클래스",
+        "description": "축구를 즐기는 모든 여성분들을 위해"
+      },
+      "men": {
+        "title": "남성 취미반",
+        "subtitle": "성인 남성 클래스",
+        "description": "축구를 통한 건강한 라이프스타일"
+      },
+      "private": {
+        "title": "1:1 개인 코칭",
+        "subtitle": "맞춤 트레이닝",
+        "description": "나에게 집중하는 프리미엄 레슨"
+      }
     }
   },
   "ProgramsPage": {
     "heading1": "수준과 목표에 맞는",
     "heading2": "더블제이의 프로그램",
     "items": {
-      "pro": { "title": "프로", "subtitle": "PRO", "desc": "프로가 만드는 프로.\n프로 무대를 목표로 하는 선수를 위한 전문 트레이닝 프로그램입니다." },
-      "academy": { "title": "아카데미", "subtitle": "ACADEMY", "desc": "기본기부터 실전까지, 체계적인 커리큘럼으로 성장하는 유소년 축구 프로그램입니다." },
-      "women": { "title": "여성 취미반", "subtitle": "WOMEN", "desc": "부담 없이 즐기면서 배우는 여성 전용 축구 클래스입니다." },
-      "men": { "title": "남성 취미반", "subtitle": "MEN", "desc": "취미로 즐기되 훈련의 디테일은 타협하지 않는 남성 축구 클래스입니다." },
-      "private": { "title": "1:1 개인 코칭", "subtitle": "PRIVATE", "desc": "개인의 수준과 목표에 맞춘 1:1 맞춤형 트레이닝입니다." }
+      "pro": {
+        "title": "프로",
+        "subtitle": "PRO",
+        "desc": "프로가 만드는 프로.\n프로 무대를 목표로 하는 선수를 위한 전문 트레이닝 프로그램입니다."
+      },
+      "academy": {
+        "title": "아카데미",
+        "subtitle": "ACADEMY",
+        "desc": "기본기부터 실전까지, 체계적인 커리큘럼으로 성장하는 유소년 축구 프로그램입니다."
+      },
+      "women": {
+        "title": "여성 취미반",
+        "subtitle": "WOMEN",
+        "desc": "부담 없이 즐기면서 배우는 여성 전용 축구 클래스입니다."
+      },
+      "men": {
+        "title": "남성 취미반",
+        "subtitle": "MEN",
+        "desc": "취미로 즐기되 훈련의 디테일은 타협하지 않는 남성 축구 클래스입니다."
+      },
+      "private": {
+        "title": "1:1 개인 코칭",
+        "subtitle": "PRIVATE",
+        "desc": "개인의 수준과 목표에 맞춘 1:1 맞춤형 트레이닝입니다."
+      }
     }
   },
   "HomeLocations": {
@@ -50,8 +90,12 @@
     "intro": "두 도시에서 더블제이의 전문적인 코칭을 경험하세요.",
     "viewButton": "위치 보기 →",
     "items": {
-      "frankfurt": { "name": "프랑크푸르트점" },
-      "dusseldorf": { "name": "뒤셀도르프점" }
+      "frankfurt": {
+        "name": "프랑크푸르트점"
+      },
+      "dusseldorf": {
+        "name": "뒤셀도르프점"
+      }
     }
   },
   "LocationsPage": {
@@ -60,8 +104,12 @@
     "addressLabel": "주소",
     "viewButton": "위치 보기 →",
     "items": {
-      "frankfurt": { "name": "프랑크푸르트 지점" },
-      "dusseldorf": { "name": "뒤셀도르프 지점" }
+      "frankfurt": {
+        "name": "프랑크푸르트 지점"
+      },
+      "dusseldorf": {
+        "name": "뒤셀도르프 지점"
+      }
     }
   },
   "ApplyModal": {
@@ -77,7 +125,14 @@
       "women": "여성 취미반",
       "men": "남성 취미반",
       "private": "1:1 개인 코칭"
-    }
+    },
+    "consentLabel": "개인정보(이름·연락처) 수집·이용에 동의합니다. 상담 연락 목적으로만 사용됩니다.",
+    "required": "이름, 연락처, 개인정보 동의를 확인해 주세요.",
+    "sending": "전송 중...",
+    "successTitle": "신청이 접수되었습니다",
+    "successBody": "확인 후 빠르게 연락드리겠습니다.",
+    "close": "닫기",
+    "error": "전송에 실패했습니다. 잠시 후 다시 시도해 주세요."
   },
   "GreetingPage": {
     "h1Line1": "축구를 좋아하는",
@@ -148,21 +203,51 @@
       }
     },
     "coaches": {
-      "jungChiHyun": { "name": "정치현", "role": "코치" },
-      "choHoon": { "name": "조훈", "role": "코치" },
-      "peter": { "name": "피터", "role": "코치" }
+      "jungChiHyun": {
+        "name": "정치현",
+        "role": "코치"
+      },
+      "choHoon": {
+        "name": "조훈",
+        "role": "코치"
+      },
+      "peter": {
+        "name": "피터",
+        "role": "코치"
+      }
     }
   },
   "ComingSoon": {
     "notice": "페이지 준비중입니다.",
     "pages": {
-      "locationsFrankfurt": { "category": "LOCATION", "title": "프랑크푸르트점" },
-      "locationsDusseldorf": { "category": "LOCATION", "title": "뒤셀도르프점" },
-      "programsAcademy": { "category": "PROGRAM", "title": "아카데미" },
-      "programsMen": { "category": "PROGRAM", "title": "남성 취미반" },
-      "programsPro": { "category": "PROGRAM", "title": "프로" },
-      "programsPrivate": { "category": "PROGRAM", "title": "1:1 개인 코칭" },
-      "programsWomen": { "category": "PROGRAM", "title": "여성 취미반" }
+      "locationsFrankfurt": {
+        "category": "LOCATION",
+        "title": "프랑크푸르트점"
+      },
+      "locationsDusseldorf": {
+        "category": "LOCATION",
+        "title": "뒤셀도르프점"
+      },
+      "programsAcademy": {
+        "category": "PROGRAM",
+        "title": "아카데미"
+      },
+      "programsMen": {
+        "category": "PROGRAM",
+        "title": "남성 취미반"
+      },
+      "programsPro": {
+        "category": "PROGRAM",
+        "title": "프로"
+      },
+      "programsPrivate": {
+        "category": "PROGRAM",
+        "title": "1:1 개인 코칭"
+      },
+      "programsWomen": {
+        "category": "PROGRAM",
+        "title": "여성 취미반"
+      }
     }
   },
   "VisionPage": {

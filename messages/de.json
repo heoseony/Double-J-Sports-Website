@@ -27,22 +27,62 @@
     "heading": "Programme für jedes Ziel",
     "intro": "Strukturierte Trainingsprogramme, abgestimmt auf Alter und Ziel – damit du durch Fußball weiterkommst.",
     "items": {
-      "pro": { "title": "Pro", "subtitle": "Angehende Profis", "description": "Von Profis ausgebildet" },
-      "academy": { "title": "Akademie", "subtitle": "Jugendförderung", "description": "Vom ersten Ballkontakt bis zur professionellen Ausbildung" },
-      "women": { "title": "Fußballtraining für Frauen", "subtitle": "Für erwachsene Spielerinnen", "description": "Für alle Frauen, die einfach Fußball spielen möchten" },
-      "men": { "title": "Fußballtraining für Männer", "subtitle": "Für erwachsene Spieler", "description": "Fit bleiben und Fußball genießen" },
-      "private": { "title": "1:1 Einzeltraining", "subtitle": "Individuelles Training", "description": "Eine Premium-Trainingseinheit ganz auf dich zugeschnitten" }
+      "pro": {
+        "title": "Pro",
+        "subtitle": "Angehende Profis",
+        "description": "Von Profis ausgebildet"
+      },
+      "academy": {
+        "title": "Akademie",
+        "subtitle": "Jugendförderung",
+        "description": "Vom ersten Ballkontakt bis zur professionellen Ausbildung"
+      },
+      "women": {
+        "title": "Fußballtraining für Frauen",
+        "subtitle": "Für erwachsene Spielerinnen",
+        "description": "Für alle Frauen, die einfach Fußball spielen möchten"
+      },
+      "men": {
+        "title": "Fußballtraining für Männer",
+        "subtitle": "Für erwachsene Spieler",
+        "description": "Fit bleiben und Fußball genießen"
+      },
+      "private": {
+        "title": "1:1 Einzeltraining",
+        "subtitle": "Individuelles Training",
+        "description": "Eine Premium-Trainingseinheit ganz auf dich zugeschnitten"
+      }
     }
   },
   "ProgramsPage": {
     "heading1": "Das passende Programm",
     "heading2": "für dein Niveau und deine Ziele",
     "items": {
-      "pro": { "title": "Pro", "subtitle": "PRO", "desc": "Von Profis ausgebildet.\nEin spezialisiertes Trainingsprogramm für Spieler mit dem Ziel Profifußball." },
-      "academy": { "title": "Akademie", "subtitle": "ACADEMY", "desc": "Vom Grundlagentraining bis zum Spiel – unser Jugendprogramm mit klar strukturiertem Trainingsplan." },
-      "women": { "title": "Fußballtraining für Frauen", "subtitle": "WOMEN", "desc": "Fußballtraining nur für Frauen, das du ganz ohne Leistungsdruck genießen kannst." },
-      "men": { "title": "Fußballtraining für Männer", "subtitle": "MEN", "desc": "Fußballtraining für Männer, bei dem der Spaß im Vordergrund steht – ohne Abstriche bei der Trainingsqualität." },
-      "private": { "title": "1:1 Einzeltraining", "subtitle": "PRIVATE", "desc": "Maßgeschneidertes 1:1-Training, abgestimmt auf dein Niveau und deine Ziele." }
+      "pro": {
+        "title": "Pro",
+        "subtitle": "PRO",
+        "desc": "Von Profis ausgebildet.\nEin spezialisiertes Trainingsprogramm für Spieler mit dem Ziel Profifußball."
+      },
+      "academy": {
+        "title": "Akademie",
+        "subtitle": "ACADEMY",
+        "desc": "Vom Grundlagentraining bis zum Spiel – unser Jugendprogramm mit klar strukturiertem Trainingsplan."
+      },
+      "women": {
+        "title": "Fußballtraining für Frauen",
+        "subtitle": "WOMEN",
+        "desc": "Fußballtraining nur für Frauen, das du ganz ohne Leistungsdruck genießen kannst."
+      },
+      "men": {
+        "title": "Fußballtraining für Männer",
+        "subtitle": "MEN",
+        "desc": "Fußballtraining für Männer, bei dem der Spaß im Vordergrund steht – ohne Abstriche bei der Trainingsqualität."
+      },
+      "private": {
+        "title": "1:1 Einzeltraining",
+        "subtitle": "PRIVATE",
+        "desc": "Maßgeschneidertes 1:1-Training, abgestimmt auf dein Niveau und deine Ziele."
+      }
     }
   },
   "HomeLocations": {
@@ -50,8 +90,12 @@
     "intro": "Erlebe das professionelle Coaching von Double J in beiden Städten.",
     "viewButton": "Standort ansehen →",
     "items": {
-      "frankfurt": { "name": "Frankfurt" },
-      "dusseldorf": { "name": "Düsseldorf" }
+      "frankfurt": {
+        "name": "Frankfurt"
+      },
+      "dusseldorf": {
+        "name": "Düsseldorf"
+      }
     }
   },
   "LocationsPage": {
@@ -60,8 +104,12 @@
     "addressLabel": "Adresse",
     "viewButton": "Standort ansehen →",
     "items": {
-      "frankfurt": { "name": "Frankfurt" },
-      "dusseldorf": { "name": "Düsseldorf" }
+      "frankfurt": {
+        "name": "Frankfurt"
+      },
+      "dusseldorf": {
+        "name": "Düsseldorf"
+      }
     }
   },
   "ApplyModal": {
@@ -77,7 +125,14 @@
       "women": "Fußballtraining für Frauen",
       "men": "Fußballtraining für Männer",
       "private": "1:1 Einzeltraining"
-    }
+    },
+    "consentLabel": "Ich willige in die Erhebung und Nutzung meiner Daten (Name, Kontakt) ausschließlich zur Kontaktaufnahme bezüglich der Probestunde ein.",
+    "required": "Bitte Name, Kontakt und die Einwilligung angeben.",
+    "sending": "Wird gesendet...",
+    "successTitle": "Ihre Anmeldung ist eingegangen",
+    "successBody": "Wir melden uns in Kürze bei Ihnen.",
+    "close": "Schließen",
+    "error": "Senden fehlgeschlagen. Bitte versuchen Sie es später erneut."
   },
   "GreetingPage": {
     "h1Line1": "Für alle,",
@@ -148,21 +203,51 @@
       }
     },
     "coaches": {
-      "jungChiHyun": { "name": "Chihyun Jung", "role": "Trainer" },
-      "choHoon": { "name": "Hoon Cho", "role": "Trainer" },
-      "peter": { "name": "Peter", "role": "Trainer" }
+      "jungChiHyun": {
+        "name": "Chihyun Jung",
+        "role": "Trainer"
+      },
+      "choHoon": {
+        "name": "Hoon Cho",
+        "role": "Trainer"
+      },
+      "peter": {
+        "name": "Peter",
+        "role": "Trainer"
+      }
     }
   },
   "ComingSoon": {
     "notice": "Diese Seite wird bald verfügbar sein.",
     "pages": {
-      "locationsFrankfurt": { "category": "LOCATION", "title": "Standort Frankfurt" },
-      "locationsDusseldorf": { "category": "LOCATION", "title": "Standort Düsseldorf" },
-      "programsAcademy": { "category": "PROGRAM", "title": "Akademie" },
-      "programsMen": { "category": "PROGRAM", "title": "Fußballtraining für Männer" },
-      "programsPro": { "category": "PROGRAM", "title": "Pro" },
-      "programsPrivate": { "category": "PROGRAM", "title": "1:1 Einzeltraining" },
-      "programsWomen": { "category": "PROGRAM", "title": "Fußballtraining für Frauen" }
+      "locationsFrankfurt": {
+        "category": "LOCATION",
+        "title": "Standort Frankfurt"
+      },
+      "locationsDusseldorf": {
+        "category": "LOCATION",
+        "title": "Standort Düsseldorf"
+      },
+      "programsAcademy": {
+        "category": "PROGRAM",
+        "title": "Akademie"
+      },
+      "programsMen": {
+        "category": "PROGRAM",
+        "title": "Fußballtraining für Männer"
+      },
+      "programsPro": {
+        "category": "PROGRAM",
+        "title": "Pro"
+      },
+      "programsPrivate": {
+        "category": "PROGRAM",
+        "title": "1:1 Einzeltraining"
+      },
+      "programsWomen": {
+        "category": "PROGRAM",
+        "title": "Fußballtraining für Frauen"
+      }
     }
   },
   "VisionPage": {

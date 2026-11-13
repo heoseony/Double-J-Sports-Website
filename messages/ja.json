@@ -27,22 +27,62 @@
     "heading": "一人ひとりの目標に合わせたプログラム",
     "intro": "年齢や目標に合わせた体系的なカリキュラムで、一人ひとりの成長をサポートします。",
     "items": {
-      "pro": { "title": "プロ", "subtitle": "プロ選手を目指す方へ", "description": "プロを目指すための専門トレーニング" },
-      "academy": { "title": "アカデミー", "subtitle": "ユース育成", "description": "初めてボールに触れる子どもから、本格的な選手育成まで" },
-      "women": { "title": "女性クラス", "subtitle": "大人の女性向けクラス", "description": "サッカーを楽しみたいすべての女性に" },
-      "men": { "title": "男性クラス", "subtitle": "大人の男性向けクラス", "description": "楽しみながら、サッカーでアクティブに。" },
-      "private": { "title": "マンツーマンコーチング", "subtitle": "オーダーメイドトレーニング", "description": "一人ひとりのレベルと目標に合わせたオーダーメイドトレーニング" }
+      "pro": {
+        "title": "プロ",
+        "subtitle": "プロ選手を目指す方へ",
+        "description": "プロを目指すための専門トレーニング"
+      },
+      "academy": {
+        "title": "アカデミー",
+        "subtitle": "ユース育成",
+        "description": "初めてボールに触れる子どもから、本格的な選手育成まで"
+      },
+      "women": {
+        "title": "女性クラス",
+        "subtitle": "大人の女性向けクラス",
+        "description": "サッカーを楽しみたいすべての女性に"
+      },
+      "men": {
+        "title": "男性クラス",
+        "subtitle": "大人の男性向けクラス",
+        "description": "楽しみながら、サッカーでアクティブに。"
+      },
+      "private": {
+        "title": "マンツーマンコーチング",
+        "subtitle": "オーダーメイドトレーニング",
+        "description": "一人ひとりのレベルと目標に合わせたオーダーメイドトレーニング"
+      }
     }
   },
   "ProgramsPage": {
     "heading1": "レベルと目標に合わせた",
     "heading2": "ダブルジェイのプログラム",
     "items": {
-      "pro": { "title": "プロ", "subtitle": "PRO", "desc": "プロを目指す選手のための専門トレーニングプログラムです。" },
-      "academy": { "title": "アカデミー", "subtitle": "ACADEMY", "desc": "基礎から実戦まで、体系的なカリキュラムで成長するユースサッカープログラムです。" },
-      "women": { "title": "女性クラス", "subtitle": "WOMEN", "desc": "気軽に楽しみながら学べる女性専用サッカークラスです。" },
-      "men": { "title": "男性クラス", "subtitle": "MEN", "desc": "趣味として楽しみつつも、トレーニングの質にはこだわる男性サッカークラスです。" },
-      "private": { "title": "マンツーマンコーチング", "subtitle": "PRIVATE", "desc": "一人ひとりのレベルと目標に合わせたオーダーメイドトレーニングです。" }
+      "pro": {
+        "title": "プロ",
+        "subtitle": "PRO",
+        "desc": "プロを目指す選手のための専門トレーニングプログラムです。"
+      },
+      "academy": {
+        "title": "アカデミー",
+        "subtitle": "ACADEMY",
+        "desc": "基礎から実戦まで、体系的なカリキュラムで成長するユースサッカープログラムです。"
+      },
+      "women": {
+        "title": "女性クラス",
+        "subtitle": "WOMEN",
+        "desc": "気軽に楽しみながら学べる女性専用サッカークラスです。"
+      },
+      "men": {
+        "title": "男性クラス",
+        "subtitle": "MEN",
+        "desc": "趣味として楽しみつつも、トレーニングの質にはこだわる男性サッカークラスです。"
+      },
+      "private": {
+        "title": "マンツーマンコーチング",
+        "subtitle": "PRIVATE",
+        "desc": "一人ひとりのレベルと目標に合わせたオーダーメイドトレーニングです。"
+      }
     }
   },
   "HomeLocations": {
@@ -50,8 +90,12 @@
     "intro": "2つの拠点で、ダブルジェイの本格的なコーチングを体験してください。",
     "viewButton": "アクセスを見る →",
     "items": {
-      "frankfurt": { "name": "フランクフルト" },
-      "dusseldorf": { "name": "デュッセルドルフ" }
+      "frankfurt": {
+        "name": "フランクフルト"
+      },
+      "dusseldorf": {
+        "name": "デュッセルドルフ"
+      }
     }
   },
   "LocationsPage": {
@@ -60,8 +104,12 @@
     "addressLabel": "住所",
     "viewButton": "アクセスを見る →",
     "items": {
-      "frankfurt": { "name": "フランクフルト" },
-      "dusseldorf": { "name": "デュッセルドルフ" }
+      "frankfurt": {
+        "name": "フランクフルト"
+      },
+      "dusseldorf": {
+        "name": "デュッセルドルフ"
+      }
     }
   },
   "ApplyModal": {
@@ -77,7 +125,14 @@
       "women": "女性クラス",
       "men": "男性クラス",
       "private": "1:1 個人コーチング"
-    }
+    },
+    "consentLabel": "体験レッスンのご連絡のみを目的として、個人情報（お名前・連絡先）の収集・利用に同意します。",
+    "required": "お名前・連絡先・個人情報の同意をご確認ください。",
+    "sending": "送信中...",
+    "successTitle": "お申し込みを受け付けました",
+    "successBody": "確認のうえ、折り返しご連絡いたします。",
+    "close": "閉じる",
+    "error": "送信に失敗しました。しばらくしてからもう一度お試しください。"
   },
   "GreetingPage": {
     "h1Line1": "サッカーが好きな",
@@ -148,21 +203,51 @@
       }
     },
     "coaches": {
-      "jungChiHyun": { "name": "ジョン・チヒョン", "role": "コーチ" },
-      "choHoon": { "name": "チョ・フン", "role": "コーチ" },
-      "peter": { "name": "Peter", "role": "コーチ" }
+      "jungChiHyun": {
+        "name": "ジョン・チヒョン",
+        "role": "コーチ"
+      },
+      "choHoon": {
+        "name": "チョ・フン",
+        "role": "コーチ"
+      },
+      "peter": {
+        "name": "Peter",
+        "role": "コーチ"
+      }
     }
   },
   "ComingSoon": {
     "notice": "このページは準備中です。",
     "pages": {
-      "locationsFrankfurt": { "category": "LOCATION", "title": "フランクフルト" },
-      "locationsDusseldorf": { "category": "LOCATION", "title": "デュッセルドルフ" },
-      "programsAcademy": { "category": "PROGRAM", "title": "アカデミー" },
-      "programsMen": { "category": "PROGRAM", "title": "男性クラス" },
-      "programsPro": { "category": "PROGRAM", "title": "プロ" },
-      "programsPrivate": { "category": "PROGRAM", "title": "1:1 個人コーチング" },
-      "programsWomen": { "category": "PROGRAM", "title": "女性クラス" }
+      "locationsFrankfurt": {
+        "category": "LOCATION",
+        "title": "フランクフルト"
+      },
+      "locationsDusseldorf": {
+        "category": "LOCATION",
+        "title": "デュッセルドルフ"
+      },
+      "programsAcademy": {
+        "category": "PROGRAM",
+        "title": "アカデミー"
+      },
+      "programsMen": {
+        "category": "PROGRAM",
+        "title": "男性クラス"
+      },
+      "programsPro": {
+        "category": "PROGRAM",
+        "title": "プロ"
+      },
+      "programsPrivate": {
+        "category": "PROGRAM",
+        "title": "1:1 個人コーチング"
+      },
+      "programsWomen": {
+        "category": "PROGRAM",
+        "title": "女性クラス"
+      }
     }
   },
   "VisionPage": {

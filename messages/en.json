@@ -27,22 +27,62 @@
     "heading": "Programs for Every Goal",
     "intro": "Structured programs tailored to each player's age and goals, helping them grow through football.",
     "items": {
-      "pro": { "title": "Pro", "subtitle": "Aspiring Professionals", "description": "Built by Pros. Made for Future Pros." },
-      "academy": { "title": "Academy", "subtitle": "Youth Development", "description": "From first kicks to player development" },
-      "women": { "title": "Women's Football", "subtitle": "Adult Women's Program", "description": "For women who simply love the game." },
-      "men": { "title": "Men's Football", "subtitle": "Adult Men's Program", "description": "Stay active and enjoy football." },
-      "private": { "title": "1-on-1 Coaching", "subtitle": "Personalized Training", "description": "Individual coaching focused entirely on you." }
+      "pro": {
+        "title": "Pro",
+        "subtitle": "Aspiring Professionals",
+        "description": "Built by Pros. Made for Future Pros."
+      },
+      "academy": {
+        "title": "Academy",
+        "subtitle": "Youth Development",
+        "description": "From first kicks to player development"
+      },
+      "women": {
+        "title": "Women's Football",
+        "subtitle": "Adult Women's Program",
+        "description": "For women who simply love the game."
+      },
+      "men": {
+        "title": "Men's Football",
+        "subtitle": "Adult Men's Program",
+        "description": "Stay active and enjoy football."
+      },
+      "private": {
+        "title": "1-on-1 Coaching",
+        "subtitle": "Personalized Training",
+        "description": "Individual coaching focused entirely on you."
+      }
     }
   },
   "ProgramsPage": {
     "heading1": "A Program Built",
     "heading2": "for Your Level and Goals",
     "items": {
-      "pro": { "title": "Pro", "subtitle": "PRO", "desc": "Pros made by pros.\nA specialized training program for players aiming for the professional stage." },
-      "academy": { "title": "Academy", "subtitle": "ACADEMY", "desc": "From fundamentals to match play, a youth football program that grows through a structured curriculum." },
-      "women": { "title": "Women's Class", "subtitle": "WOMEN", "desc": "A women-only football class you can enjoy without pressure." },
-      "men": { "title": "Men's Class", "subtitle": "MEN", "desc": "A men's football class built for enjoyment, without compromising on training detail." },
-      "private": { "title": "1:1 Private Coaching", "subtitle": "PRIVATE", "desc": "One-on-one training tailored to your individual level and goals." }
+      "pro": {
+        "title": "Pro",
+        "subtitle": "PRO",
+        "desc": "Pros made by pros.\nA specialized training program for players aiming for the professional stage."
+      },
+      "academy": {
+        "title": "Academy",
+        "subtitle": "ACADEMY",
+        "desc": "From fundamentals to match play, a youth football program that grows through a structured curriculum."
+      },
+      "women": {
+        "title": "Women's Class",
+        "subtitle": "WOMEN",
+        "desc": "A women-only football class you can enjoy without pressure."
+      },
+      "men": {
+        "title": "Men's Class",
+        "subtitle": "MEN",
+        "desc": "A men's football class built for enjoyment, without compromising on training detail."
+      },
+      "private": {
+        "title": "1:1 Private Coaching",
+        "subtitle": "PRIVATE",
+        "desc": "One-on-one training tailored to your individual level and goals."
+      }
     }
   },
   "HomeLocations": {
@@ -50,8 +90,12 @@
     "intro": "Experience Double J coaching in both locations.",
     "viewButton": "View Location →",
     "items": {
-      "frankfurt": { "name": "Frankfurt" },
-      "dusseldorf": { "name": "Düsseldorf" }
+      "frankfurt": {
+        "name": "Frankfurt"
+      },
+      "dusseldorf": {
+        "name": "Düsseldorf"
+      }
     }
   },
   "LocationsPage": {
@@ -60,8 +104,12 @@
     "addressLabel": "Address",
     "viewButton": "View Location →",
     "items": {
-      "frankfurt": { "name": "Frankfurt" },
-      "dusseldorf": { "name": "Düsseldorf" }
+      "frankfurt": {
+        "name": "Frankfurt"
+      },
+      "dusseldorf": {
+        "name": "Düsseldorf"
+      }
     }
   },
   "ApplyModal": {
@@ -77,7 +125,14 @@
       "women": "Women's Class",
       "men": "Men's Class",
       "private": "1:1 Private Coaching"
-    }
+    },
+    "consentLabel": "I agree to the collection and use of my personal data (name, contact) for the sole purpose of being contacted about my trial class.",
+    "required": "Please enter your name, contact and agree to the privacy consent.",
+    "sending": "Sending...",
+    "successTitle": "Your application has been received",
+    "successBody": "We will get back to you shortly.",
+    "close": "Close",
+    "error": "Submission failed. Please try again in a moment."
   },
   "GreetingPage": {
     "h1Line1": "For Everyone",
@@ -148,21 +203,51 @@
       }
     },
     "coaches": {
-      "jungChiHyun": { "name": "Chihyun Jung", "role": "Coach" },
-      "choHoon": { "name": "Hoon Cho", "role": "Coach" },
-      "peter": { "name": "Peter", "role": "Coach" }
+      "jungChiHyun": {
+        "name": "Chihyun Jung",
+        "role": "Coach"
+      },
+      "choHoon": {
+        "name": "Hoon Cho",
+        "role": "Coach"
+      },
+      "peter": {
+        "name": "Peter",
+        "role": "Coach"
+      }
     }
   },
   "ComingSoon": {
     "notice": "This page is coming soon.",
     "pages": {
-      "locationsFrankfurt": { "category": "LOCATION", "title": "Frankfurt Location" },
-      "locationsDusseldorf": { "category": "LOCATION", "title": "Düsseldorf Location" },
-      "programsAcademy": { "category": "PROGRAM", "title": "Academy" },
-      "programsMen": { "category": "PROGRAM", "title": "Men's Class" },
-      "programsPro": { "category": "PROGRAM", "title": "Pro" },
-      "programsPrivate": { "category": "PROGRAM", "title": "1:1 Private Coaching" },
-      "programsWomen": { "category": "PROGRAM", "title": "Women's Class" }
+      "locationsFrankfurt": {
+        "category": "LOCATION",
+        "title": "Frankfurt Location"
+      },
+      "locationsDusseldorf": {
+        "category": "LOCATION",
+        "title": "Düsseldorf Location"
+      },
+      "programsAcademy": {
+        "category": "PROGRAM",
+        "title": "Academy"
+      },
+      "programsMen": {
+        "category": "PROGRAM",
+        "title": "Men's Class"
+      },
+      "programsPro": {
+        "category": "PROGRAM",
+        "title": "Pro"
+      },
+      "programsPrivate": {
+        "category": "PROGRAM",
+        "title": "1:1 Private Coaching"
+      },
+      "programsWomen": {
+        "category": "PROGRAM",
+        "title": "Women's Class"
+      }
     }
   },
   "VisionPage": {
