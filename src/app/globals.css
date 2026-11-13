@@ -67,10 +67,16 @@ body {
   }
 }
 
-/* CONTENT-CENTER: PC에서 배경은 화면 끝까지, 글/카드는 가운데 1152px (되돌리려면 이 블록 삭제) */
+/* CONTENT-CENTER: PC에서 배경은 화면 끝까지, 글/카드는 가운데 1344px (되돌리려면 이 블록 삭제) */
 @media (min-width: 768px) {
   .md\:px-16 {
-    padding-left: max(4rem, calc((100% - 1152px) / 2));
-    padding-right: max(4rem, calc((100% - 1152px) / 2));
+    padding-left: max(4rem, calc((100% - 1344px) / 2));
+    padding-right: max(4rem, calc((100% - 1344px) / 2));
   }
+}
+
+/* KEEP-ALL: 한글을 단어 중간에서 끊지 않기 (되돌리려면 이 블록 삭제) */
+h1, h2, h3, p, li {
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
