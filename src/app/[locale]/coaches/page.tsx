@@ -4,7 +4,7 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 const LEADER_KEYS = [
-  { key: "jungYeonUng", photo: "/images/jung-yeonung-v10.jpg" },
+  { key: "jungYeonUng", photo: "/images/jung-yeonung-v11.jpg" },
   { key: "jungYeonHwang", photo: "/images/jung-yeonhwang-v10.jpg" },
 ] as const;
 
