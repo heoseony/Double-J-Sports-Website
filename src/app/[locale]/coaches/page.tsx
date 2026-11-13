@@ -40,7 +40,7 @@ export default async function CoachesPage() {
 </div>
 </section>
 
-<section className="grid grid-cols-1 gap-6 px-6 py-10 md:grid-cols-2 md:px-0">
+<section className="grid grid-cols-1 gap-6 px-6 py-10 md:grid-cols-2 md:px-16">
         {LEADER_KEYS.map((leader) => {
           const career = t.raw(`leaders.${leader.key}.career`) as string[];
           return (
@@ -73,7 +73,7 @@ export default async function CoachesPage() {
         })}
 </section>
 
-<section className="border-t border-gray-100 px-6 py-10 md:px-0 md:py-14">
+<section className="border-t border-gray-100 px-6 py-10 md:px-16 md:py-14">
 <p className="text-xs font-bold tracking-widest text-brand-blue">COACHING STAFF</p>
 <h2 className="mt-1 text-xl font-black text-gray-900 md:text-2xl">
           {t("staffHeading")}

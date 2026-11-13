@@ -38,9 +38,6 @@ body {
   }
   body {
     min-width: 1280px;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -67,5 +64,13 @@ body {
   }
   p, li {
     letter-spacing: -0.01em;
+  }
+}
+
+/* CONTENT-CENTER: PC에서 배경은 화면 끝까지, 글/카드는 가운데 1152px (되돌리려면 이 블록 삭제) */
+@media (min-width: 768px) {
+  .md\:px-16 {
+    padding-left: max(4rem, calc((100% - 1152px) / 2));
+    padding-right: max(4rem, calc((100% - 1152px) / 2));
   }
 }
