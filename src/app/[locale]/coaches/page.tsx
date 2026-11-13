@@ -73,13 +73,13 @@ export default async function CoachesPage() {
         })}
 </section>
 
-<section className="border-t border-gray-100 px-6 py-10 md:px-16">
+<section className="border-t border-gray-100 px-6 py-10 md:px-0 md:py-14">
 <p className="text-xs font-bold tracking-widest text-brand-blue">COACHING STAFF</p>
 <h2 className="mt-1 text-xl font-black text-gray-900 md:text-2xl">
           {t("staffHeading")}
 </h2>
 
-<div className="mt-6 grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
+<div className="mt-6 grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-[repeat(3,minmax(0,300px))] md:gap-8">
           {COACH_KEYS.map((coach) => (
 <div key={coach.key}>
 <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-200">
@@ -87,10 +87,10 @@ export default async function CoachesPage() {
                 <ProtectedPhoto src={coach.photo} alt={t(`coaches.${coach.key}.name`)} fill className="object-cover" />
               )}
 </div>
-<p className="mt-2 text-center text-sm font-bold text-gray-900">
+<p className="mt-3 text-center text-sm md:text-base font-bold text-gray-900">
                 {t(`coaches.${coach.key}.name`)}
 </p>
-<p className="text-center text-xs text-gray-500">
+<p className="text-center text-xs md:text-sm text-gray-500">
                 {t(`coaches.${coach.key}.role`)}
 </p>
 </div>
