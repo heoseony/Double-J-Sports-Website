@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import ApplyModal from "./ApplyModal";
-import Image from "next/image";
 
 export default function Hero() {
   const t = useTranslations("Hero");
@@ -12,14 +11,30 @@ export default function Hero() {
   return (
     <>
     <section className="relative flex h-[400px] flex-col justify-center overflow-hidden bg-brand-navy px-6 py-16 text-white md:h-[520px] md:px-16">
-      <Image
-        src="/images/hero-main-v2.png"
-        alt="Double J Sports Academy"
-        fill
-        priority
-        className="object-cover"
+      {/* TEMP-HERO: 실제 사진이 정해질 때까지 쓰는 임시 배경 (사진 넣을 땐 이 블록을 <Image>로 교체) */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 80% at 85% 20%, rgba(59,130,196,0.35), transparent 60%), linear-gradient(135deg, #0A1F44 0%, #0d2a5c 55%, #0A1F44 100%)",
+        }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/75 to-brand-navy/30"></div>
+      <svg
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full opacity-[0.07]"
+        viewBox="0 0 1200 520"
+        preserveAspectRatio="xMaxYMid slice"
+        fill="none"
+        stroke="white"
+        strokeWidth="2"
+      >
+        <circle cx="900" cy="260" r="140" />
+        <line x1="900" y1="0" x2="900" y2="520" />
+        <rect x="1020" y="150" width="260" height="220" />
+        <rect x="1130" y="215" width="150" height="90" />
+        <circle cx="900" cy="260" r="5" fill="white" />
+      </svg>
       <div className="relative z-10 flex flex-col">
       <p className="text-xs font-bold tracking-widest text-brand-gold">
         DOUBLE J SPORTS ACADEMY
