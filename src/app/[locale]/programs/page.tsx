@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { getTranslations } from "next-intl/server";
 
 const PROGRAM_KEYS = ["pro", "academy", "women", "men", "private"] as const;
@@ -10,7 +11,7 @@ export default async function ProgramsPage() {
     <div>
       <Header />
 
-      <section className="px-6 py-16 md:px-16">
+      <section className="px-6 py-16 md:px-16 md:py-24">
         <p className="text-sm font-bold tracking-widest text-brand-blue">PROGRAM</p>
         <h1 className="mt-3 text-4xl font-black leading-tight text-gray-900 md:text-5xl">
           {t("heading1")}
@@ -23,7 +24,7 @@ export default async function ProgramsPage() {
         {PROGRAM_KEYS.map((key) => (
           <div
             key={key}
-            className="grid grid-cols-1 gap-4 px-6 py-12 md:grid-cols-[260px_1fr] md:gap-10 md:px-16 md:py-16"
+            className="grid grid-cols-1 gap-4 px-6 py-12 md:grid-cols-[260px_1fr] md:gap-10 md:px-16 md:py-20"
           >
             <div>
               <p className="text-xs font-bold tracking-widest text-gray-400">
@@ -41,6 +42,7 @@ export default async function ProgramsPage() {
           </div>
         ))}
       </section>
+      <Footer />
     </div>
   );
 }

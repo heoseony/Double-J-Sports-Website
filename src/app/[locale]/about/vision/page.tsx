@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
@@ -71,7 +72,7 @@ export default async function VisionPage() {
         <div className="grid grid-cols-1 gap-10 divide-y divide-gray-100 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
           {PILLAR_KEYS.map((key) => (
             <div key={key} className="flex flex-col items-center gap-3 pt-8 text-center first:pt-0 sm:pt-0 lg:px-6 lg:first:pl-0 lg:last:pr-0">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-50 text-brand-blue">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-50 text-brand-blue">
                 {PILLAR_ICONS[key]}
               </div>
               <p className="text-xs font-bold tracking-wide text-brand-navy">{t(`pillars.${key}.title`)}</p>
@@ -82,6 +83,7 @@ export default async function VisionPage() {
           ))}
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

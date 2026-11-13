@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { supabase } from "@/lib/supabase";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -17,11 +18,11 @@ type PostWithThumbnail = {
 
 const CATEGORY_KEYS = [
   { id: null, key: "all", color: "bg-gray-400" },
-  { id: "d1ad19a7-a579-48dd-8380-e16d478ebd2b", key: "kids", color: "bg-blue-500" },
-  { id: "6f780863-7fa0-40ca-ba1c-d7d69ca7bc76", key: "elite", color: "bg-orange-500" },
-  { id: "b2a8bc6f-aabc-4da4-bbe5-239d82be6475", key: "women", color: "bg-green-500" },
-  { id: "4f1364d1-17f3-45f1-b7f1-ba4bcaa10c91", key: "men", color: "bg-purple-500" },
-  { id: "59efee6c-12f4-478f-aff3-794930fb867d", key: "event", color: "bg-yellow-500" },
+  { id: "d1ad19a7-a579-48dd-8380-e16d478ebd2b", key: "kids", color: "bg-brand-navy" },
+  { id: "6f780863-7fa0-40ca-ba1c-d7d69ca7bc76", key: "elite", color: "bg-brand-blue" },
+  { id: "b2a8bc6f-aabc-4da4-bbe5-239d82be6475", key: "women", color: "bg-gray-500" },
+  { id: "4f1364d1-17f3-45f1-b7f1-ba4bcaa10c91", key: "men", color: "bg-gray-800" },
+  { id: "59efee6c-12f4-478f-aff3-794930fb867d", key: "event", color: "bg-brand-gold" },
 ] as const;
 
 async function getPosts(): Promise<PostWithThumbnail[]> {
@@ -118,6 +119,7 @@ export default async function GalleryPage({
           ))}
 </div>
 </section>
+  <Footer />
 </div>
   );
 }

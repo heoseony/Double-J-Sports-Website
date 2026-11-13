@@ -12,23 +12,19 @@
   --font-sans: "Pretendard", var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --color-brand-navy: #003082;
+  --color-brand-navy: #0A1F44;
   --color-brand-red: #E6030E;
-  --color-brand-blue: #3B82C4;
+  --color-brand-blue: #9A7A44;
+  --color-brand-gold: #D9BC8A;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Pretendard", Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 /* PC-FIXED-WIDTH: PC 화면에서는 폭 고정 (되돌리려면 이 블록 전체 삭제) */
@@ -79,4 +75,18 @@ body {
 h1, h2, h3, p, li {
   word-break: keep-all;
   overflow-wrap: break-word;
+}
+
+/* PREMIUM-THEME: 클래식 프리미엄 느낌 (되돌리려면 이 블록 삭제) */
+.font-black { font-weight: 800; }
+.tracking-widest { letter-spacing: 0.22em; }
+h1, h2 { letter-spacing: -0.02em; }
+::selection { background: #0A1F44; color: #ffffff; }
+html { scroll-behavior: smooth; }
+@keyframes premiumFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  section { animation: premiumFadeIn 0.9s ease both; }
 }

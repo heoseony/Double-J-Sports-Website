@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 import { notFound } from "next/navigation";
@@ -41,7 +42,7 @@ export default async function GalleryDetailPage({
 <div>
 <Header />
 
-<section className="px-6 py-16 md:px-16">
+<section className="px-6 py-16 md:px-16 md:py-24">
 <p className="text-xs text-gray-400">
           {new Date(post.created_at).toLocaleDateString("ko-KR")}
 </p>
@@ -74,6 +75,7 @@ export default async function GalleryDetailPage({
           <p className="py-12 text-sm text-gray-400">{t("noMedia")}</p>
         )}
 </section>
+  <Footer />
 </div>
   );
 }

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
@@ -82,7 +83,7 @@ export default async function GreetingPage() {
           <h2 className="text-3xl font-black leading-tight text-white md:text-4xl">
             TRAIN LIKE A PRO.
             <br />
-            <span className="text-blue-400">GROW YOUR WAY.</span>
+            <span className="text-brand-gold">GROW YOUR WAY.</span>
           </h2>
           <div className="mt-5 h-px w-10 bg-white/40" />
           <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-white/80 md:text-base">
@@ -91,6 +92,7 @@ export default async function GreetingPage() {
         </div>
 
       </section>
+      <Footer />
     </div>
   );
 }

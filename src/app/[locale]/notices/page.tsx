@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { supabase } from "@/lib/supabase";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -33,7 +34,7 @@ export default async function NoticesPage() {
 <div>
 <Header />
 
-<section className="px-6 py-16 md:px-16">
+<section className="px-6 py-16 md:px-16 md:py-24">
 <p className="text-sm font-bold tracking-widest text-brand-blue">NOTICE</p>
 <h1 className="mt-3 text-4xl font-black leading-tight text-gray-900 md:text-5xl">
           {t("heading")}
@@ -83,6 +84,7 @@ export default async function NoticesPage() {
 </table>
 </div>
 </section>
+  <Footer />
 </div>
   );
 }

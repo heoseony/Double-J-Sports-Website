@@ -51,8 +51,8 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="flex items-center justify-between px-6 py-3 md:px-16">
+    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
+      <div className="flex items-center justify-between px-6 py-3 md:px-16 md:py-4">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/images/logo.png" alt="Double J Sports" width={40} height={40} />
           <div className="leading-tight">
@@ -71,7 +71,7 @@ export default function Header() {
             >
               <Link
                 href={item.href}
-                className="block py-2 text-sm font-bold text-gray-700 hover:text-brand-navy"
+                className="block py-2 text-[13px] font-semibold tracking-[0.12em] text-gray-800 transition hover:text-brand-blue"
               >
                 {t(`nav.${item.key}`)}
               </Link>
@@ -188,7 +188,7 @@ export default function Header() {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-brand-navy px-4 py-2 text-sm font-medium text-white hover:opacity-90"
+            className="rounded-md bg-brand-navy px-5 py-2.5 text-sm font-semibold tracking-wide text-white transition hover:bg-[#13306b]"
           >
             {t("booking")}
           </a>

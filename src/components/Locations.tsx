@@ -26,7 +26,7 @@ export default async function Locations() {
   const t = await getTranslations("HomeLocations");
 
   return (
-<section className="px-6 py-20 md:px-16">
+<section className="px-6 py-20 md:px-16 md:py-32">
 <p className="text-xs font-bold tracking-widest text-brand-blue">
         OUR LOCATIONS
 </p>
@@ -41,10 +41,10 @@ export default async function Locations() {
         {LOCATION_KEYS.map((loc) => (
           <div
             key={loc.key}
-            className="relative flex h-56 flex-col justify-end overflow-hidden rounded-2xl"
+            className="group relative flex h-56 flex-col justify-end overflow-hidden rounded-md md:h-72"
           >
             <div className="absolute inset-0 bg-gray-800">
-              <Image src={loc.image} alt="" fill className="object-cover opacity-70" />
+              <Image src={loc.image} alt="" fill className="object-cover opacity-70 transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
             </div>
 
@@ -56,7 +56,7 @@ export default async function Locations() {
                 href={loc.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-gray-900 hover:opacity-90"
+                className="mt-3 inline-flex items-center gap-1 rounded-md bg-white px-3 py-1.5 text-xs font-bold text-gray-900 hover:opacity-90"
               >
                 {t("viewButton")}
               </a>

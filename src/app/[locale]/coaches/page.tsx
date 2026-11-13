@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import ProtectedPhoto from "@/components/ProtectedPhoto";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
@@ -46,21 +47,21 @@ export default async function CoachesPage() {
           return (
 <div
             key={leader.key}
-            className="flex gap-6 overflow-hidden rounded-2xl bg-gray-50 p-6"
+            className="flex gap-6 overflow-hidden rounded-md border border-gray-200 bg-white p-6"
 >
-<div className="relative aspect-[3/4] w-[32%] md:w-[48%] shrink-0 self-start md:self-stretch md:aspect-auto overflow-hidden rounded-xl bg-gray-200">
+<div className="relative aspect-[3/4] w-[32%] md:w-[48%] shrink-0 self-start md:self-stretch md:aspect-auto overflow-hidden rounded-sm bg-gray-200">
               {leader.photo && (
                 <ProtectedPhoto src={leader.photo} alt={t(`leaders.${leader.key}.name`)} fill className="object-cover object-top" />
               )}
 </div>
 <div className="flex flex-col justify-start">
-<span className="inline-block w-fit rounded-full bg-brand-navy px-3 py-1 text-xs md:text-sm font-bold text-white">
+<span className="inline-block w-fit rounded-sm bg-brand-navy px-3 py-1 tracking-wider text-xs md:text-sm font-bold text-white">
                 {t(`leaders.${leader.key}.role`)}
 </span>
 <h2 className="mt-2 text-2xl md:text-3xl font-black text-gray-900">
                 {t(`leaders.${leader.key}.name`)}
 </h2>
-<div className="mt-4"><span className="inline-block rounded-full border border-gray-300 px-3 py-1 text-xs font-bold text-gray-700">{t("credentialsLabel")}</span>
+<div className="mt-4"><span className="inline-block rounded-sm border border-gray-300 px-3 py-1 text-xs font-bold text-gray-700">{t("credentialsLabel")}</span>
 <ul className="mt-3 space-y-2 text-sm leading-relaxed text-gray-600">
                     {career.map((line) => (
 <li key={line}>{line}</li>
@@ -82,7 +83,7 @@ export default async function CoachesPage() {
 <div className="mt-6 grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-[repeat(3,minmax(0,300px))] md:gap-8">
           {COACH_KEYS.map((coach) => (
 <div key={coach.key}>
-<div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-200">
+<div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm bg-gray-200">
               {coach.photo && (
                 <ProtectedPhoto src={coach.photo} alt={t(`coaches.${coach.key}.name`)} fill className="object-cover" />
               )}
@@ -97,6 +98,7 @@ export default async function CoachesPage() {
           ))}
 </div>
 </section>
+  <Footer />
 </div>
   );
 }

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { supabase } from "@/lib/supabase";
 import { notFound } from "next/navigation";
 
@@ -29,7 +30,7 @@ export default async function NoticeDetailPage({
 <div>
 <Header />
 
-<section className="px-6 py-16 md:px-16">
+<section className="px-6 py-16 md:px-16 md:py-24">
 <p className="text-sm font-bold tracking-widest text-brand-blue">NOTICE</p>
 <h1 className="mt-3 text-3xl font-black leading-tight text-gray-900 md:text-4xl">
             {notice.title}
@@ -42,6 +43,7 @@ export default async function NoticeDetailPage({
             {notice.content}
 </div>
 </section>
+  <Footer />
 </div>
   );
 }

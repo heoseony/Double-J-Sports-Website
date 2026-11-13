@@ -19,16 +19,16 @@ export default function Hero() {
         priority
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/70 to-brand-navy/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/75 to-brand-navy/30"></div>
       <div className="relative z-10 flex flex-col">
-      <p className="text-xs font-bold tracking-widest text-blue-400">
+      <p className="text-xs font-bold tracking-widest text-brand-gold">
         DOUBLE J SPORTS ACADEMY
       </p>
 
       <h1 className="mt-4 text-4xl font-black leading-none tracking-tight md:text-7xl">
         TRAIN LIKE A PRO
         <br />
-        <span className="text-blue-400">GROW YOUR WAY</span>
+        <span className="text-brand-gold">GROW YOUR WAY</span>
       </h1>
 
       <p className="mt-4 text-base text-gray-200 md:text-lg">
@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="mt-8 flex gap-3">
         <button
           onClick={() => setModalOpen(true)}
-          className="rounded-full bg-white px-6 py-3 text-sm font-bold text-brand-navy hover:opacity-90"
+          className="rounded-md bg-white px-8 py-3.5 text-sm font-bold tracking-wide text-brand-navy transition hover:bg-brand-gold"
         >
           {t("cta")}
         </button>

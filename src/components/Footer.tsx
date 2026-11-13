@@ -15,9 +15,9 @@ export default async function Footer() {
   const tf = await getTranslations("Footer");
 
   return (
-    <footer className="bg-white px-6 py-10 md:px-16">
-      <div className="flex flex-col items-center justify-between gap-6 border-t border-gray-100 pt-8 md:flex-row">
-        <div className="text-sm font-bold text-brand-navy">
+    <footer className="bg-brand-navy px-6 py-14 md:px-16 md:py-16">
+      <div className="flex flex-col items-center justify-between gap-6 border-t border-white/15 pt-8 md:flex-row">
+        <div className="text-sm font-bold tracking-wide text-white">
           {tf("tagline")}
         </div>
 
@@ -26,7 +26,7 @@ export default async function Footer() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-xs font-semibold text-gray-500 hover:text-brand-navy"
+              className="text-xs font-semibold tracking-wider text-white/60 transition hover:text-brand-gold"
             >
               {t(`nav.${item.key}`)}
             </Link>
@@ -34,7 +34,7 @@ export default async function Footer() {
         </nav>
       </div>
 
-      <p className="mt-6 text-center text-[11px] text-gray-400">
+      <p className="mt-6 text-center text-[11px] text-white/40">
         {tf("copyright")}
       </p>
     </footer>

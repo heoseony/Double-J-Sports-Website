@@ -23,7 +23,7 @@ export default function ApplyModal({
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 px-4">
-      <div className="w-full max-w-md rounded-2xl bg-white p-6">
+      <div className="w-full max-w-md rounded-lg bg-white p-6">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-bold text-brand-navy">{t("title")}</h2>
           <button onClick={onClose} className="text-xl text-gray-400 hover:text-gray-700">
@@ -74,7 +74,7 @@ export default function ApplyModal({
 
           <button
             type="submit"
-            className="mt-2 rounded-full bg-brand-navy px-6 py-3 text-sm font-bold text-white hover:opacity-90"
+            className="mt-2 rounded-md bg-brand-navy px-6 py-3 text-sm font-bold text-white hover:opacity-90"
           >
             {t("submit")}
           </button>
