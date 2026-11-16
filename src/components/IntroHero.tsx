@@ -12,14 +12,22 @@ import ApplyModal from "./ApplyModal";
 const LOCALES = ["ko", "en", "de", "ja"] as const;
 const LANG_SHORT: Record<(typeof LOCALES)[number], string> = { ko: "KO", en: "EN", de: "DE", ja: "JA" };
 
-const SIDE_LINKS = [
-  { key: "about", href: "/about" },
+type SideLink = { key: string; href: string; children?: { key: string; href: string }[] };
+const SIDE_LINKS: SideLink[] = [
+  {
+    key: "about",
+    href: "/about",
+    children: [
+      { key: "greeting", href: "/about/greeting" },
+      { key: "vision", href: "/about/vision" },
+    ],
+  },
   { key: "program", href: "/programs" },
   { key: "news", href: "/news" },
   { key: "location", href: "/locations" },
   { key: "notice", href: "/notices" },
   { key: "coach", href: "/coaches" },
-] as const;
+];
 
 export default function IntroHero() {
   const th = useTranslations("Header");
@@ -118,9 +126,18 @@ export default function IntroHero() {
 
           <nav className="intro-sidenav" aria-label="menu">
             {SIDE_LINKS.map((l, i) => (
-              <Link key={l.key} href={l.href} style={{ "--i": i } as CSSProperties}>
-                {th(`nav.${l.key}`)}
-              </Link>
+              <div key={l.key} className="intro-navitem" style={{ "--i": i } as CSSProperties}>
+                <Link href={l.href}>{th(`nav.${l.key}`)}</Link>
+                {l.children && (
+                  <div className="intro-sub">
+                    {l.children.map((c) => (
+                      <Link key={c.key} href={c.href}>
+                        {th(`aboutChildren.${c.key}`)}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
           <div ref={freeRef} className="intro-rollfree">

@@ -160,8 +160,14 @@ html { scroll-behavior: smooth; }
 .intro-word.intro-r { left: 70.5%; transform: translate(calc(var(--p) * 14cqw), -50%); }
 
 .intro-sidenav { position: absolute; z-index: 3; left: clamp(20px, 5.5vw, 90px); top: 22%; display: flex; flex-direction: column; gap: 6px; font-size: clamp(13px, 1.5vw, 19px); font-weight: 300; letter-spacing: .04em; }
-.intro-sidenav a { color: #fff; text-decoration: none; display: block; opacity: clamp(0, calc((var(--p) - .55) * 5 - var(--i) * .35), 1); transform: translateX(calc((1 - var(--p)) * 80px)); }
+.intro-navitem { opacity: clamp(0, calc((var(--p) - .55) * 5 - var(--i) * .35), 1); transform: translateX(calc((1 - var(--p)) * 80px)); }
+.intro-sidenav a { color: #fff; text-decoration: none; display: block; }
 .intro-sidenav a:hover { color: var(--blue); }
+/* 서브메뉴: 마우스를 올리면 ABOUT 바로 아래로 글씨만 펼쳐짐 (배경 없음, 아래 메뉴는 자연스럽게 밀려남) */
+.intro-sub { max-height: 0; opacity: 0; overflow: hidden; padding-left: 1.1em; transition: max-height .35s ease, opacity .3s ease; }
+.intro-sub a { font-size: .84em; color: rgba(255,255,255,.78); padding: 3px 0; }
+.intro-navitem:hover .intro-sub, .intro-navitem:focus-within .intro-sub { max-height: 6em; opacity: 1; }
+@media (hover: none) { .intro-sub { max-height: 6em; opacity: 1; } }
 .intro-fade { position: absolute; z-index: 5; left: 0; right: 0; bottom: 0; height: 38%; background: linear-gradient(to bottom, rgba(0,0,0,0), #000 96%); opacity: clamp(0, calc((var(--p) - .82) * 6), 1); pointer-events: none; }
 .intro-title { position: absolute; z-index: 6; right: clamp(20px, 4vw, 70px); bottom: 9%; text-align: right; font-weight: 300; line-height: 1; letter-spacing: -.01em; font-size: clamp(26px, 4.2vw, 62px); opacity: clamp(0, calc((var(--p) - .75) * 5), 1); transform: translateY(calc((1 - var(--p)) * 24px)); }
 .intro-cta { position: absolute; z-index: 6; left: clamp(20px, 5.5vw, 90px); bottom: 9%; padding: 12px 22px; border-radius: 6px; font: 700 14px var(--font); letter-spacing: .02em; background: #fff; color: #0A1F44; border: 0; cursor: pointer; }
