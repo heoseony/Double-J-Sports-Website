@@ -81,11 +81,14 @@ export default function IntroHero() {
 
           <div className="intro-gwrap">
             <img className="intro-bg intro-grass" src="/images/intro/hero-grass.jpg" alt="" draggable={false} />
-            <div className="intro-endshadow">
+            <div className="intro-rollshadow">
               <i className="intro-w" />
               <i className="intro-c" />
             </div>
-            <img className="intro-endball" src="/images/intro/ball-end.webp" alt="" draggable={false} />
+            <div className="intro-roll">
+              <img className="intro-rc" src="/images/intro/ball-roll.webp" alt="" draggable={false} />
+              <img className="intro-re" src="/images/intro/ball-end.webp" alt="" draggable={false} />
+            </div>
           </div>
 
           <div className="intro-wrap">
@@ -108,6 +111,7 @@ export default function IntroHero() {
               </Link>
             ))}
           </nav>
+          <div className="intro-fade" />
           <div className="intro-title">DOUBLE J SPORTS</div>
           <button className="intro-cta" type="button" onClick={() => setModalOpen(true)}>
             {t("cta")}
