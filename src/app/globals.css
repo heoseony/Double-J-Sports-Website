@@ -108,31 +108,22 @@ html { scroll-behavior: smooth; }
 .intro-wrap img, .intro-gwrap img { position: absolute; display: block; user-select: none; -webkit-user-drag: none; }
 .intro-bg { inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .intro-black { opacity: clamp(0, calc(1 - (var(--p) - .06) * 5), 1); }
-.intro-grass { filter: brightness(.74) saturate(.92); opacity: clamp(0, calc((var(--p) - .26) * 3.2), 1); }
+.intro-grass { filter: brightness(.74) saturate(.92); opacity: clamp(0, calc((var(--p) - .12) * 3), 1); }
 .intro-vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 55%, transparent 45%, rgba(0,0,0,.55) 100%); opacity: clamp(0, calc(1 - var(--p) * 3), 1); }
 
 .intro-gwrap { position: absolute; left: 50%; top: 50%; width: max(100vw, 200vh); aspect-ratio: 2 / 1;
   /* 카메라 무빙: 낮은 시점(비스듬히 보는 잔디)에서 위로 올라가며 위에서 내려다보는 시점으로 */
-  --k: calc(1 - clamp(0, (var(--p) - .24) / .46, 1));
+  --k: calc(1 - clamp(0, (var(--p) - .12) / .50, 1));
   transform: translate(-50%, -50%) perspective(1100px) rotateX(calc(var(--k) * 34deg)) scale(calc(1 + var(--k) * .55)) translateY(calc(var(--k) * -4%)); }
-.intro-roll, .intro-rollshadow { position: absolute; left: 67.64%; top: 49.57%; width: 7.75%; height: 19.37%;
-  --a: clamp(0, calc((var(--p) - .28) / .12), 1);
-  --b: clamp(0, calc((var(--p) - .40) / .08), 1);
-  --t: clamp(0, calc((var(--p) - .40) / .30), 1);
-  --e: calc(1 - (1 - var(--t)) * (1 - var(--t)));
-  --sx: -276%; --sy: -27%; --dhx: 31.2%; --dhy: -101.5%; --dgy: -80%; --sh: 1.52;
-  --sc: calc(var(--sh) + (.8 - var(--sh)) * var(--a) + .2 * var(--e));
-  --x: calc((1 - var(--e)) * var(--sx) + (1 - var(--a)) * var(--dhx)); }
-.intro-roll { transform-origin: 50% 50%; opacity: clamp(0, calc((var(--p) - .26) * 20), 1);
-  transform: translate(var(--x), calc((1 - var(--e)) * var(--sy) + (1 - var(--a) * var(--a)) * var(--dhy) - 35% * 4 * var(--b) * (1 - var(--b)))) scale(var(--sc)); }
-.intro-rollball { position: absolute; inset: 0; transform: rotate(calc(var(--a) * 360deg - (1 - var(--e)) * 360deg)); }
-.intro-rollball img { left: 0; top: 0; width: 100%; height: 100%; object-fit: fill; }
-.intro-rollball .intro-rc { filter: brightness(calc(.58 + .28 * var(--a))) saturate(calc(.52 + .26 * var(--a))) contrast(calc(.88 + .1 * var(--a))); }
-.intro-rollball .intro-re { opacity: clamp(0, calc((var(--p) - .44) / .26), 1); }
-/* 그림자: 빛은 왼쪽 위 → 그림자는 공 오른쪽 아래. 공과 같은 위치·크기로 따라가고, 공이 뜨면 옅고 작아지며 바닥에 닿으면 진해짐 */
-.intro-rollshadow { pointer-events: none; transform-origin: 50% 50%;
-  opacity: calc(clamp(0, (var(--p) - .26) * 20, 1) * (.25 + .75 * var(--a)) * (1 - .55 * 4 * var(--b) * (1 - var(--b))));
-  transform: translate(var(--x), calc((1 - var(--e)) * var(--sy) + (1 - var(--a) * var(--a)) * var(--dgy))) scale(calc(var(--sc) * (1 - .15 * 4 * var(--b) * (1 - var(--b))))); }
+.intro-roll, .intro-rollshadow { position: absolute; left: 67.64%; top: 49.57%; width: 7.75%; height: 19.37%; }
+.intro-roll { visibility: hidden; }
+/* 두 번째 공: 첫 공이 사라지는 동안 잔디 위에서 서서히 나타남 (그림자는 공 이미지에 구워져 있음) */
+.intro-rollfree { position: absolute; left: 0; top: 0; width: 0; height: 0; pointer-events: none; opacity: clamp(0, calc((var(--p) - .20) / .30), 1); }
+.intro-rollfree img { position: absolute; display: block; left: 0; top: 0; width: 100%; height: 100%; object-fit: fill; }
+.intro-rollball { position: absolute; inset: 0; }
+.intro-rollball .intro-re { opacity: clamp(0, calc((var(--p) - .42) / .22), 1); }
+/* 그림자: 빛은 왼쪽 위 → 그림자는 공 오른쪽 아래 */
+.intro-rollshadow { pointer-events: none; opacity: clamp(0, calc((var(--p) - .20) / .30), 1); }
 .intro-rollshadow i { position: absolute; display: block; border-radius: 50%; background: #000; }
 .intro-rollshadow .intro-w { left: 7.3%; top: 40.9%; width: 160%; height: 69.8%; opacity: .5; filter: blur(max(1.1vw, 2.2vh)); }
 .intro-rollshadow .intro-c { left: 14.9%; top: 69.9%; width: 83.9%; height: 23.2%; opacity: .85; filter: blur(max(.45vw, .9vh)); }
@@ -140,19 +131,18 @@ html { scroll-behavior: smooth; }
 .intro-ball {
   left: 32.57%; top: 12.39%; width: 33.89%; height: 84.73%; object-fit: fill;
   transform-origin: 50.9% 47.9%;
-  --q: clamp(0, calc((var(--p) - .08) / .2), 1);
-  --qq: calc(1 - (1 - var(--q)) * (1 - var(--q)));
+  --q: clamp(0, calc((var(--p) - .06) / .26), 1);
   --s: var(--q);
   filter: brightness(calc(1 - var(--s) * .3)) saturate(calc(1 - var(--s) * .38)) contrast(calc(1 - var(--s) * .12));
-  transform: translate(calc(var(--qq) * 12%), calc(var(--qq) * -30%)) scale(calc(1 - var(--q) * .5));
-  opacity: clamp(0, calc((.3 - var(--p)) * 20), 1);
+  transform: scale(calc(1 - var(--q) * .08));
+  opacity: calc(1 - var(--q));
 }
 
 /* 공과 같이 이동하는 그림자 (왼쪽에서 오른쪽으로 공을 따라감) */
 .intro-bshadow { position: absolute; left: 32.57%; top: 12.39%; width: 33.89%; height: 84.73%; transform-origin: 50.9% 47.9%; pointer-events: none;
-  --q: clamp(0, calc((var(--p) - .08) / .2), 1);
+  --q: clamp(0, calc((var(--p) - .06) / .26), 1);
   --s: var(--q);
-  opacity: clamp(0, calc(1 - var(--q) * 1.5), 1); }
+  opacity: clamp(0, calc(1 - var(--q) * 1.3), 1); }
 .intro-bshadow i { position: absolute; display: block; border-radius: 50%; background: #000; }
 .intro-bshadow .intro-c { left: 11.7%; width: 85.7%; top: 84.6%; height: 4.8%; filter: blur(.62cqw); opacity: calc(.9 - var(--s) * .3); }
 .intro-bshadow .intro-w { left: 3.3%; width: 115.5%; top: 83.3%; height: 8.5%; filter: blur(1.5cqw); opacity: calc(.45 + var(--s) * .2); transform: scaleX(calc(1 + var(--q) * .3)); transform-origin: 50% 50%; }
@@ -162,12 +152,12 @@ html { scroll-behavior: smooth; }
 .intro-labels a { position: absolute; transform: translate(-50%, -50%); width: 11cqw; height: 5.5cqw; display: block; border-radius: 1cqw; color: transparent; font-size: 1px; overflow: hidden; text-decoration: none; }
 .intro-labels a { outline: none; -webkit-tap-highlight-color: transparent; cursor: pointer; }
 .intro-labels a:hover, .intro-labels a:focus, .intro-labels a:active { background: none; }
-.intro-ball-lab { opacity: min(clamp(0, calc(1 - var(--p) * 2.8), 1), clamp(0, calc((.3 - var(--p)) * 20), 1)) !important; filter: brightness(calc(1 - var(--s) * .3)) saturate(calc(1 - var(--s) * .38)) blur(calc(var(--p) * 20px)) !important; }
+.intro-ball-lab { opacity: calc(1 - var(--q)) !important; filter: brightness(calc(1 - var(--s) * .3)) saturate(calc(1 - var(--s) * .38)) !important; }
 .intro-stage[data-scrolled="1"] .intro-labels { pointer-events: none; }
 
 .intro-word { position: absolute; top: 52.6%; transform: translateY(-50%); font-size: 5.4cqw; font-weight: 600; line-height: 1; letter-spacing: -.01em; white-space: nowrap; opacity: clamp(0, calc(1 - var(--p) * 3), 1); }
-.intro-word.intro-l { right: 70.5%; transform: translate(calc(var(--p) * -14cqw), -50%); }
-.intro-word.intro-r { left: 70.5%; transform: translate(calc(var(--p) * 14cqw), -50%); }
+.intro-word.l { right: 70.5%; transform: translate(calc(var(--p) * -14cqw), -50%); }
+.intro-word.r { left: 70.5%; transform: translate(calc(var(--p) * 14cqw), -50%); }
 
 .intro-sidenav { position: absolute; z-index: 3; left: clamp(20px, 5.5vw, 90px); top: 22%; display: flex; flex-direction: column; gap: 6px; font-size: clamp(13px, 1.5vw, 19px); font-weight: 300; letter-spacing: .04em; }
 .intro-sidenav a { color: #fff; text-decoration: none; display: block; opacity: clamp(0, calc((var(--p) - .55) * 5 - var(--i) * .35), 1); transform: translateX(calc((1 - var(--p)) * 80px)); }
@@ -179,14 +169,13 @@ html { scroll-behavior: smooth; }
 
 
 @media (max-width: 700px) {
-  .intro-roll, .intro-rollshadow { --dhx: 186.7%; --dhy: -73.4%; --dgy: -55%; --sh: .755; }
   .intro-wrap { width: 230vw; }
-  .intro-gwrap { height: 100%; width: calc(100svh * 2); left: calc((100vw - 100svh * 2) * .74); top: 0; transform: perspective(900px) rotateX(calc(var(--k) * 30deg)) scale(calc(1 + var(--k) * .5)); }
-  .intro-grass { filter: brightness(.74) saturate(.92); opacity: clamp(0, calc((var(--p) - .26) * 3.2), 1); }
-  .intro-ball-lab { opacity: min(clamp(0, calc(1 - var(--p) * 2.8), 1), clamp(0, calc((.3 - var(--p)) * 20), 1)) !important; filter: brightness(calc(1 - var(--s) * .3)) saturate(calc(1 - var(--s) * .38)) blur(calc(var(--p) * 20px)) !important; }
+  .intro-gwrap { height: 100%; width: calc(100svh * 2); left: calc((100vw - 100svh * 2) * .74); top: 0; transform: perspective(900px) rotateX(calc(var(--k) * 30deg)) scale(calc(1 + var(--k) * .22)); }
+  .intro-grass { filter: brightness(.74) saturate(.92); opacity: clamp(0, calc((var(--p) - .12) * 3), 1); }
+  .intro-ball-lab { opacity: calc(1 - var(--q)) !important; filter: brightness(calc(1 - var(--s) * .3)) saturate(calc(1 - var(--s) * .38)) !important; }
   .intro-word { font-size: clamp(34px, 12vw, 60px); left: 50% !important; right: auto !important; }
-  .intro-word.intro-l { top: 3%; transform: translate(-50%, calc(var(--p) * -30vh)); }
-  .intro-word.intro-r { top: 99%; transform: translate(-50%, calc(var(--p) * 30vh)); }
+  .intro-word.l { top: 3%; transform: translate(-50%, calc(var(--p) * -30vh)); }
+  .intro-word.r { top: 99%; transform: translate(-50%, calc(var(--p) * 30vh)); }
   .intro-labels a { position: absolute; transform: translate(-50%, -50%); width: 11cqw; height: 5.5cqw; display: block; border-radius: 1cqw; color: transparent; font-size: 1px; overflow: hidden; text-decoration: none; }
   .intro-cta { left: 50%; transform: translateX(-50%); bottom: 5%; white-space: nowrap; }
   .intro-title { right: 50%; transform: translateX(50%); bottom: 16%; }

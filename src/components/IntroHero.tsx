@@ -30,6 +30,8 @@ export default function IntroHero() {
   const [modalOpen, setModalOpen] = useState(false);
   const rootRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
+  const markRef = useRef<HTMLDivElement>(null);
+  const freeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const root = rootRef.current;
@@ -45,6 +47,19 @@ export default function IntroHero() {
       const p = reduce ? 1 : total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
       root.style.setProperty("--p", p.toFixed(4));
       stage.dataset.scrolled = p > 0.25 ? "1" : "0";
+      // 잔디에 나타나는 공은 기울어지는 잔디 밖에 따로 그려서(찌그러짐 방지), 잔디 위 표식 위치를 따라가게 함
+      const m = markRef.current;
+      const f = freeRef.current;
+      if (m && f) {
+        const sr = stage.getBoundingClientRect();
+        const mr = m.getBoundingClientRect();
+        const w = mr.width;
+        const h = w * 1.25;
+        f.style.width = w + "px";
+        f.style.height = h + "px";
+        f.style.left = mr.left - sr.left + "px";
+        f.style.top = mr.top + mr.height * 0.48 - sr.top - h * 0.48 + "px";
+      }
     }
     function onScroll() {
       if (!raf) raf = requestAnimationFrame(update);
@@ -85,12 +100,7 @@ export default function IntroHero() {
               <i className="intro-w" />
               <i className="intro-c" />
             </div>
-            <div className="intro-roll">
-              <div className="intro-rollball">
-                <img className="intro-rc" src="/images/intro/ball-roll.webp" alt="" draggable={false} />
-                <img className="intro-re" src="/images/intro/ball-end.webp" alt="" draggable={false} />
-              </div>
-            </div>
+            <div ref={markRef} className="intro-roll" />
           </div>
 
           <div className="intro-wrap">
@@ -113,6 +123,12 @@ export default function IntroHero() {
               </Link>
             ))}
           </nav>
+          <div ref={freeRef} className="intro-rollfree">
+            <div className="intro-rollball">
+              <img className="intro-rc" src="/images/intro/ball-roll.webp" alt="" draggable={false} />
+              <img className="intro-re" src="/images/intro/ball-end.webp" alt="" draggable={false} />
+            </div>
+          </div>
           <div className="intro-fade" />
           <div className="intro-title">DOUBLE J SPORTS</div>
           <button className="intro-cta" type="button" onClick={() => setModalOpen(true)}>
