@@ -9,19 +9,8 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import ApplyModal from "./ApplyModal";
 
-const BOOKING_URL = "https://double-j-sports.vercel.app";
 const LOCALES = ["ko", "en", "de", "ja"] as const;
 const LANG_SHORT: Record<(typeof LOCALES)[number], string> = { ko: "KO", en: "EN", de: "DE", ja: "JA" };
-
-// 공 위 글씨(이미지에 박혀 있음)의 클릭 영역 위치 — 이미지를 바꾸면 이 좌표도 맞춰야 합니다.
-const BALL_LINKS = [
-  { key: "about", href: "/about", left: "50.2%", top: "30.6%" },
-  { key: "program", href: "/programs", left: "59.8%", top: "43.8%" },
-  { key: "gallery", href: "/gallery", left: "59.0%", top: "64.2%" },
-  { key: "location", href: "/locations", left: "50.1%", top: "74.5%" },
-  { key: "notice", href: "/notices", left: "41.1%", top: "63.9%" },
-  { key: "coach", href: "/coaches", left: "39.9%", top: "43.8%" },
-] as const;
 
 const SIDE_LINKS = [
   { key: "about", href: "/about" },
@@ -85,9 +74,6 @@ export default function IntroHero() {
                 {LANG_SHORT[code]}
               </button>
             ))}
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-              {th("booking")}
-            </a>
           </div>
           <div className="intro-top">
             <img src="/images/intro/logo.webp" alt="Double J Sports" />
@@ -106,14 +92,6 @@ export default function IntroHero() {
             </div>
             <img className="intro-ball" src="/images/intro/ball.webp" alt="Double J Sports" draggable={false} />
             <img className="intro-ball intro-ball-lab" src="/images/intro/ball-labels.webp" alt="" draggable={false} />
-
-            <div className="intro-labels">
-              {BALL_LINKS.map((l) => (
-                <Link key={l.key} href={l.href} aria-label={th(`nav.${l.key}`)} style={{ left: l.left, top: l.top }}>
-                  {th(`nav.${l.key}`)}
-                </Link>
-              ))}
-            </div>
 
             <div className="intro-word intro-l">DOUBLE</div>
             <div className="intro-word intro-r">SPORTS</div>
