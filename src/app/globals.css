@@ -111,7 +111,14 @@ html { scroll-behavior: smooth; }
 .intro-grass { filter: brightness(.74) saturate(.92); opacity: clamp(0, calc((var(--p) - .26) * 3.2), 1); }
 .intro-vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 55%, transparent 45%, rgba(0,0,0,.55) 100%); opacity: clamp(0, calc(1 - var(--p) * 3), 1); }
 
-.intro-gwrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: max(100vw, 200vh); aspect-ratio: 2 / 1; }
+.intro-gwrap { position: absolute; left: 50%; top: 50%; width: max(100vw, 200vh); aspect-ratio: 2 / 1;
+  /* 카메라 무빙: 낮은 시점(비스듬히 보는 잔디)에서 위로 올라가며 위에서 내려다보는 시점으로 */
+  --k: calc(1 - clamp(0, (var(--p) - .24) / .46, 1));
+  transform: translate(-50%, -50%) perspective(1100px) rotateX(calc(var(--k) * 34deg)) scale(calc(1 + var(--k) * .55)) translateY(calc(var(--k) * -4%)); }
+.intro-endshadow { position: absolute; inset: 0; pointer-events: none; opacity: clamp(0, calc((var(--p) - .7) * 10), 1); }
+.intro-endshadow i { position: absolute; display: block; border-radius: 50%; background: #000; }
+.intro-endshadow .intro-w { left: 68.2%; top: 57.5%; width: 12.4%; height: 13.5%; opacity: .5; filter: blur(max(1.1vw, 2.2vh)); }
+.intro-endshadow .intro-c { left: 68.8%; top: 63.1%; width: 6.5%; height: 4.5%; opacity: .8; filter: blur(max(.45vw, .9vh)); }
 .intro-endball { left: 67.64%; top: 49.57%; width: 7.75%; height: 19.37%; object-fit: fill; opacity: clamp(0, calc((var(--p) - .7) * 10), 1); }
 /* 공 (검은 배경 사진을 공 모양으로만 오려 씀) */
 .intro-ball {
@@ -120,7 +127,8 @@ html { scroll-behavior: smooth; }
   --q: clamp(0, calc((var(--p) - .08) / .6), 1);
   --s: clamp(0, calc(var(--q) * 1.8), 1);
   filter: brightness(calc(1 - var(--s) * .3)) saturate(calc(1 - var(--s) * .38)) contrast(calc(1 - var(--s) * .12));
-  transform: translate(calc(var(--q) * 64.2%), calc(var(--q) * 6.9%)) scale(calc(1 - var(--s) * 0.771));
+  --r: clamp(0, calc((var(--p) - .26) / .42), 1);
+  transform: translate(calc(var(--q) * 64.2%), calc(var(--q) * 6.9%)) scale(calc(1 - var(--s) * 0.771)) rotate(calc(var(--r) * 360deg));
   opacity: clamp(0, calc((.8 - var(--p)) * 10), 1);
 }
 
@@ -156,7 +164,7 @@ html { scroll-behavior: smooth; }
 
 @media (max-width: 700px) {
   .intro-wrap { width: 230vw; }
-  .intro-gwrap { height: 100%; width: calc(100svh * 2); left: calc((100vw - 100svh * 2) * .74); top: 0; transform: none; }
+  .intro-gwrap { height: 100%; width: calc(100svh * 2); left: calc((100vw - 100svh * 2) * .74); top: 0; transform: perspective(900px) rotateX(calc(var(--k) * 30deg)) scale(calc(1 + var(--k) * .5)); }
   .intro-endball { opacity: clamp(0, calc((var(--p) - .45) * 5), 1); }
   .intro-grass { filter: brightness(.74) saturate(.92); opacity: clamp(0, calc((var(--p) - .42) * 5), 1); }
   .intro-bshadow { transform: scale(calc(1 - var(--p) * .15)); opacity: clamp(0, calc((.5 - var(--p)) * 8), 1); }

@@ -81,6 +81,10 @@ export default function IntroHero() {
 
           <div className="intro-gwrap">
             <img className="intro-bg intro-grass" src="/images/intro/hero-grass.jpg" alt="" draggable={false} />
+            <div className="intro-endshadow">
+              <i className="intro-w" />
+              <i className="intro-c" />
+            </div>
             <img className="intro-endball" src="/images/intro/ball-end.webp" alt="" draggable={false} />
           </div>
 
