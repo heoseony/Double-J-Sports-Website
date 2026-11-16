@@ -90,3 +90,91 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: no-preference) {
   section { animation: premiumFadeIn 0.9s ease both; }
 }
+
+/* INTRO-HOME: 홈 첫 화면(공 → 잔디 스크롤 인트로). 되돌리려면 이 블록 전체 삭제 */
+.intro-root { --p: 0; --blue: #60A5FA; --font: "Pretendard", system-ui, sans-serif; background: #000; color: #fff; font-family: var(--font); line-height: 1.2; }
+.intro-root *, .intro-root *::before, .intro-root *::after { box-sizing: border-box; }
+.intro-top { position: absolute; z-index: 20; inset: 0 0 auto 0; padding: 14px max(3.5vw, env(safe-area-inset-right, 0px)) 0 max(3.5vw, env(safe-area-inset-left, 0px)); display: flex; justify-content: flex-end; pointer-events: none; }
+.intro-top img { height: clamp(46px, 5.6vw, 70px); width: auto; display: block; filter: drop-shadow(0 1px 8px rgba(0,0,0,.5)); }
+
+.intro-hero { height: 320vh; position: relative; }
+.intro-stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: #000; }
+
+/* 이미지 전용 상자: 2:1 비율을 유지하며 화면을 덮음 (공 위치가 화면 크기와 상관없이 같은 곳) */
+.intro-wrap {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: max(100vw, 200vh); aspect-ratio: 2 / 1; container-type: inline-size;
+}
+.intro-wrap img, .intro-gwrap img { position: absolute; display: block; user-select: none; -webkit-user-drag: none; }
+.intro-bg { inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.intro-black { opacity: clamp(0, calc(1 - (var(--p) - .06) * 5), 1); }
+.intro-grass { filter: brightness(.74) saturate(.92); opacity: clamp(0, calc((var(--p) - .26) * 3.2), 1); }
+.intro-vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 55%, transparent 45%, rgba(0,0,0,.55) 100%); opacity: clamp(0, calc(1 - var(--p) * 3), 1); }
+
+.intro-gwrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: max(100vw, 200vh); aspect-ratio: 2 / 1; }
+.intro-endball { left: 67.64%; top: 49.57%; width: 7.75%; height: 19.37%; object-fit: fill; opacity: clamp(0, calc((var(--p) - .7) * 10), 1); }
+/* 공 (검은 배경 사진을 공 모양으로만 오려 씀) */
+.intro-ball {
+  left: 32.57%; top: 12.39%; width: 33.89%; height: 84.73%; object-fit: fill;
+  transform-origin: 50.9% 47.9%;
+  --q: clamp(0, calc((var(--p) - .08) / .6), 1);
+  --s: clamp(0, calc(var(--q) * 1.8), 1);
+  filter: brightness(calc(1 - var(--s) * .3)) saturate(calc(1 - var(--s) * .38)) contrast(calc(1 - var(--s) * .12));
+  transform: translate(calc(var(--q) * 64.2%), calc(var(--q) * 6.9%)) scale(calc(1 - var(--s) * 0.771));
+  opacity: clamp(0, calc((.8 - var(--p)) * 10), 1);
+}
+
+/* 공과 같이 이동하는 그림자 (왼쪽에서 오른쪽으로 공을 따라감) */
+.intro-bshadow { position: absolute; left: 32.57%; top: 12.39%; width: 33.89%; height: 84.73%; transform-origin: 50.9% 47.9%; pointer-events: none;
+  --q: clamp(0, calc((var(--p) - .08) / .6), 1);
+  --s: clamp(0, calc(var(--q) * 1.8), 1);
+  transform: translate(calc(var(--q) * 64.2%), calc(var(--q) * 6.9%)) scale(calc(1 - var(--s) * 0.771));
+  opacity: clamp(0, calc((.8 - var(--p)) * 10), 1); }
+.intro-bshadow i { position: absolute; display: block; border-radius: 50%; background: #000; }
+.intro-bshadow .intro-c { left: 11.7%; width: 85.7%; top: 84.6%; height: 4.8%; filter: blur(.62cqw); opacity: calc(.9 - var(--s) * .25); }
+.intro-bshadow .intro-w { left: 3.3%; width: 115.5%; top: 83.3%; height: 8.5%; filter: blur(1.5cqw); opacity: calc(.45 + var(--s) * .2); transform: scaleX(calc(1 + var(--q) * .22)); transform-origin: 0 50%; }
+
+/* 공 위 메뉴 글자 (공의 흰 조각 위에 올림) */
+.intro-labels { position: absolute; inset: 0; opacity: clamp(0, calc(1 - var(--p) * 6), 1); }
+.intro-labels a { position: absolute; transform: translate(-50%, -50%); width: 11cqw; height: 5.5cqw; display: block; border-radius: 1cqw; color: transparent; font-size: 1px; overflow: hidden; text-decoration: none; }
+.intro-labels a { outline: none; -webkit-tap-highlight-color: transparent; cursor: pointer; }
+.intro-labels a:hover, .intro-labels a:focus, .intro-labels a:active { background: none; }
+.intro-ball-lab { opacity: clamp(0, calc(1 - var(--p) * 2.8), 1) !important; filter: brightness(calc(1 - var(--s) * .3)) saturate(calc(1 - var(--s) * .38)) blur(calc(var(--p) * 20px)) !important; }
+.intro-stage[data-scrolled="1"] .intro-labels { pointer-events: none; }
+
+.intro-word { position: absolute; top: 52.6%; transform: translateY(-50%); font-size: 5.4cqw; font-weight: 600; line-height: 1; letter-spacing: -.01em; white-space: nowrap; opacity: clamp(0, calc(1 - var(--p) * 3), 1); }
+.intro-word.intro-l { right: 70.5%; transform: translate(calc(var(--p) * -14cqw), -50%); }
+.intro-word.intro-r { left: 70.5%; transform: translate(calc(var(--p) * 14cqw), -50%); }
+
+.intro-sidenav { position: absolute; z-index: 3; left: clamp(20px, 5.5vw, 90px); top: 22%; display: flex; flex-direction: column; gap: 6px; font-size: clamp(13px, 1.5vw, 19px); font-weight: 300; letter-spacing: .04em; }
+.intro-sidenav a { color: #fff; text-decoration: none; display: block; opacity: clamp(0, calc((var(--p) - .55) * 5 - var(--i) * .35), 1); transform: translateX(calc((1 - var(--p)) * 80px)); }
+.intro-sidenav a:hover { color: var(--blue); }
+.intro-title { position: absolute; z-index: 3; right: clamp(20px, 4vw, 70px); bottom: 9%; text-align: right; font-weight: 300; line-height: 1; letter-spacing: -.01em; font-size: clamp(26px, 4.2vw, 62px); opacity: clamp(0, calc((var(--p) - .75) * 5), 1); transform: translateY(calc((1 - var(--p)) * 24px)); }
+.intro-cta { position: absolute; z-index: 4; left: clamp(20px, 5.5vw, 90px); bottom: 9%; padding: 12px 22px; border-radius: 6px; font: 700 14px var(--font); letter-spacing: .02em; background: #fff; color: #0A1F44; border: 0; cursor: pointer; }
+.intro-hint { position: absolute; z-index: 3; bottom: 18px; left: 50%; transform: translateX(-50%); font-size: 11px; letter-spacing: .28em; opacity: clamp(0, calc(1 - var(--p) * 8), 1); }
+
+
+@media (max-width: 700px) {
+  .intro-wrap { width: 230vw; }
+  .intro-gwrap { height: 100%; width: calc(100svh * 2); left: calc((100vw - 100svh * 2) * .74); top: 0; transform: none; }
+  .intro-endball { opacity: clamp(0, calc((var(--p) - .45) * 5), 1); }
+  .intro-grass { filter: brightness(.74) saturate(.92); opacity: clamp(0, calc((var(--p) - .42) * 5), 1); }
+  .intro-bshadow { transform: scale(calc(1 - var(--p) * .15)); opacity: clamp(0, calc((.5 - var(--p)) * 8), 1); }
+  .intro-ball { transform: scale(calc(1 - var(--p) * .15)); opacity: clamp(0, calc((.5 - var(--p)) * 8), 1); }
+  .intro-ball-lab { opacity: clamp(0, calc(1 - var(--p) * 2.8), 1) !important; filter: brightness(calc(1 - var(--s) * .3)) saturate(calc(1 - var(--s) * .38)) blur(calc(var(--p) * 20px)) !important; }
+  .intro-word { font-size: clamp(34px, 12vw, 60px); left: 50% !important; right: auto !important; }
+  .intro-word.intro-l { top: 3%; transform: translate(-50%, calc(var(--p) * -30vh)); }
+  .intro-word.intro-r { top: 99%; transform: translate(-50%, calc(var(--p) * 30vh)); }
+  .intro-labels a { position: absolute; transform: translate(-50%, -50%); width: 11cqw; height: 5.5cqw; display: block; border-radius: 1cqw; color: transparent; font-size: 1px; overflow: hidden; text-decoration: none; }
+  .intro-cta { left: 50%; transform: translateX(-50%); bottom: 5%; white-space: nowrap; }
+  .intro-title { right: 50%; transform: translateX(50%); bottom: 16%; }
+  .intro-sidenav { top: 14%; }
+}
+@media (prefers-reduced-motion: reduce) { .intro-hero { height: auto; } }
+
+.intro-util { position: absolute; z-index: 21; left: max(3.5vw, env(safe-area-inset-left, 0px)); top: 22px; display: flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 600; letter-spacing: .08em; }
+.intro-util button { background: none; border: 0; padding: 4px 2px; color: rgba(255,255,255,.5); cursor: pointer; font: inherit; letter-spacing: inherit; }
+.intro-util button:hover, .intro-util button[aria-current="true"] { color: #fff; }
+.intro-util a { color: #fff; text-decoration: none; border: 1px solid rgba(255,255,255,.4); border-radius: 999px; padding: 6px 12px; letter-spacing: .02em; }
+.intro-util a:hover { border-color: #fff; }
+@media (max-width: 700px) { .intro-util { gap: 8px; top: 16px; } .intro-util a { display: none; } }
