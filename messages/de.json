@@ -6,7 +6,8 @@
       "coach": "COACHES",
       "location": "LOCATION",
       "gallery": "GALLERY",
-      "notice": "NOTICE"
+      "notice": "NOTICE",
+      "news": "NEWS"
     },
     "aboutChildren": {
       "greeting": "Willkommen",
@@ -271,6 +272,18 @@
         "title": "PRO EXPERIENCE",
         "desc": "Ein einzigartiges Trainingskonzept,\ngeprägt von Profi-Erfahrung"
       }
+    }
+  },
+  "News": {
+    "heading": "NEWS",
+    "empty": "Noch keine Neuigkeiten.",
+    "player": "Spieler",
+    "back": "Zur Übersicht",
+    "categories": {
+      "all": "Alle",
+      "transfer": "Wechsel",
+      "national": "Nationalmannschaft",
+      "etc": "Sonstiges"
     }
   }
 }

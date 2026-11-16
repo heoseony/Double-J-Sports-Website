@@ -6,7 +6,8 @@
       "coach": "COACHES",
       "location": "LOCATION",
       "gallery": "GALLERY",
-      "notice": "NOTICE"
+      "notice": "NOTICE",
+      "news": "NEWS"
     },
     "aboutChildren": {
       "greeting": "ご挨拶",
@@ -271,6 +272,18 @@
         "title": "PRO EXPERIENCE",
         "desc": "プロの経験から生まれた\n独自のカリキュラム"
       }
+    }
+  },
+  "News": {
+    "heading": "NEWS",
+    "empty": "ニュースはまだありません。",
+    "player": "選手",
+    "back": "一覧へ",
+    "categories": {
+      "all": "すべて",
+      "transfer": "移籍",
+      "national": "代表選出",
+      "etc": "その他"
     }
   }
 }

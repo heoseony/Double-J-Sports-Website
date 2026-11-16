@@ -6,7 +6,8 @@
       "coach": "COACHES",
       "location": "LOCATION",
       "gallery": "GALLERY",
-      "notice": "NOTICE"
+      "notice": "NOTICE",
+      "news": "NEWS"
     },
     "aboutChildren": {
       "greeting": "Greeting",
@@ -271,6 +272,18 @@
         "title": "PRO EXPERIENCE",
         "desc": "A distinctive curriculum\nshaped by professional experience"
       }
+    }
+  },
+  "News": {
+    "heading": "NEWS",
+    "empty": "No news yet.",
+    "player": "Player",
+    "back": "Back to list",
+    "categories": {
+      "all": "All",
+      "transfer": "Transfers",
+      "national": "National Team Call-ups",
+      "etc": "Other"
     }
   }
 }

@@ -13,7 +13,7 @@ const NAV_KEYS = [
   { key: "program", href: "/programs", children: [] },
   { key: "coach", href: "/coaches", children: [] },
   { key: "location", href: "/locations", children: [] },
-  { key: "gallery", href: "/gallery", children: [] },
+  { key: "news", href: "/news", children: [] },
   { key: "notice", href: "/notices", children: [] },
 ] as const;
 

@@ -6,7 +6,8 @@
       "coach": "COACHES",
       "location": "LOCATION",
       "gallery": "GALLERY",
-      "notice": "NOTICE"
+      "notice": "NOTICE",
+      "news": "NEWS"
     },
     "aboutChildren": {
       "greeting": "인사말",
@@ -271,6 +272,18 @@
         "title": "PRO EXPERIENCE",
         "desc": "프로의 경험으로 완성한\n차별화된 커리큘럼"
       }
+    }
+  },
+  "News": {
+    "heading": "NEWS",
+    "empty": "등록된 소식이 없습니다.",
+    "player": "선수",
+    "back": "목록으로",
+    "categories": {
+      "all": "전체",
+      "transfer": "이적",
+      "national": "국가대표 발탁",
+      "etc": "기타"
     }
   }
 }

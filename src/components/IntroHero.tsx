@@ -15,10 +15,10 @@ const LANG_SHORT: Record<(typeof LOCALES)[number], string> = { ko: "KO", en: "EN
 const SIDE_LINKS = [
   { key: "about", href: "/about" },
   { key: "program", href: "/programs" },
-  { key: "coach", href: "/coaches" },
+  { key: "news", href: "/news" },
   { key: "location", href: "/locations" },
-  { key: "gallery", href: "/gallery" },
   { key: "notice", href: "/notices" },
+  { key: "coach", href: "/coaches" },
 ] as const;
 
 export default function IntroHero() {
