@@ -348,3 +348,10 @@ html.dj-embed .dj-fade-r { -webkit-mask-image: linear-gradient(to right, transpa
   .intro-panel { width: 88vw; }
   .intro-panel-frame { width: calc(100% - 17vw); }
 }
+
+/* INTRO-PANEL-CLOSER2: 패널을 메뉴 쪽으로 한 번 더 당김 + 메뉴(패널)가 열리면 오른쪽 아래 DOUBLE J SPORTS 글자가 서서히 사라짐 */
+@media (min-width: 901px) {
+  .intro-panel { width: 92vw; }
+  .intro-panel-frame { width: calc(100% - 15vw); }
+}
+.intro-root[data-panel="1"] .intro-title { opacity: 0 !important; transition: opacity .9s ease; }
