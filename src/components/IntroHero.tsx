@@ -97,6 +97,7 @@ export default function IntroHero() {
       const p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
       root.style.setProperty("--p", p.toFixed(4));
       stage.dataset.scrolled = p > 0.25 ? "1" : "0";
+      stage.dataset.scene = p > 0.58 ? "1" : "0"; // INTRO-MENU-REVEAL: 잔디가 깔리면 메뉴가 시간 따라 위→아래로 나타남
       // 잔디에 나타나는 공은 기울어지는 잔디 밖에 따로 그려서(찌그러짐 방지), 잔디 위 표식 위치를 따라가게 함
       const m = markRef.current;
       const f = freeRef.current;

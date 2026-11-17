@@ -362,3 +362,8 @@ body:not(:has(.dj-own)) section.bg-brand-navy .from-brand-navy { --tw-gradient-f
 
 /* INTRO-HIDE-EYEBROW: 제목 위의 작은 영어 소제목(ABOUT, LOCATION 등) 숨김 (홈·코치 페이지 제외) */
 body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue { display: none; }
+
+/* INTRO-MENU-REVEAL: 메뉴는 스크롤 양이 아니라 '잔디가 깔린 뒤' 위에서 아래로 은은하게 하나씩 나타남 */
+.intro-navitem { opacity: 0; transform: translateY(-10px); pointer-events: none;
+  transition: opacity 1.2s ease, transform 1.2s cubic-bezier(.2,.7,.2,1); transition-delay: 0s; }
+.intro-stage[data-scene="1"] .intro-navitem { opacity: 1; transform: none; pointer-events: auto; transition-delay: calc(.25s + var(--i) * .22s); }
