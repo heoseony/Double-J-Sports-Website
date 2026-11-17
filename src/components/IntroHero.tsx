@@ -9,6 +9,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import ApplyModal from "./ApplyModal";
 import CoachCarousel from "./CoachCarousel";
+import IntroPanel from "./IntroPanel";
 
 const LOCALES = ["ko", "en", "de", "ja"] as const;
 const LANG_SHORT: Record<(typeof LOCALES)[number], string> = { ko: "KO", en: "EN", de: "DE", ja: "JA" };
@@ -38,6 +39,14 @@ export default function IntroHero() {
   const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
   const [coachOpen, setCoachOpen] = useState(false);
+  const [panel, setPanel] = useState<string | null>(null);
+  const closePanel = useCallback(() => setPanel(null), []);
+  const openPanel = (href: string) => {
+    const h = href === "/about" ? "/about/greeting" : href;
+    setPanel((cur) => (cur === h ? null : h));
+  };
+  const panelSrc = panel ? (locale === "ko" ? panel : `/${locale}${panel}`) : null;
+  const activeKey = SIDE_LINKS.find((l) => panel && (l.href === panel || l.children?.some((c) => c.href === panel) || (l.key === "about" && panel === "/about/greeting")))?.key;
   const ct = useTranslations("CoachesPage");
   const closeCoach = useCallback(() => setCoachOpen(false), []);
   const coachItems = useMemo(
@@ -102,7 +111,7 @@ export default function IntroHero() {
 
   return (
     <>
-      <section ref={rootRef} className="intro-root intro-hero">
+      <section ref={rootRef} className="intro-root intro-hero" data-panel={panel ? "1" : "0"}>
         <div ref={stageRef} className="intro-stage" data-scrolled="0">
           <div className="intro-util">
             {LOCALES.map((code) => (
@@ -145,17 +154,17 @@ export default function IntroHero() {
 
           <nav className="intro-sidenav" aria-label="menu">
             {SIDE_LINKS.map((l, i) => (
-              <div key={l.key} className="intro-navitem" style={{ "--i": i } as CSSProperties}>
+              <div key={l.key} className={`intro-navitem${activeKey === l.key ? " intro-navitem-on" : ""}`} style={{ "--i": i } as CSSProperties}>
                 <Link
                   href={l.href}
-                  onClick={l.key === "coach" ? (e) => { e.preventDefault(); setCoachOpen(true); } : undefined}
+                  onClick={(e) => { e.preventDefault(); if (l.key === "coach") { setPanel(null); setCoachOpen(true); } else openPanel(l.href); }}
                 >
                   {th(`nav.${l.key}`)}
                 </Link>
                 {l.children && (
                   <div className="intro-sub">
                     {l.children.map((c) => (
-                      <Link key={c.key} href={c.href}>
+                      <Link key={c.key} href={c.href} onClick={(e) => { e.preventDefault(); openPanel(c.href); }}>
                         {th(`aboutChildren.${c.key}`)}
                       </Link>
                     ))}
@@ -179,6 +188,7 @@ export default function IntroHero() {
           <div className="intro-hint">SCROLL</div>
         </div>
       </section>
+      <IntroPanel src={panelSrc} onClose={closePanel} closeLabel={ct("cardClose")} />
       <CoachCarousel
         open={coachOpen}
         onClose={closeCoach}
