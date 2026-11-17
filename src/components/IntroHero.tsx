@@ -119,6 +119,7 @@ export default function IntroHero() {
             </div>
             <img className="intro-ball" src="/images/intro/ball.webp" alt="Double J Sports" draggable={false} />
             <img className="intro-ball intro-ball-lab" src="/images/intro/ball-labels.webp" alt="" draggable={false} />
+            <div className="intro-ballshade" />
 
             <div className="intro-word intro-l">DOUBLE</div>
             <div className="intro-word intro-r">SPORTS</div>
@@ -146,6 +147,7 @@ export default function IntroHero() {
               <img className="intro-re" src="/images/intro/ball-end.webp" alt="" draggable={false} />
             </div>
           </div>
+          <div className="intro-load" />
           <div className="intro-fade" />
           <div className="intro-title">DOUBLE J SPORTS</div>
           <button className="intro-cta" type="button" onClick={() => setModalOpen(true)}>
