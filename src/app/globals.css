@@ -290,7 +290,7 @@ body:not(:has(.dj-own)) .hover\:border-gray-400:hover { border-color: rgba(255,2
 
 /* INTRO-PANEL: 홈에서 메뉴를 누르면 오른쪽에서 어두운 그라데이션 패널이 열림 (되돌리려면 이 블록 삭제) */
 .intro-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 64vw; z-index: 100; visibility: hidden; opacity: 0; transform: translateX(100%);
-  background: linear-gradient(to right, rgba(7,16,31,0) 0, rgba(7,16,31,.84) 20%, rgba(7,16,31,.9) 100%);
+  background: linear-gradient(to right, rgba(7,16,31,0) 0, rgba(7,16,31,.5) 16%, rgba(7,16,31,.86) 36%, rgba(7,16,31,.9) 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.35) 14%, #000 34%); mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.35) 14%, #000 34%);
   transition: transform .95s cubic-bezier(.2,.7,.2,1), opacity .7s ease, visibility 0s .95s; }
 .intro-panel.intro-panel-on { visibility: visible; opacity: 1; transform: none; transition: transform .95s cubic-bezier(.2,.7,.2,1), opacity .7s ease; }
