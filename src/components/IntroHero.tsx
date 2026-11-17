@@ -43,6 +43,12 @@ export default function IntroHero() {
   const closePanel = useCallback(() => setPanel(null), []);
   const openPanel = (href: string) => {
     const h = href === "/about" ? "/about/greeting" : href;
+    // INTRO-PANEL-SCENE: 패널 뒤에는 항상 잔디 장면+왼쪽 메뉴가 보이도록, 첫 화면(검은 배경)에서 눌러도 잔디 장면으로 이동
+    const rt = rootRef.current;
+    if (rt) {
+      const end = rt.offsetTop + rt.offsetHeight - window.innerHeight;
+      if (window.scrollY < end - 4) window.scrollTo(0, end);
+    }
     setPanel((cur) => (cur === h ? null : h));
   };
   const panelSrc = panel ? (locale === "ko" ? panel : `/${locale}${panel}`) : null;
