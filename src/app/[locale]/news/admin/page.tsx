@@ -6,7 +6,7 @@ export const metadata = { title: "NEWS 관리", robots: { index: false, follow: 
 
 export default function NewsAdminPage() {
   return (
-    <div>
+    <div className="dj-own">
       <Header />
       <NewsAdmin />
       <Footer />

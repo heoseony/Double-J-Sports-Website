@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 // 인트로 끝 → 검정 그라데이션 → 검정 푸터 (다른 페이지의 푸터는 기존 남색 그대로)
 export default function Home() {
   return (
-    <div>
+    <div className="dj-own">
       <IntroHero />
       <div className="intro-footer">
         <Footer />

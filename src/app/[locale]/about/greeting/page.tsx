@@ -29,7 +29,7 @@ export default async function GreetingPage() {
           </div>
         </div>
 
-        <div className="relative mt-6 h-[420px] w-full max-w-[640px] overflow-hidden rounded-lg bg-gray-100 md:mt-10 md:h-[480px]">
+        <div className="dj-fade-l relative mt-6 h-[420px] w-full overflow-hidden md:-mr-16 md:mt-10 md:h-[520px] md:max-w-[720px] md:justify-self-end">
           <Image
             src="/images/greeting-1.jpg"
             alt=""
@@ -41,7 +41,7 @@ export default async function GreetingPage() {
 
       {/* Section 2 */}
       <section className="grid grid-cols-1 items-start gap-10 px-6 pt-6 pb-16 md:grid-cols-2 md:px-16 md:pt-8 md:pb-24">
-        <div className="relative order-2 h-[320px] w-full overflow-hidden rounded-lg bg-gray-100 md:order-1 md:h-[380px]">
+        <div className="dj-fade-r relative order-2 h-[320px] w-full overflow-hidden md:-ml-16 md:order-1 md:h-[420px]">
           <Image
             src="/images/greeting-2.jpg"
             alt=""

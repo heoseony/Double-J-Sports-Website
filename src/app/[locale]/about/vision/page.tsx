@@ -52,10 +52,11 @@ export default async function VisionPage() {
             className="object-cover object-[10%_60%]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/40" />
+          <div className="absolute inset-0 bg-gradient-to-l from-[#07101f] via-[#07101f]/90 to-[#07101f]/15" />
+          <div className="absolute inset-0 bg-[#07101f]/60 md:hidden" />
         </div>
 
-        <div className="relative z-10">
+        <div className="relative z-10 md:ml-[42%]">
           <h1 className="text-4xl font-black leading-tight text-gray-900 md:text-5xl">
             {t("titleLine1")}
             <br />
