@@ -190,7 +190,7 @@
       },
       "jungYeonHwang": {
         "name": "Yeonhwang Jung",
-        "role": "Head Coach",
+        "role": "Head Director",
         "career": [
           "Jeonbuk Hyundai Motors U-12 (Korea K League 1)",
           "Daejeon Citizen U-15 (Korea K League 1)",
@@ -206,17 +206,45 @@
     "coaches": {
       "jungChiHyun": {
         "name": "Chihyun Jung",
-        "role": "Coach"
+        "role": "Coach",
+        "career": [
+          "Joan KJ FC U15",
+          "Ratingen 0419 U17",
+          "VFB Hilden U19",
+          "Turu Düsseldorf",
+          "ETB SW Essen",
+          "FC Porz (current)"
+        ]
       },
       "choHoon": {
         "name": "Hoon Cho",
-        "role": "Coach"
+        "role": "Coach",
+        "career": [
+          "FC Seoul Dae-Dong U13 (Player)",
+          "FC Yeong Seo U16 (Player)",
+          "FC SKD U18 (Player)",
+          "TSV Meerbusch U19 (Germany, Player / 2018–2019)",
+          "DSV Duisburger Landesliga (Germany, Player / 2019–2020)",
+          "SC Kappeln-Erft U15 (Germany, Assistant Coach / 2020–2021)",
+          "SC Düsseldorf West Oberliga (Germany, Player / 2021–2022)",
+          "Konkuk University Football Team, Video Analyst (South Korea, 2 Feb 2024 – 29 Feb 2024)",
+          "Fortuna Düsseldorf U16 (Germany, Video Analyst / 2025–2026)",
+          "Fortuna Düsseldorf U19 (Germany, Video Analyst / 1 Jul 2026 – present)",
+          "KFA (Korea Football Association) Match Analyst Level 1 Certificate"
+        ]
       },
       "peter": {
         "name": "Peter",
-        "role": "Coach"
+        "role": "Coach",
+        "career": [
+          "North Atletico U19",
+          "Sherwood Park Phoenix FC Futsal",
+          "VFB Unterliederbach Herren (current)"
+        ]
       }
-    }
+    },
+    "cardHint": "Click a card to view the profile",
+    "cardClose": "Close"
   },
   "ComingSoon": {
     "notice": "This page is coming soon.",

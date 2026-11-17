@@ -4,10 +4,11 @@
 // 이미지는 public/images/intro/ 안에 있고, 바꾸려면 같은 이름으로 교체하면 됩니다.
 /* eslint-disable @next/next/no-img-element */
 
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import ApplyModal from "./ApplyModal";
+import CoachCarousel from "./CoachCarousel";
 
 const LOCALES = ["ko", "en", "de", "ja"] as const;
 const LANG_SHORT: Record<(typeof LOCALES)[number], string> = { ko: "KO", en: "EN", de: "DE", ja: "JA" };
@@ -36,6 +37,23 @@ export default function IntroHero() {
   const pathname = usePathname();
   const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
+  const [coachOpen, setCoachOpen] = useState(false);
+  const ct = useTranslations("CoachesPage");
+  const closeCoach = useCallback(() => setCoachOpen(false), []);
+  const coachItems = useMemo(
+    () => [
+      ...["jungYeonUng", "jungYeonHwang"].map((k) => ({
+        key: k, name: ct(`leaders.${k}.name`), role: ct(`leaders.${k}.role`),
+        career: ct.raw(`leaders.${k}.career`) as string[], photo: `/images/coach-card/${k}.jpg`,
+      })),
+      ...["jungChiHyun", "choHoon", "peter"].map((k) => ({
+        key: k, name: ct(`coaches.${k}.name`), role: ct(`coaches.${k}.role`),
+        career: ct.raw(`coaches.${k}.career`) as string[], photo: `/images/coach-card/${k}.jpg`,
+      })),
+    ],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [locale],
+  );
   const rootRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const markRef = useRef<HTMLDivElement>(null);
@@ -128,7 +146,12 @@ export default function IntroHero() {
           <nav className="intro-sidenav" aria-label="menu">
             {SIDE_LINKS.map((l, i) => (
               <div key={l.key} className="intro-navitem" style={{ "--i": i } as CSSProperties}>
-                <Link href={l.href}>{th(`nav.${l.key}`)}</Link>
+                <Link
+                  href={l.href}
+                  onClick={l.key === "coach" ? (e) => { e.preventDefault(); setCoachOpen(true); } : undefined}
+                >
+                  {th(`nav.${l.key}`)}
+                </Link>
                 {l.children && (
                   <div className="intro-sub">
                     {l.children.map((c) => (
@@ -156,6 +179,15 @@ export default function IntroHero() {
           <div className="intro-hint">SCROLL</div>
         </div>
       </section>
+      <CoachCarousel
+        open={coachOpen}
+        onClose={closeCoach}
+        items={coachItems}
+        label={th("nav.coach")}
+        hint={ct("cardHint")}
+        credentials={ct("credentialsLabel")}
+        closeLabel={ct("cardClose")}
+      />
       <ApplyModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </>
   );

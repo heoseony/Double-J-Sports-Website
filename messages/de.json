@@ -190,7 +190,7 @@
       },
       "jungYeonHwang": {
         "name": "Yeonhwang Jung",
-        "role": "Cheftrainer",
+        "role": "Gesamtleiter",
         "career": [
           "Jeonbuk Hyundai Motors U-12 (Südkorea K League 1)",
           "Daejeon Citizen U-15 (Südkorea K League 1)",
@@ -206,17 +206,45 @@
     "coaches": {
       "jungChiHyun": {
         "name": "Chihyun Jung",
-        "role": "Trainer"
+        "role": "Trainer",
+        "career": [
+          "Joan KJ FC U15",
+          "Ratingen 0419 U17",
+          "VFB Hilden U19",
+          "Turu Düsseldorf",
+          "ETB SW Essen",
+          "FC Porz (aktuell)"
+        ]
       },
       "choHoon": {
         "name": "Hoon Cho",
-        "role": "Trainer"
+        "role": "Trainer",
+        "career": [
+          "FC Seoul Dae-Dong U13 (Spieler)",
+          "FC Yeong Seo U16 (Spieler)",
+          "FC SKD U18 (Spieler)",
+          "TSV Meerbusch U19 (Deutschland, Spieler / 2018–2019)",
+          "DSV Duisburger Landesliga (Deutschland, Spieler / 2019–2020)",
+          "SC Kappeln-Erft U15 (Deutschland, Co-Trainer / 2020–2021)",
+          "SC Düsseldorf West Oberliga (Deutschland, Spieler / 2021–2022)",
+          "Fußballteam der Konkuk-Universität, Videoanalyst (Südkorea, 02.02.2024–29.02.2024)",
+          "Fortuna Düsseldorf U16 (Deutschland, Videoanalyst / 2025–2026)",
+          "Fortuna Düsseldorf U19 (Deutschland, Videoanalyst / seit 01.07.2026)",
+          "KFA (Koreanischer Fußballverband) Match Analyst Level 1 Zertifikat"
+        ]
       },
       "peter": {
         "name": "Peter",
-        "role": "Trainer"
+        "role": "Trainer",
+        "career": [
+          "North Atletico U19",
+          "Sherwood Park Phoenix FC Futsal",
+          "VFB Unterliederbach Herren (aktuell)"
+        ]
       }
-    }
+    },
+    "cardHint": "Karte anklicken, um das Profil zu öffnen",
+    "cardClose": "Schließen"
   },
   "ComingSoon": {
     "notice": "Diese Seite wird bald verfügbar sein.",

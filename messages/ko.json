@@ -190,7 +190,7 @@
       },
       "jungYeonHwang": {
         "name": "정연황",
-        "role": "감독",
+        "role": "총감독",
         "career": [
           "전북현대모터스 U-12 (한국 K-1리그)",
           "대전시티즌 U-15 (한국 K-1리그)",
@@ -206,17 +206,45 @@
     "coaches": {
       "jungChiHyun": {
         "name": "정치현",
-        "role": "코치"
+        "role": "코치",
+        "career": [
+          "Joan KJ FC U15",
+          "Ratingen 0419 U17",
+          "VFB Hilden U19",
+          "Turu Düsseldorf",
+          "ETB SW Essen",
+          "(현) FC Porz"
+        ]
       },
       "choHoon": {
         "name": "조훈",
-        "role": "코치"
+        "role": "코치",
+        "career": [
+          "FC Seoul Dae-Dong U13 (선수)",
+          "FC Yeong Seo U16 (선수)",
+          "FC SKD U18 (선수)",
+          "TSV Meerbusch U19 (독일, 선수 / 2018~2019)",
+          "DSV Duisburger Landesliga (독일, 선수 / 2019~2020)",
+          "SC Kappeln-Erft U15 (독일, 코트레이너 / 2020~2021)",
+          "SC Düsseldorf West Oberliga (독일, 선수 / 2021~2022)",
+          "건국대학교 축구팀 비디오 분석관 (대한민국, 2024.02.02~2024.02.29)",
+          "Fortuna Düsseldorf U16 (독일, 비디오 분석관 / 2025~2026)",
+          "Fortuna Düsseldorf U19 (독일, 비디오 분석관 / 2026.07.01~현재)",
+          "대한축구협회(KFA) Match Analyst Level 1 자격증"
+        ]
       },
       "peter": {
         "name": "피터",
-        "role": "코치"
+        "role": "코치",
+        "career": [
+          "North Atletico U19",
+          "Sherwood Park Phoenix FC Futsal",
+          "(현) VFB Unterliederbach Herren"
+        ]
       }
-    }
+    },
+    "cardHint": "카드를 누르면 프로필로 이동해요",
+    "cardClose": "닫기"
   },
   "ComingSoon": {
     "notice": "페이지 준비중입니다.",
