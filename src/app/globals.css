@@ -318,3 +318,9 @@ html.dj-embed .dj-fade-r { -webkit-mask-image: linear-gradient(to left, transpar
 @media (max-width: 900px) { .intro-panel-frame { -webkit-mask-image: none; mask-image: none; } }
 /* INTRO-PANEL-SEETHROUGH: 패널 안 페이지 배경을 투명하게 → 뒤의 잔디가 은은하게 비침 */
 html.dj-embed, html.dj-embed body, html.dj-embed body:not(:has(.dj-own)) { background: transparent !important; }
+
+/* INTRO-MENU-STAY */
+.intro-root[data-panel="1"] .intro-navitem { opacity: .62 !important; transform: none !important; transition: opacity .3s ease; }
+.intro-root[data-panel="1"] .intro-navitem.intro-navitem-on { opacity: 1 !important; }
+.intro-root[data-panel="1"] .intro-navitem:hover { opacity: 1 !important; }
+.intro-root[data-panel="1"] .intro-navitem > a { opacity: 1 !important; }
