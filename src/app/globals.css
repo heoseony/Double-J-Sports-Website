@@ -342,3 +342,9 @@ html.dj-embed, html.dj-embed body, html.dj-embed body:not(:has(.dj-own)) { backg
 }
 /* 패널 안의 사진은 양쪽 가장자리를 모두 부드럽게 (경계 줄 방지) */
 html.dj-embed .dj-fade-r { -webkit-mask-image: linear-gradient(to right, transparent 0, #000 24%, #000 72%, transparent), linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent 0, #000 24%, #000 72%, transparent), linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent); mask-composite: intersect; }
+
+/* INTRO-PANEL-CLOSER: 패널을 메뉴 쪽으로 조금 더 당김 (어두운 부분은 화면 왼쪽 약 30%부터) */
+@media (min-width: 901px) {
+  .intro-panel { width: 88vw; }
+  .intro-panel-frame { width: calc(100% - 17vw); }
+}
