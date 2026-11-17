@@ -355,3 +355,7 @@ html.dj-embed .dj-fade-r { -webkit-mask-image: linear-gradient(to right, transpa
   .intro-panel-frame { width: calc(100% - 15vw); }
 }
 .intro-root[data-panel="1"] .intro-title { opacity: 0 !important; transition: opacity .9s ease; }
+
+/* INTRO-CLOSING-BLACK: 인사말 페이지 맨 아래 'TRAIN LIKE A PRO' 영역을 검정으로 (윗 경계는 부드럽게) */
+body:not(:has(.dj-own)) section.bg-brand-navy { background-color: #000; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 90px); mask-image: linear-gradient(to bottom, transparent 0, #000 90px); }
+body:not(:has(.dj-own)) section.bg-brand-navy .from-brand-navy { --tw-gradient-from: #000; --tw-gradient-via: rgba(0,0,0,.8); }
