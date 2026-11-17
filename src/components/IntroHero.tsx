@@ -40,7 +40,10 @@ export default function IntroHero() {
   const [modalOpen, setModalOpen] = useState(false);
   const [coachOpen, setCoachOpen] = useState(false);
   const [panel, setPanel] = useState<string | null>(null);
-  const closePanel = useCallback(() => setPanel(null), []);
+  const closePanel = useCallback(() => {
+    setPanel(null);
+    try { if (window.location.search.includes("panel=")) window.history.replaceState(null, "", window.location.pathname); } catch {}
+  }, []);
   const openPanel = (href: string) => {
     const h = href === "/about" ? "/about/greeting" : href;
     // INTRO-PANEL-SCENE: 패널 뒤에는 항상 잔디 장면+왼쪽 메뉴가 보이도록, 첫 화면(검은 배경)에서 눌러도 잔디 장면으로 이동
@@ -52,7 +55,7 @@ export default function IntroHero() {
     setPanel((cur) => (cur === h ? null : h));
   };
   const panelSrc = panel ? (locale === "ko" ? panel : `/${locale}${panel}`) : null;
-  const activeKey = SIDE_LINKS.find((l) => panel && (l.href === panel || l.children?.some((c) => c.href === panel) || (l.key === "about" && panel === "/about/greeting")))?.key;
+  const activeKey = SIDE_LINKS.find((l) => panel && (l.href === panel.split("#")[0] || l.children?.some((c) => c.href === panel.split("#")[0]) || (l.key === "about" && panel === "/about/greeting")))?.key;
   const ct = useTranslations("CoachesPage");
   const closeCoach = useCallback(() => setCoachOpen(false), []);
   const coachItems = useMemo(
@@ -80,6 +83,11 @@ export default function IntroHero() {
     if (!root || !stage) return;
     if ("scrollRestoration" in history) history.scrollRestoration = "manual";
     window.scrollTo(0, 0);
+    // INTRO-FINAL: /?panel=/about/greeting 처럼 들어오면 홈 위에 그 페이지 패널을 바로 열기
+    try {
+      const q = new URLSearchParams(window.location.search).get("panel");
+      if (q && /^\/[A-Za-z0-9\-_/#%]*$/.test(q) && !q.startsWith("//")) window.setTimeout(() => openPanel(q), 60);
+    } catch {}
     let raf = 0;
     function update() {
       raf = 0;
@@ -199,6 +207,7 @@ export default function IntroHero() {
       <CoachCarousel
         open={coachOpen}
         onClose={closeCoach}
+        onPick={(k) => { setCoachOpen(false); openPanel(`/coaches#${k}`); }}
         items={coachItems}
         label={th("nav.coach")}
         hint={ct("cardHint")}

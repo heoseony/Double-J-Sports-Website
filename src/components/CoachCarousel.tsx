@@ -18,11 +18,12 @@ type Props = {
   hint: string;
   credentials: string;
   closeLabel: string;
+  onPick?: (key: string) => void; // INTRO-FINAL: 주어지면 페이지 이동 대신 이 함수로 열기
 };
 
 const STEP = 46; // 카드 사이 각도
 
-export default function CoachCarousel({ open, onClose, items, label, hint, credentials, closeLabel }: Props) {
+export default function CoachCarousel({ open, onClose, items, label, hint, credentials, closeLabel, onPick }: Props) {
   const router = useRouter();
   const N = items.length;
   const onCloseRef = useRef(onClose);
@@ -134,6 +135,7 @@ export default function CoachCarousel({ open, onClose, items, label, hint, crede
     const s = st.current;
     if (s.going) return;
     s.going = true;
+    if (onPick) { onPick(key); s.going = false; return; }
     router.push(`/coaches#${key}`);
   };
 

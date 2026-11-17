@@ -51,7 +51,7 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full flex flex-col">
         <Script id="dj-embed" strategy="beforeInteractive">
-          {"try{if(self!==top)document.documentElement.classList.add('dj-embed')}catch(e){}"}
+          {"try{var d=document.documentElement,p=location.pathname,m=p.match(/^\\/(en|de|ja)(\\/.*)?$/),l=m?'/'+m[1]:'',r=m?(m[2]||'/'):p;if(self!==top){d.classList.add('dj-embed');if(r==='/'||r==='')top.location.replace(l+'/')}else if(r!=='/'&&r!==''&&r.indexOf('admin')<0){location.replace(l+'/?panel='+encodeURIComponent(r+location.hash))}}catch(e){}"}
         </Script>
         <NextIntlClientProvider messages={messages}>
           {children}
