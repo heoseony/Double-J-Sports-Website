@@ -17,10 +17,13 @@ export default function IntroPanel({ src, onClose, closeLabel }: Props) {
       if (e.key === "Escape") onClose();
     };
     window.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
+    // 스크롤 잠금은 body가 아니라 html에 걸어야 함 (body에 걸면 홈의 sticky 화면이 풀려 까맣게 사라짐)
+    const html = document.documentElement;
+    const prevOverflow = html.style.overflow;
+    html.style.overflow = "hidden";
     return () => {
       window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
+      html.style.overflow = prevOverflow;
     };
   }, [open, onClose]);
 
