@@ -291,10 +291,10 @@ body:not(:has(.dj-own)) .hover\:border-gray-400:hover { border-color: rgba(255,2
 /* INTRO-PANEL: 홈에서 메뉴를 누르면 오른쪽에서 어두운 그라데이션 패널이 열림 (되돌리려면 이 블록 삭제) */
 .intro-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 64vw; z-index: 100; visibility: hidden; opacity: 0; transform: translateX(100%);
   background: linear-gradient(to right, rgba(7,16,31,0) 0, #07101f 14%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 18%); mask-image: linear-gradient(to right, transparent 0, #000 18%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.35) 14%, #000 34%); mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.35) 14%, #000 34%);
   transition: transform .95s cubic-bezier(.2,.7,.2,1), opacity .7s ease, visibility 0s .95s; }
 .intro-panel.intro-panel-on { visibility: visible; opacity: 1; transform: none; transition: transform .95s cubic-bezier(.2,.7,.2,1), opacity .7s ease; }
-.intro-panel-frame { position: absolute; top: 0; right: 0; bottom: 0; width: calc(100% - 8vw); height: 100%; border: 0; background: transparent; color-scheme: dark; }
+.intro-panel-frame { position: absolute; top: 0; right: 0; bottom: 0; width: calc(100% - 14vw); height: 100%; border: 0; background: transparent; color-scheme: dark; }
 .intro-panel-x { position: absolute; z-index: 2; top: 22px; right: 28px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.35); background: rgba(7,16,31,.6); color: #fff; font-size: 17px; line-height: 1; cursor: pointer; }
 .intro-panel-x:hover { background: rgba(255,255,255,.15); }
 .intro-root[data-panel="1"] .intro-navitem:not(.intro-navitem-on) > a { opacity: .5; }
@@ -309,3 +309,6 @@ body:not(:has(.dj-own)) .hover\:border-gray-400:hover { border-color: rgba(255,2
 html.dj-embed header, html.dj-embed footer { display: none !important; }
 html.dj-embed { overflow-x: hidden; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.25) transparent; }
 html.dj-embed body { min-width: 0 !important; }
+/* INTRO-PANEL-PHOTOFADE: 패널(좁은 화면) 안에서도 사진 가장자리를 가로로 부드럽게 */
+html.dj-embed .dj-fade-l { -webkit-mask-image: linear-gradient(to right, transparent 0, #000 30%), linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent); mask-image: linear-gradient(to right, transparent 0, #000 30%), linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent); }
+html.dj-embed .dj-fade-r { -webkit-mask-image: linear-gradient(to left, transparent 0, #000 30%), linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent); mask-image: linear-gradient(to left, transparent 0, #000 30%), linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent); }
