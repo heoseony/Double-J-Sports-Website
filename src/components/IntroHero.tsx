@@ -72,14 +72,15 @@ export default function IntroHero() {
     const root = rootRef.current;
     const stage = stageRef.current;
     if (!root || !stage) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
     let raf = 0;
     function update() {
       raf = 0;
       if (!root || !stage) return;
       const r = root.getBoundingClientRect();
       const total = root.offsetHeight - window.innerHeight;
-      const p = reduce ? 1 : total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+      const p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
       root.style.setProperty("--p", p.toFixed(4));
       stage.dataset.scrolled = p > 0.25 ? "1" : "0";
       // 잔디에 나타나는 공은 기울어지는 잔디 밖에 따로 그려서(찌그러짐 방지), 잔디 위 표식 위치를 따라가게 함

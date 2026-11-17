@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -48,10 +49,10 @@ export default async function LocaleLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: "try{if(self!==top)document.documentElement.classList.add('dj-embed')}catch(e){}" }} />
-      </head>
       <body className="min-h-full flex flex-col">
+        <Script id="dj-embed" strategy="beforeInteractive">
+          {"try{if(self!==top)document.documentElement.classList.add('dj-embed')}catch(e){}"}
+        </Script>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
