@@ -208,7 +208,6 @@ export default function IntroHero() {
       <CoachCarousel
         open={coachOpen}
         onClose={closeCoach}
-        onPick={(k) => { setCoachOpen(false); openPanel(`/coaches#${k}`); }}
         items={coachItems}
         label={th("nav.coach")}
         hint={ct("cardHint")}

@@ -2,7 +2,7 @@
 
 **최종 사이트는 `src/components/IntroHero.tsx` 가 만드는 홈 하나입니다.**
 메뉴(ABOUT, PROGRAM, NEWS, LOCATION, NOTICE)를 누르면 홈은 그대로 두고 오른쪽에서 패널이 열려 그 페이지가 보입니다.
-COACHES는 3D 카드가 열리고, 카드를 누르면 같은 패널에서 코치 상세가 열립니다.
+COACHES는 3D 카드가 펼쳐지고(정연웅, 정연황, 정치현, 조훈, 피터 순), 카드를 눌러도 페이지가 바뀌지 않습니다.
 
 ## 이렇게 동작해요
 - 홈이 아닌 주소(예: `/about/greeting`)를 주소창에 직접 입력해도 홈(`/?panel=/about/greeting`)으로 돌아와 패널로 열립니다.

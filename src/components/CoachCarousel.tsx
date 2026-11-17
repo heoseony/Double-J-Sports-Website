@@ -6,7 +6,6 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useEffect, useRef } from "react";
-import { useRouter } from "@/i18n/navigation";
 
 export type CoachCardItem = { key: string; name: string; role: string; career: string[]; photo: string };
 
@@ -18,13 +17,11 @@ type Props = {
   hint: string;
   credentials: string;
   closeLabel: string;
-  onPick?: (key: string) => void; // INTRO-FINAL: 주어지면 페이지 이동 대신 이 함수로 열기
 };
 
 const STEP = 46; // 카드 사이 각도
 
-export default function CoachCarousel({ open, onClose, items, label, hint, credentials, closeLabel, onPick }: Props) {
-  const router = useRouter();
+export default function CoachCarousel({ open, onClose, items, label, hint, credentials, closeLabel }: Props) {
   const N = items.length;
   const onCloseRef = useRef(onClose);
   onCloseRef.current = onClose;
@@ -131,12 +128,10 @@ export default function CoachCarousel({ open, onClose, items, label, hint, crede
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, N]);
 
+  // INTRO-COACH-SPREAD: 카드는 펼쳐서 보기만 함 (페이지 이동·패널 열기 없음)
   const go = (key: string) => {
-    const s = st.current;
-    if (s.going) return;
-    s.going = true;
-    if (onPick) { onPick(key); s.going = false; return; }
-    router.push(`/coaches#${key}`);
+    void key;
+    st.current.going = false;
   };
 
   const pick = (e: React.MouseEvent, i: number, key: string) => {
