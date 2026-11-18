@@ -243,7 +243,7 @@
         ]
       }
     },
-    "cardHint": "Mit der Maus über die Karte fahren, um die Laufbahn zu sehen",
+    "cardHint": "Karte anklicken: Sie dreht sich und zeigt die Laufbahn",
     "cardClose": "Schließen"
   },
   "ComingSoon": {

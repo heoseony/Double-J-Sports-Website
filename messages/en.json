@@ -243,7 +243,7 @@
         ]
       }
     },
-    "cardHint": "Hover over a card to see the career",
+    "cardHint": "Click a card to spin it and see the career",
     "cardClose": "Close"
   },
   "ComingSoon": {

@@ -19,7 +19,7 @@ export default async function CoachesPage() {
   const t = await getTranslations("CoachesPage");
 
   return (
-<div className="dj-own">
+<div>
 <Header />
 
 <section className="relative flex h-[280px] items-center overflow-hidden bg-brand-navy px-6 py-12 md:h-[440px] md:px-16 md:py-16">

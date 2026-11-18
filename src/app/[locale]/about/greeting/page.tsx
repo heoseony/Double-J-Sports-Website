@@ -67,31 +67,6 @@ export default async function GreetingPage() {
         </div>
       </section>
 
-      {/* Closing */}
-      <section className="relative overflow-hidden bg-brand-navy px-6 py-20 md:px-16 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/greeting-3.jpg"
-            alt=""
-            fill
-            className="object-cover opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent" />
-        </div>
-
-        <div className="relative z-10">
-          <h2 className="text-3xl font-black leading-tight text-white md:text-4xl">
-            TRAIN LIKE A PRO.
-            <br />
-            <span className="text-brand-gold">GROW YOUR WAY.</span>
-          </h2>
-          <div className="mt-5 h-px w-10 bg-white/40" />
-          <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-white/80 md:text-base">
-            {t("closingBody")}
-          </p>
-        </div>
-
-      </section>
       <Footer />
     </div>
   );
