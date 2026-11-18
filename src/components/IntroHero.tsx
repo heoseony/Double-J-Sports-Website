@@ -40,6 +40,7 @@ export default function IntroHero() {
   const [modalOpen, setModalOpen] = useState(false);
   const [coachOpen, setCoachOpen] = useState(false);
   const [coachPick, setCoachPick] = useState<{ i: number; n: number } | null>(null);
+  const [sceneOn, setSceneOn] = useState(false);
   const [coachSel, setCoachSel] = useState<number | null>(null); // eslint-disable-line @typescript-eslint/no-unused-vars
   const [panel, setPanel] = useState<string | null>(null);
   const closePanel = useCallback(() => {
@@ -100,7 +101,8 @@ export default function IntroHero() {
       const p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
       root.style.setProperty("--p", p.toFixed(4));
       stage.dataset.scrolled = p > 0.25 ? "1" : "0";
-      stage.dataset.scene = p > 0.58 ? "1" : "0"; // INTRO-MENU-REVEAL: 잔디가 깔리면 메뉴가 시간 따라 위→아래로 나타남
+      stage.dataset.scene = p > 0.58 ? "1" : "0";
+      setSceneOn(p > 0.58); // INTRO-MENU-REVEAL: 잔디가 깔리면 메뉴가 시간 따라 위→아래로 나타남
       // 잔디에 나타나는 공은 기울어지는 잔디 밖에 따로 그려서(찌그러짐 방지), 잔디 위 표식 위치를 따라가게 함
       const m = markRef.current;
       const f = freeRef.current;
@@ -236,11 +238,13 @@ export default function IntroHero() {
               <h1 className="intro-scene-h">TRAIN LIKE A PRO<br />GROW YOUR WAY</h1>
               <p className="intro-scene-p">{t("bodyLine1")}<br />{t("bodyLine2")}</p>
             </div>
-            <button className="intro-cta intro-scene-cta" type="button" onClick={() => setModalOpen(true)}>{t("cta")}</button>
           </div>
           <div className="intro-hint">SCROLL</div>
         </div>
       </section>
+      {/* 체험수업신청하기: 어떤 메뉴/패널이 열려도 그대로 위에 떠 있음 */}
+      <button className="intro-cta intro-scene-cta intro-cta-top" data-on={sceneOn ? "1" : "0"} type="button" onClick={() => setModalOpen(true)}>{t("cta")}</button>
+      <div className="intro-glow" data-mode={coachOpen ? "coach" : panel ? "panel" : "off"} aria-hidden="true" />
       <IntroPanel src={panelSrc} onClose={closePanel} closeLabel={ct("cardClose")} />
       <CoachCarousel
         open={coachOpen}

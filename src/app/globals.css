@@ -1322,7 +1322,7 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   color: #fff;
   text-shadow: 0 1px 12px rgba(0,0,0,.6);
 }
-.intro-scene .intro-scene-cta {
+.intro-cta.intro-scene-cta {
   position: absolute;
   z-index: 1;
   left: clamp(20px, 4.9vw, 90px);
@@ -1344,7 +1344,7 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   box-shadow: none;
   transition: background .3s ease, color .3s ease;
 }
-.intro-scene .intro-scene-cta:hover {
+.intro-cta.intro-scene-cta:hover {
   background: #E1262E;
   color: #fff;
 }
@@ -1372,7 +1372,7 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   .intro-scene-h {
     font-size: clamp(30px, 8.4vw, 44px);
   }
-  .intro-scene .intro-scene-cta {
+  .intro-cta.intro-scene-cta {
     left: 6vw;
     bottom: 9vh;
   }
@@ -1405,7 +1405,7 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   transform: translateY(-2px);
   color: #fff;
 }
-.intro-scene .intro-scene-cta {
+.intro-cta.intro-scene-cta {
   left: clamp(20px, 5.5vw, 90px);
 }
 .intro-gwrap img.intro-grass {
@@ -1534,7 +1534,7 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   .intro-scene-copy {
     bottom: clamp(28px, 5.5vh, 64px);
   }
-  .intro-scene .intro-scene-cta {
+  .intro-cta.intro-scene-cta {
     bottom: clamp(40px, 11vh, 110px);
   }
 }
@@ -1771,3 +1771,25 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
     mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.35) 22%, #000 52%), linear-gradient(to bottom, transparent 0, #000 14%, #000 86%, transparent 100%);
     mask-composite: intersect; }
 }
+
+/* INTRO-MENU-GLOW: 메뉴를 열면 뒤에서 아래쪽 잔디가 그라데이션으로 은은하게 비침 + 체험수업신청하기 버튼은 계속 보임 */
+.intro-glow { position: fixed; left: 0; right: 0; bottom: 0; height: 62vh; z-index: 101; pointer-events: none; opacity: 0; transition: opacity 1s ease;
+  background: url(/images/intro/hero-grass.jpg) center bottom / cover no-repeat; mix-blend-mode: screen; filter: saturate(1.1);
+  -webkit-mask-image: linear-gradient(to top, #000 0, rgba(0,0,0,.6) 40%, transparent 100%);
+  mask-image: linear-gradient(to top, #000 0, rgba(0,0,0,.6) 40%, transparent 100%); }
+.intro-glow[data-mode="panel"] { opacity: .62; }
+.intro-glow[data-mode="coach"] { opacity: .4; z-index: 201; }
+.intro-root[data-panel="1"] .intro-scene, .intro-root[data-coach="1"] .intro-scene { opacity: 1 !important; transition: opacity .5s ease; transition-delay: 0s; }
+.intro-scene .intro-scene-art, .intro-scene .intro-scene-clouds, .intro-scene .intro-scene-copy { transition: opacity .6s ease; }
+.intro-root[data-panel="1"] .intro-scene-art, .intro-root[data-panel="1"] .intro-scene-clouds, .intro-root[data-panel="1"] .intro-scene-copy,
+.intro-root[data-coach="1"] .intro-scene-art, .intro-root[data-coach="1"] .intro-scene-clouds, .intro-root[data-coach="1"] .intro-scene-copy { opacity: 0 !important; }
+.intro-panel { background: linear-gradient(to right, rgba(7,16,31,0) 0, rgba(7,16,31,.42) 16%, rgba(7,16,31,.72) 36%, rgba(7,16,31,.78) 100%); }
+.intro-cc { background: radial-gradient(ellipse at 50% 45%, rgba(38,55,86,.78), rgba(10,22,36,.84) 70%, rgba(4,10,18,.88)); }
+.intro-cc-x, .intro-cc-label { z-index: 3; }
+/* 패널의 그라데이션 바탕은 클릭을 막지 않음 (왼쪽 메뉴·체험수업신청하기 버튼이 눌리도록). 페이지 영역과 ✕만 클릭됨 */
+.intro-panel { pointer-events: none; }
+.intro-panel-frame, .intro-panel-x { pointer-events: auto; }
+
+.intro-cta.intro-scene-cta.intro-cta-top { position: fixed; z-index: 150; opacity: 0; visibility: hidden; transition: opacity 1s ease .9s, visibility 0s 1.9s, background .3s ease, color .3s ease; }
+.intro-cta.intro-scene-cta.intro-cta-top[data-on="1"] { opacity: 1; visibility: visible; transition: opacity 1s ease .9s, visibility 0s, background .3s ease, color .3s ease; }
+.intro-stage { overflow: hidden; overflow: clip; }
