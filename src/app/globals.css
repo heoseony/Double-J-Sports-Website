@@ -1778,7 +1778,7 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   -webkit-mask-image: linear-gradient(to top, #000 0, rgba(0,0,0,.6) 40%, transparent 100%);
   mask-image: linear-gradient(to top, #000 0, rgba(0,0,0,.6) 40%, transparent 100%); }
 .intro-glow[data-mode="panel"] { opacity: .62; }
-.intro-glow[data-mode="coach"] { opacity: .4; z-index: 201; }
+.intro-glow[data-mode="coach"] { opacity: 0; }
 .intro-root[data-panel="1"] .intro-scene, .intro-root[data-coach="1"] .intro-scene { opacity: 1 !important; transition: opacity .5s ease; transition-delay: 0s; }
 .intro-scene .intro-scene-art, .intro-scene .intro-scene-clouds, .intro-scene .intro-scene-copy { transition: opacity .6s ease; }
 .intro-root[data-panel="1"] .intro-scene-art, .intro-root[data-panel="1"] .intro-scene-clouds, .intro-root[data-panel="1"] .intro-scene-copy,
