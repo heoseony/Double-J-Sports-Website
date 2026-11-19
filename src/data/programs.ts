@@ -19,10 +19,10 @@ export const ACADEMY_PROGRAMS: ProgramMeta[] = [
   { key: "elite", image: "/images/greeting-kid.jpg", objectPosition: "50% 28%", detailImage: { src: "/images/program-elite.webp", objectPosition: "50% 50%" }, hasTarget: false },
 ];
 
-// 취미반: 아카데미와 따로 분리. 여성/남성 사진은 같은 단체사진을 임시로 같이 써요.
+// 취미반: 아카데미와 따로 분리. 남성 취미반은 전용 사진, 여성 취미반은 단체사진을 임시로 써요.
 export const HOBBY_PROGRAMS: ProgramMeta[] = [
   { key: "women", image: "/images/program-adult.jpg", objectPosition: "50% 40%", hasTarget: true },
-  { key: "men", image: "/images/program-adult.jpg", objectPosition: "50% 40%", hasTarget: true },
+  { key: "men", image: "/images/program-men.jpg", objectPosition: "40% 55%", hasTarget: true },
 ];
 
 // ──────────────────────────────────────────────────────────────
