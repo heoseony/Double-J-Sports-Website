@@ -223,13 +223,13 @@ export default function CoachCarousel({ open, onClose, items, label, hint, crede
                       <img src={c.photo} alt="" draggable={false} />
                       <div className="intro-cc-cap">
                         <div className="intro-cc-role">{c.role}</div>
-                        <div className="intro-cc-name">{c.name}</div>
+                        <div className={c.name.length >= 9 ? "intro-cc-name intro-cc-name-long" : "intro-cc-name"}>{c.name}</div>
                       </div>
                     </div>
                     <div className="intro-cc-back">
                       <div className="intro-cc-info">
                         <div className="intro-cc-role">{c.role}</div>
-                        <div className="intro-cc-name">{c.name}</div>
+                        <div className={c.name.length >= 9 ? "intro-cc-name intro-cc-name-long" : "intro-cc-name"}>{c.name}</div>
                         <div className="intro-cc-ln" />
                         <div className="intro-cc-hd">{credentials}</div>
                         <ul>{c.career.map((l) => <li key={l}>{l}</li>)}</ul>
@@ -261,13 +261,13 @@ export default function CoachCarousel({ open, onClose, items, label, hint, crede
                   <div className="intro-cc-shade" />
                   <div className="intro-cc-cap">
                     <div className="intro-cc-role">{c.role}</div>
-                    <div className="intro-cc-name">{c.name}</div>
+                    <div className={c.name.length >= 9 ? "intro-cc-name intro-cc-name-long" : "intro-cc-name"}>{c.name}</div>
                   </div>
                 </div>
                 <div className="intro-cc-back">
                   <div className="intro-cc-info">
                     <div className="intro-cc-role">{c.role}</div>
-                    <div className="intro-cc-name">{c.name}</div>
+                    <div className={c.name.length >= 9 ? "intro-cc-name intro-cc-name-long" : "intro-cc-name"}>{c.name}</div>
                     <div className="intro-cc-ln" />
                     <div className="intro-cc-hd">{credentials}</div>
                     <ul>

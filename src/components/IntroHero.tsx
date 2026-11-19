@@ -77,11 +77,11 @@ export default function IntroHero() {
     () => [
       ...["jungYeonUng", "jungYeonHwang"].map((k) => ({
         key: k, name: ct(`leaders.${k}.name`), role: ct(`leaders.${k}.role`),
-        career: ct.raw(`leaders.${k}.career`) as string[], photo: `/images/coach-card/${k}.jpg`,
+        career: ((): string[] => { const v = ct.raw(`leaders.${k}.career`) as unknown; return Array.isArray(v) ? (v as string[]) : []; })(), photo: `/images/coach-card/${k}.jpg`,
       })),
       ...["jungChiHyun", "choHoon", "peter"].map((k) => ({
         key: k, name: ct(`coaches.${k}.name`), role: ct(`coaches.${k}.role`),
-        career: ct.raw(`coaches.${k}.career`) as string[], photo: `/images/coach-card/${k}.jpg`,
+        career: ((): string[] => { const v = ct.raw(`coaches.${k}.career`) as unknown; return Array.isArray(v) ? (v as string[]) : []; })(), photo: `/images/coach-card/${k}.jpg`,
       })),
     ],
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -262,7 +262,7 @@ export default function IntroHero() {
         open={coachOpen}
         onClose={closeCoach}
         items={coachItems}
-        label={th("nav.coach")}
+        label={locale === "ko" ? ct("staffLabel") : th("nav.coach")}
         hint={ct("cardHint")}
         credentials={ct("credentialsLabel")}
         closeLabel={ct("cardClose")}

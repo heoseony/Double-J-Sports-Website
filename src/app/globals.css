@@ -1811,3 +1811,20 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
     mask-composite: intersect;
   }
 }
+
+/* 긴 이름(일본어 등)은 한 줄에 들어가도록 글씨를 줄임 */
+.intro-cc-name.intro-cc-name-long { white-space: nowrap; font-size: clamp(15px, 1.7vw, 22px); }
+.intro-cg-card .intro-cc-name.intro-cc-name-long { font-size: clamp(10px, .98vw, 14px); }
+.intro-cg-card .intro-cc-info .intro-cc-name.intro-cc-name-long { font-size: clamp(10px, .98vw, 13px); }
+@media (max-width: 900px) {
+  .intro-cc-info .intro-cc-name.intro-cc-name-long { font-size: 12px; }
+  .intro-cg-card .intro-cc-name.intro-cc-name-long, .intro-cg-card .intro-cc-info .intro-cc-name.intro-cc-name-long { font-size: 10px; }
+}
+/* 체험수업 신청 버튼: 처음부터 화면에 고정 */
+.intro-cta.intro-scene-cta.intro-cta-top, .intro-cta.intro-scene-cta.intro-cta-top[data-on="0"] { opacity: 1; visibility: visible; transition: background .3s ease, color .3s ease; }
+/* 모바일: 패널/코치가 열리면 뒤의 메뉴·로고를 숨기고 버튼이 내용을 가리지 않게 */
+@media (max-width: 900px) {
+  .intro-root[data-panel="1"] .intro-sidenav, .intro-root[data-coach="1"] .intro-sidenav,
+  .intro-root[data-panel="1"] .intro-logo-btn, .intro-root[data-coach="1"] .intro-logo-btn { opacity: 0 !important; visibility: hidden; pointer-events: none; }
+  .intro-root[data-panel="1"] ~ .intro-cta.intro-scene-cta.intro-cta-top, .intro-root[data-coach="1"] ~ .intro-cta.intro-scene-cta.intro-cta-top { top: auto !important; bottom: max(12px, env(safe-area-inset-bottom, 0px)) !important; right: 12px !important; left: auto !important; transform: none !important; padding: 9px 14px; font-size: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.45); }
+}
