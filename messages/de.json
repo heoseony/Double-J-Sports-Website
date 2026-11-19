@@ -58,6 +58,41 @@
     }
   },
   "ProgramsPage": {
+    "view": {
+      "lead1": "Vom ersten Schritt bis zur Vorbereitung auf die Profibühne",
+      "lead2": "bieten wir strukturierte Programme für jede Entwicklungsstufe.",
+      "introLabel": "Über das Programm",
+      "targetLabel": "Zielgruppe",
+      "cta": "Probetraining anfragen",
+      "more": "Mehr erfahren",
+      "sub": "Programme",
+      "pro": {
+        "title": "Pro",
+        "head": "Von Profis für künftige Profis",
+        "desc": "Ein professionelles Trainingsprogramm für Spieler mit dem Ziel Profifußball.",
+        "intro": "Von Profis für künftige Profis. Ein professionelles Trainingsprogramm für Spieler mit dem Ziel Profifußball.",
+        "target": "Spieler mit dem Ziel Profifußball"
+      },
+      "academy": {
+        "title": "Akademie",
+        "head": "Strukturiertes Wachstum – von den Grundlagen bis zum Spiel",
+        "desc": "Ein Jugendfußball-Programm, das Spieler mit einem strukturierten Curriculum von den Grundlagen bis zum Wettkampf entwickelt."
+      },
+      "kids": {
+        "title": "Kids",
+        "desc": "Ein Jugendprogramm, in dem Kinder mit Spaß Grundlagen und Teamgeist lernen",
+        "target": "Kinder und Jugendliche"
+      },
+      "elite": {
+        "title": "Elite",
+        "desc": "Ein vertiefendes Programm, das auf soliden Grundlagen Technik und Spielerfahrung aufbaut"
+      },
+      "adult": {
+        "title": "Erwachsenen-Freizeitgruppe",
+        "desc": "Ein Programm für erwachsene Frauen und Männer, die gemeinsam Spaß am Fußball und an Bewegung haben",
+        "target": "Erwachsene Frauen und Männer"
+      }
+    },
     "heading1": "Das passende Programm",
     "heading2": "für dein Niveau und deine Ziele",
     "items": {

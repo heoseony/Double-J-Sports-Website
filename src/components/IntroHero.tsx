@@ -39,6 +39,16 @@ export default function IntroHero() {
   const pathname = usePathname();
   const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
+
+  // 패널 안 페이지(프로그램 등)에서 "체험수업 신청하기"를 누르면 신청 창을 열어요.
+  useEffect(() => {
+    const onMsg = (e: MessageEvent) => {
+      if (e.origin !== window.location.origin) return;
+      if ((e.data as { type?: string } | null)?.type === "dj-apply") setModalOpen(true);
+    };
+    window.addEventListener("message", onMsg);
+    return () => window.removeEventListener("message", onMsg);
+  }, []);
   const [coachOpen, setCoachOpen] = useState(false);
   const [coachPick, setCoachPick] = useState<{ i: number; n: number } | null>(null);
   const [sceneOn, setSceneOn] = useState(false);

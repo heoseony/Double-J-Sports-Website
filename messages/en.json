@@ -58,6 +58,41 @@
     }
   },
   "ProgramsPage": {
+    "view": {
+      "lead1": "From your very first steps to preparing for the professional stage,",
+      "lead2": "we offer structured programs tailored to each player's stage of growth.",
+      "introLabel": "About the program",
+      "targetLabel": "Who it's for",
+      "cta": "Book a Trial Session",
+      "more": "Learn more",
+      "sub": "Programs",
+      "pro": {
+        "title": "Pro",
+        "head": "Made by pros, for future pros",
+        "desc": "A specialized training program for players aiming for the professional game.",
+        "intro": "Made by pros, for future pros. A specialized training program for players aiming for the professional game.",
+        "target": "Players aiming for the professional game"
+      },
+      "academy": {
+        "title": "Academy",
+        "head": "Structured growth, from the basics to match play",
+        "desc": "A youth football program that grows players from fundamentals to real match play through a structured curriculum."
+      },
+      "kids": {
+        "title": "Kids",
+        "desc": "A youth program where children enjoy football while learning the fundamentals and teamwork",
+        "target": "Youth players"
+      },
+      "elite": {
+        "title": "Elite",
+        "desc": "An advanced program that builds technique and match experience on top of strong fundamentals"
+      },
+      "adult": {
+        "title": "Adult Recreational",
+        "desc": "A program for adult men and women who enjoy football and staying active together",
+        "target": "Adult men and women"
+      }
+    },
     "heading1": "A Program Built",
     "heading2": "for Your Level and Goals",
     "items": {
