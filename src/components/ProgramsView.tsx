@@ -231,9 +231,14 @@ export default function ProgramsView({ dict }: { dict: ProgramsDict }) {
             {dict.lead2}
           </p>
         </div>
-        <div className="pointer-events-none absolute right-[4%] top-1/2 hidden h-[260px] w-[300px] -translate-y-1/2 md:block lg:right-[8%]" aria-hidden="true">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_85%,rgba(96,150,44,0.38),transparent_68%)]" />
-          <Image src="/images/intro/ball.webp" alt="" fill sizes="300px" className="object-contain" />
+        <div className="pointer-events-none absolute right-[3%] top-1/2 hidden h-[230px] w-[460px] -translate-y-1/2 md:block lg:right-[6%]" aria-hidden="true">
+          <Image
+            src="/images/program-ball.jpg"
+            alt=""
+            fill
+            sizes="460px"
+            className="object-cover [mask-image:radial-gradient(ellipse_at_center,#000_42%,transparent_72%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,#000_42%,transparent_72%)]"
+          />
         </div>
       </section>
 
