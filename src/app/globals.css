@@ -1826,3 +1826,12 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   .intro-root[data-panel="1"] .intro-logo-btn, .intro-root[data-coach="1"] .intro-logo-btn { opacity: 0 !important; visibility: hidden; pointer-events: none; }
   .intro-root[data-panel="1"] ~ .intro-cta.intro-scene-cta.intro-cta-top, .intro-root[data-coach="1"] ~ .intro-cta.intro-scene-cta.intro-cta-top { top: auto !important; bottom: max(12px, env(safe-area-inset-bottom, 0px)) !important; right: 12px !important; left: auto !important; transform: none !important; padding: 9px 14px; font-size: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.45); }
 }
+
+/* 모바일: 왼쪽 세로 메뉴를 위쪽 가로 메뉴로 바꿔 아카데미 그림·문구와 겹치지 않게 */
+@media (max-width: 900px) {
+  .intro-sidenav { top: 108px; left: 18px; right: 18px; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 18px; font-size: 13px; letter-spacing: .06em; }
+  .intro-sidenav .intro-sub { display: none !important; }
+  .intro-sidenav .intro-navitem { transform: none; }
+  .intro-sidenav .intro-social { display: flex; gap: 14px; margin-left: auto; }
+  .intro-sidenav .intro-social svg { width: 20px; height: 20px; }
+}
