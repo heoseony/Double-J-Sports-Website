@@ -16,7 +16,7 @@ export const PRO_IMAGE = { src: "/images/program-pro.jpg", objectPosition: "50% 
 
 export const ACADEMY_PROGRAMS: ProgramMeta[] = [
   { key: "kids", image: "/images/greeting-1.jpg", objectPosition: "50% 35%", detailImage: { src: "/images/program-kids.jpg", objectPosition: "50% 60%" }, hasTarget: true },
-  { key: "elite", image: "/images/greeting-kid.jpg", objectPosition: "50% 28%", detailImage: { src: "/images/program-elite.webp", objectPosition: "50% 50%" }, hasTarget: false },
+  { key: "elite", image: "/images/program-elite-card.jpg", objectPosition: "50% 35%", detailImage: { src: "/images/program-elite.webp", objectPosition: "50% 50%" }, hasTarget: false },
 ];
 
 // 취미반: 아카데미와 따로 분리. 여성·남성 취미반 각각 전용 사진을 써요.
