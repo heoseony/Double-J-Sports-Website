@@ -4,7 +4,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import Script from "next/script";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -50,9 +49,7 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-        <Script id="dj-embed" strategy="beforeInteractive">
-          {"try{var d=document.documentElement,p=location.pathname,m=p.match(/^\\/(en|de|ja)(\\/.*)?$/),l=m?'/'+m[1]:'',r=m?(m[2]||'/'):p;if(self!==top){d.classList.add('dj-embed');if(r==='/'||r==='')top.location.replace(l+'/')}else if(r!=='/'&&r!==''&&r.indexOf('admin')<0){location.replace(l+'/?panel='+encodeURIComponent(r+location.hash))}}catch(e){}"}
-        </Script>
+        <script id="dj-embed" dangerouslySetInnerHTML={{ __html: "try{var d=document.documentElement,p=location.pathname,m=p.match(/^\\/(en|de|ja)(\\/.*)?$/),l=m?'/'+m[1]:'',r=m?(m[2]||'/'):p;if(self!==top){d.classList.add('dj-embed');if(r==='/'||r==='')top.location.replace(l+'/')}else if(r!=='/'&&r!==''&&r.indexOf('admin')<0){location.replace(l+'/?panel='+encodeURIComponent(r+location.hash))}}catch(e){}" }} />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
