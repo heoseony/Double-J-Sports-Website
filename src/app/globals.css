@@ -1820,8 +1820,6 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   .intro-cc-info .intro-cc-name.intro-cc-name-long { font-size: 12px; }
   .intro-cg-card .intro-cc-name.intro-cc-name-long, .intro-cg-card .intro-cc-info .intro-cc-name.intro-cc-name-long { font-size: 10px; }
 }
-/* 체험수업 신청 버튼: 처음부터 화면에 고정 */
-.intro-cta.intro-scene-cta.intro-cta-top, .intro-cta.intro-scene-cta.intro-cta-top[data-on="0"] { opacity: 1; visibility: visible; transition: background .3s ease, color .3s ease; }
 /* 모바일: 패널/코치가 열리면 뒤의 메뉴·로고를 숨기고 버튼이 내용을 가리지 않게 */
 @media (max-width: 900px) {
   .intro-root[data-panel="1"] .intro-sidenav, .intro-root[data-coach="1"] .intro-sidenav,
