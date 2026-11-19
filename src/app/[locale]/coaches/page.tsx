@@ -76,7 +76,7 @@ export default async function CoachesPage() {
 </section>
 
 <section className="border-t border-gray-100 px-6 py-10 md:px-16 md:py-14">
-<p className="text-xs font-bold tracking-widest text-brand-blue">COACHING STAFF</p>
+<p className="text-xs font-bold tracking-widest text-brand-blue">{t("staffLabel")}</p>
 <h2 className="mt-1 text-xl font-black text-gray-900 md:text-2xl">
           {t("staffHeading")}
 </h2>

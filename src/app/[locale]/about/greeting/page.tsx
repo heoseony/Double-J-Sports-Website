@@ -11,8 +11,8 @@ export default async function GreetingPage() {
       <Header />
 
       {/* Section 1 */}
-      <section className="grid grid-cols-1 items-start gap-10 px-6 pb-6 pt-16 md:grid-cols-2 md:px-16 md:pb-8 md:pt-20">
-        <div>
+      <section className="relative grid grid-cols-1 items-start gap-10 px-6 pb-16 pt-16 md:grid-cols-1 md:px-16 md:pb-24 md:pt-20">
+        <div className="relative z-10 md:max-w-[540px]">
           <p className="text-sm font-bold tracking-widest text-brand-blue">ABOUT</p>
           <h1 className="mt-3 text-4xl font-black leading-tight text-gray-900 md:text-5xl">
             {t("h1Line1")}
@@ -27,43 +27,30 @@ export default async function GreetingPage() {
           <div className="mt-6 whitespace-pre-line text-base leading-[1.8] text-gray-700">
             {t("body1")}
           </div>
-        </div>
 
-        <div className="dj-fade-l relative mt-6 h-[420px] w-full overflow-hidden md:-mr-16 md:mt-10 md:h-[520px] md:max-w-[720px] md:justify-self-end">
-          <Image
-            src="/images/greeting-1.jpg"
-            alt=""
-            fill
-            className="object-cover object-[center_75%]"
-          />
-        </div>
-      </section>
-
-      {/* Section 2 */}
-      <section className="grid grid-cols-1 items-start gap-10 px-6 pt-6 pb-16 md:grid-cols-2 md:px-16 md:pt-8 md:pb-24">
-        <div className="dj-fade-r relative order-2 h-[320px] w-full overflow-hidden md:-ml-16 md:order-1 md:h-[420px]">
-          <Image
-            src="/images/greeting-2.jpg"
-            alt=""
-            fill
-            className="object-cover"
-          />
-        </div>
-
-        <div className="order-1 md:order-2">
-                    <h2 className="mt-3 text-3xl font-black leading-tight text-gray-900 md:text-4xl">
-            {t("h2Line1")}
-            <br />
-            {t("h2Line2")}
-            <br />
-            <span className="text-brand-blue">{t("h2Line3")}</span>
-          </h2>
+          {/* 이어지는 두 번째 카피 */}
+          <div className="mt-10 text-base leading-[1.8] text-gray-700">
+            <p>
+              {t("h2Line1")}
+              <br />
+              {t("h2Line2")}
+              <br />
+              {t("h2Line3")}
+            </p>
+          </div>
 
           <div className="mt-6 whitespace-pre-line text-base leading-[1.8] text-gray-700">
             <p>{t("body2")}</p>
           </div>
+        </div>
 
-          <div className="mt-6 h-px w-10 bg-gray-300" />
+        <div className="dj-fade-l dj-team relative mt-6 aspect-[1749/979] w-full overflow-hidden md:absolute md:right-0 md:top-24 md:mt-0 md:w-auto">
+          <Image
+            src="/images/greeting-team.jpg"
+            alt=""
+            fill
+            className="object-cover object-center"
+          />
         </div>
       </section>
 

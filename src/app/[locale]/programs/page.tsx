@@ -27,10 +27,7 @@ export default async function ProgramsPage() {
             className="grid grid-cols-1 gap-4 px-6 py-12 md:grid-cols-[260px_1fr] md:gap-10 md:px-16 md:py-20"
           >
             <div>
-              <p className="text-xs font-bold tracking-widest text-gray-400">
-                {t(`items.${key}.subtitle`)}
-              </p>
-              <div className="mt-1 flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <h2 className="text-2xl font-black text-brand-navy md:text-3xl">
                   {t(`items.${key}.title`)}
                 </h2>
