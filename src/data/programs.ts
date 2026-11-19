@@ -8,13 +8,14 @@ export type ProgramMeta = {
   key: ProgramKey;
   image: string | null; // 없으면 사진 자리가 어두운 색으로 표시됩니다
   objectPosition: string;
+  detailImage?: { src: string; objectPosition: string }; // 자세히 보기를 펼쳤을 때 쓰는 사진 (없으면 위의 image 사용)
   hasTarget: boolean; // "교육 대상" 문구가 확정된 경우에만 true
 };
 
 export const PRO_IMAGE = { src: "/images/program-pro.jpg", objectPosition: "50% 62%" };
 
 export const ACADEMY_PROGRAMS: ProgramMeta[] = [
-  { key: "kids", image: "/images/greeting-1.jpg", objectPosition: "50% 35%", hasTarget: true },
+  { key: "kids", image: "/images/greeting-1.jpg", objectPosition: "50% 35%", detailImage: { src: "/images/program-kids.jpg", objectPosition: "50% 60%" }, hasTarget: true },
   { key: "elite", image: "/images/greeting-kid.jpg", objectPosition: "50% 28%", hasTarget: false },
   { key: "adult", image: null, objectPosition: "50% 50%", hasTarget: true },
 ];

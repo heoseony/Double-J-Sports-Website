@@ -227,8 +227,8 @@ export default function ProgramsView({ dict }: { dict: ProgramsDict }) {
                     <div className="mt-4 rounded-md border border-white/15 bg-[rgba(10,22,46,0.7)] p-6 md:p-8">
                       <div className="grid gap-6 md:grid-cols-[minmax(0,260px)_1fr] md:gap-10">
                         <div className="relative hidden aspect-[4/3] overflow-hidden rounded-md bg-gradient-to-br from-[#16305c] to-[#0b1a33] md:block">
-                          {spMeta.image && (
-                            <Image src={spMeta.image} alt="" fill sizes="260px" className="object-cover" style={{ objectPosition: spMeta.objectPosition }} />
+                          {(spMeta.detailImage || spMeta.image) && (
+                            <Image src={spMeta.detailImage?.src ?? spMeta.image!} alt="" fill sizes="260px" className="object-cover" style={{ objectPosition: spMeta.detailImage?.objectPosition ?? spMeta.objectPosition }} />
                           )}
                         </div>
                         <div className="flex min-w-0 flex-col justify-center gap-5">
