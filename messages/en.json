@@ -1,6 +1,7 @@
 {
   "Header": {
     "nav": {
+      "camp": "CAMP",
       "about": "ABOUT",
       "program": "PROGRAM",
       "coach": "COACHES",
@@ -254,6 +255,10 @@
   "ComingSoon": {
     "notice": "This page is coming soon.",
     "pages": {
+      "camp": {
+        "category": "CAMP",
+        "title": "Camp"
+      },
       "locationsFrankfurt": {
         "category": "LOCATION",
         "title": "Frankfurt Location"

@@ -25,10 +25,11 @@ const SIDE_LINKS: SideLink[] = [
     ],
   },
   { key: "program", href: "/programs" },
-  { key: "news", href: "/news" },
-  { key: "location", href: "/locations" },
-  { key: "notice", href: "/notices" },
   { key: "coach", href: "/coaches" },
+  { key: "location", href: "/locations" },
+  { key: "news", href: "/news" },
+  { key: "notice", href: "/notices" },
+  { key: "camp", href: "/camp" },
 ];
 
 export default function IntroHero() {

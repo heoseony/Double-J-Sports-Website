@@ -1,6 +1,7 @@
 {
   "Header": {
     "nav": {
+      "camp": "CAMP",
       "about": "ABOUT",
       "program": "PROGRAM",
       "coach": "COACHES",
@@ -254,6 +255,10 @@
   "ComingSoon": {
     "notice": "페이지 준비중입니다.",
     "pages": {
+      "camp": {
+        "category": "CAMP",
+        "title": "캠프"
+      },
       "locationsFrankfurt": {
         "category": "LOCATION",
         "title": "프랑크푸르트점"

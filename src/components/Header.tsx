@@ -15,6 +15,7 @@ const NAV_KEYS = [
   { key: "location", href: "/locations", children: [] },
   { key: "news", href: "/news", children: [] },
   { key: "notice", href: "/notices", children: [] },
+  { key: "camp", href: "/camp", children: [] },
 ] as const;
 
 const INSTAGRAM_ACCOUNTS = [

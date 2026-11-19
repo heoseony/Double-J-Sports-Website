@@ -8,6 +8,7 @@ const FOOTER_LINK_KEYS = [
   { key: "location", href: "/locations" },
   { key: "news", href: "/news" },
   { key: "notice", href: "/notices" },
+  { key: "camp", href: "/camp" },
 ] as const;
 
 export default async function Footer() {

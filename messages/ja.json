@@ -1,6 +1,7 @@
 {
   "Header": {
     "nav": {
+      "camp": "CAMP",
       "about": "ABOUT",
       "program": "PROGRAM",
       "coach": "COACHES",
@@ -254,6 +255,10 @@
   "ComingSoon": {
     "notice": "このページは準備中です。",
     "pages": {
+      "camp": {
+        "category": "CAMP",
+        "title": "キャンプ"
+      },
       "locationsFrankfurt": {
         "category": "LOCATION",
         "title": "フランクフルト"
