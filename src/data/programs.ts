@@ -17,7 +17,7 @@ export const PRO_IMAGE = { src: "/images/program-pro.jpg", objectPosition: "50% 
 export const ACADEMY_PROGRAMS: ProgramMeta[] = [
   { key: "kids", image: "/images/greeting-1.jpg", objectPosition: "50% 35%", detailImage: { src: "/images/program-kids.jpg", objectPosition: "50% 60%" }, hasTarget: true },
   { key: "elite", image: "/images/greeting-kid.jpg", objectPosition: "50% 28%", hasTarget: false },
-  { key: "adult", image: null, objectPosition: "50% 50%", hasTarget: true },
+  { key: "adult", image: "/images/program-adult.jpg", objectPosition: "50% 40%", hasTarget: true },
 ];
 
 // ──────────────────────────────────────────────────────────────
@@ -25,6 +25,5 @@ export const ACADEMY_PROGRAMS: ProgramMeta[] = [
 // - 수업 일정, 수강료, 연령대, 훈련 횟수 (키즈반 · 엘리트반 · 성인 취미반)
 // - 엘리트반의 교육 대상
 // - PRO: 훈련 목표, 주요 훈련 구성, 상담 및 신청 안내 세부 내용
-// - 성인 취미반 사진 (등록된 성인 수업 사진이 없어요)
 // 확정되면 messages 에 문구를 넣고, 이 파일의 hasTarget 등을 true 로 바꾸면 됩니다.
 // ──────────────────────────────────────────────────────────────
