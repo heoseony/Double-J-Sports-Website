@@ -213,7 +213,7 @@ function Section({
 }
 
 export default function ProgramsView({ dict }: { dict: ProgramsDict }) {
-  const [open, setOpen] = useState<"pro" | "academy" | "hobby" | null>("academy");
+  const [open, setOpen] = useState<"pro" | "academy" | "hobby" | null>(null);
   const toggle = (k: "pro" | "academy" | "hobby") => setOpen((cur) => (cur === k ? null : k));
 
   return (
