@@ -16,7 +16,7 @@ export const PRO_IMAGE = { src: "/images/program-pro.jpg", objectPosition: "50% 
 
 export const ACADEMY_PROGRAMS: ProgramMeta[] = [
   { key: "kids", image: "/images/greeting-1.jpg", objectPosition: "50% 35%", detailImage: { src: "/images/program-kids.jpg", objectPosition: "50% 60%" }, hasTarget: true },
-  { key: "elite", image: "/images/greeting-kid.jpg", objectPosition: "50% 28%", hasTarget: false },
+  { key: "elite", image: "/images/greeting-kid.jpg", objectPosition: "50% 28%", detailImage: { src: "/images/program-elite.webp", objectPosition: "50% 50%" }, hasTarget: false },
   { key: "adult", image: "/images/program-adult.jpg", objectPosition: "50% 40%", hasTarget: true },
 ];
 
