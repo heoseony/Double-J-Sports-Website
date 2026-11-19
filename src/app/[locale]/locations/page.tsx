@@ -47,7 +47,7 @@ export default async function LocationsPage() {
             className="group relative flex h-[420px] flex-col justify-end overflow-hidden rounded-md"
           >
             <div className="absolute inset-0 bg-gray-800">
-              <Image src={loc.image} alt="" fill className="object-cover opacity-70 transition duration-700 group-hover:scale-105" />
+              <Image src={loc.image} alt="" fill className="object-cover transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             </div>
 
@@ -64,7 +64,7 @@ export default async function LocationsPage() {
                 href={loc.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-bold text-gray-900 hover:opacity-90"
+                className="mt-5 inline-flex items-center gap-2 rounded-md border border-[#E8C468] px-4 py-2 text-sm font-bold text-[#E8C468] transition hover:bg-[#E8C468]/10"
               >
                 {t("viewButton")}
               </a>

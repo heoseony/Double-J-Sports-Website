@@ -1,40 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 const PILLAR_KEYS = ["training", "match", "growth", "pro"] as const;
 
-const PILLAR_ICONS: Record<(typeof PILLAR_KEYS)[number], React.ReactNode> = {
-  training: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M4 4h16v4H4z" />
-      <path d="M4 10h10v4H4z" />
-      <path d="M4 16h7v4H4z" />
-    </svg>
-  ),
-  match: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 3v18M3 12h18" />
-    </svg>
-  ),
-  growth: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M4 20V15" />
-      <path d="M9 20V11" />
-      <path d="M14 20V7" />
-      <path d="M19 20V4" />
-    </svg>
-  ),
-  pro: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M8 4h8l-1 6a3 3 0 0 1-6 0z" />
-      <path d="M12 13v4" />
-      <path d="M9 20h6" />
-    </svg>
-  ),
-};
+// 아이콘 그림: public/images/vision/pillar-<이름>.webp (같은 이름으로 바꾸면 됩니다)
+const PILLAR_ICONS: Record<(typeof PILLAR_KEYS)[number], React.ReactNode> = Object.fromEntries(
+  PILLAR_KEYS.map((k) => [
+    k,
+    // eslint-disable-next-line @next/next/no-img-element
+    <img key={k} src={`/images/vision/pillar-${k}.webp`} alt="" width={30} height={30} className="h-[30px] w-[30px] object-contain" />,
+  ]),
+) as Record<(typeof PILLAR_KEYS)[number], React.ReactNode>;
 
 export default async function VisionPage() {
   const t = await getTranslations("VisionPage");
@@ -43,19 +20,12 @@ export default async function VisionPage() {
     <div>
       <Header />
 
-      <section className="relative overflow-hidden px-6 py-16 md:px-16">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/vision-hero.png"
-            alt=""
-            fill
-            className="object-cover object-[10%_60%]"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/40" />
+      {/* VISION-HERO: 왼쪽에 카피(왼쪽 정렬), 오른쪽에 수업 영상. 영상은 글씨 쪽으로 살짝 겹치며 그라데이션으로 번짐. 영상 교체: public/videos/vision-class.mp4 */}
+      <section className="vision-hero relative overflow-hidden px-6 py-16 md:px-16 md:py-24">
+        <div className="vision-video" aria-hidden="true">
+          <video src="/videos/vision-class.mp4" autoPlay muted loop playsInline preload="auto" />
         </div>
-
-        <div className="relative z-10">
+        <div className="relative z-10 text-left md:max-w-[52%]">
           <h1 className="text-4xl font-black leading-tight text-gray-900 md:text-5xl">
             {t("titleLine1")}
             <br />
@@ -72,7 +42,7 @@ export default async function VisionPage() {
         <div className="grid grid-cols-1 gap-10 divide-y divide-gray-100 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
           {PILLAR_KEYS.map((key) => (
             <div key={key} className="flex flex-col items-center gap-3 pt-8 text-center first:pt-0 sm:pt-0 lg:px-6 lg:first:pl-0 lg:last:pr-0">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-50 text-brand-blue">
+              <div className="flex h-12 w-12 items-center justify-center">
                 {PILLAR_ICONS[key]}
               </div>
               <p className="text-xs font-bold tracking-wide text-brand-navy">{t(`pillars.${key}.title`)}</p>

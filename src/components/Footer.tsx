@@ -6,8 +6,9 @@ const FOOTER_LINK_KEYS = [
   { key: "program", href: "/programs" },
   { key: "coach", href: "/coaches" },
   { key: "location", href: "/locations" },
-  { key: "gallery", href: "/gallery" },
+  { key: "news", href: "/news" },
   { key: "notice", href: "/notices" },
+  { key: "camp", href: "/camp" },
 ] as const;
 
 export default async function Footer() {

@@ -1,12 +1,14 @@
 {
   "Header": {
     "nav": {
+      "camp": "CAMP",
       "about": "ABOUT",
       "program": "PROGRAM",
       "coach": "COACHES",
       "location": "LOCATION",
       "gallery": "GALLERY",
-      "notice": "NOTICE"
+      "notice": "NOTICE",
+      "news": "NEWS"
     },
     "aboutChildren": {
       "greeting": "Greeting",
@@ -21,6 +23,7 @@
   "Hero": {
     "bodyLine1": "From your first touch of the ball to your next step toward the professional game.",
     "bodyLine2": "Double J provides training tailored to each player's goals and level.",
+    "eyebrow": "YOUTH & PRO PLAYER DEVELOPMENT ACADEMY IN GERMANY",
     "cta": "Book a Trial Session →"
   },
   "HomePrograms": {
@@ -55,6 +58,52 @@
     }
   },
   "ProgramsPage": {
+    "view": {
+      "lead1": "From your very first steps to preparing for the professional stage,",
+      "lead2": "we offer structured programs tailored to each player's stage of growth.",
+      "introLabel": "About the program",
+      "targetLabel": "Who it's for",
+      "cta": "Book a Trial Session",
+      "more": "Learn more",
+      "sub": "Programs",
+      "pro": {
+        "title": "Pro",
+        "head": "Made by pros, for future pros",
+        "desc": "A specialized training program for players aiming for the professional game.",
+        "intro": "Made by pros, for future pros. A specialized training program for players aiming for the professional game.",
+        "target": "Players aiming for the professional game",
+        "cta": "Apply for a Test"
+      },
+      "academy": {
+        "title": "Academy",
+        "head": "Structured growth, from the basics to match play",
+        "desc": "A youth football program that grows players from fundamentals to real match play through a structured curriculum."
+      },
+      "kids": {
+        "title": "Kids",
+        "desc": "A youth program where children enjoy football while learning the fundamentals and teamwork",
+        "target": "Youth players"
+      },
+      "elite": {
+        "title": "Elite",
+        "desc": "An advanced program that builds technique and match experience on top of strong fundamentals"
+      },
+      "hobby": {
+        "title": "Recreational",
+        "head": "Enjoy the game, grow together",
+        "desc": "An adult football program for those who love playing and staying active together."
+      },
+      "women": {
+        "title": "Women's Recreational",
+        "desc": "A program for adult women who enjoy football and staying active together",
+        "target": "Adult women"
+      },
+      "men": {
+        "title": "Men's Recreational",
+        "desc": "A program for adult men who enjoy football and staying active together",
+        "target": "Adult men"
+      }
+    },
     "heading1": "A Program Built",
     "heading2": "for Your Level and Goals",
     "items": {
@@ -143,6 +192,9 @@
     "h2Line2": "Whatever Your Goal,",
     "h2Line3": "Everyone Deserves the Chance to Experience Great Coaching.",
     "body2": "Drawing on the experience of our former professional players and coaches currently active in Europe, we provide training tailored to each player's level and goals—from strong fundamentals and match-focused training to advanced player development.",
+    "lead": "Double J Sports Academy offers structured football education\nfor every level and goal, from children kicking a ball for the first time\nto players aiming for the professional stage.",
+    "lead2": "An environment to experience great training and grow toward your goals.\nDouble J is open to everyone,\na place to grow bigger through football.",
+    "fullTitle": "Full Greeting",
     "closingBody": "Train the professional way,\nand grow through football that's your own."
   },
   "Gallery": {
@@ -169,6 +221,7 @@
     "heroLine2": "A Better Path to Growth.",
     "credentialsLabel": "Playing & Coaching Career",
     "staffHeading": "Coaching Staff",
+    "staffLabel": "COACHING STAFF",
     "leaders": {
       "jungYeonUng": {
         "name": "Yeonwoong Jung",
@@ -189,7 +242,7 @@
       },
       "jungYeonHwang": {
         "name": "Yeonhwang Jung",
-        "role": "Head Coach",
+        "role": "Head Director",
         "career": [
           "Jeonbuk Hyundai Motors U-12 (Korea K League 1)",
           "Daejeon Citizen U-15 (Korea K League 1)",
@@ -205,21 +258,53 @@
     "coaches": {
       "jungChiHyun": {
         "name": "Chihyun Jung",
-        "role": "Coach"
+        "role": "Coach",
+        "career": [
+          "Joan KJ FC U15",
+          "Ratingen 0419 U17",
+          "VFB Hilden U19",
+          "Turu Düsseldorf",
+          "ETB SW Essen",
+          "FC Porz (current)"
+        ]
       },
       "choHoon": {
         "name": "Hoon Cho",
-        "role": "Coach"
+        "role": "Coach",
+        "career": [
+          "FC Seoul Dae-Dong U13 (Player)",
+          "FC Yeong Seo U16 (Player)",
+          "FC SKD U18 (Player)",
+          "TSV Meerbusch U19 (Germany, Player / 2018–2019)",
+          "DSV Duisburger Landesliga (Germany, Player / 2019–2020)",
+          "SC Kappeln-Erft U15 (Germany, Assistant Coach / 2020–2021)",
+          "SC Düsseldorf West Oberliga (Germany, Player / 2021–2022)",
+          "Konkuk University Football Team, Video Analyst (South Korea, 2 Feb 2024 – 29 Feb 2024)",
+          "Fortuna Düsseldorf U16 (Germany, Video Analyst / 2025–2026)",
+          "Fortuna Düsseldorf U19 (Germany, Video Analyst / 1 Jul 2026 – present)",
+          "KFA (Korea Football Association) Match Analyst Level 1 Certificate"
+        ]
       },
       "peter": {
         "name": "Peter",
-        "role": "Coach"
+        "role": "Coach",
+        "career": [
+          "North Atletico U19",
+          "Sherwood Park Phoenix FC Futsal",
+          "VFB Unterliederbach Herren (current)"
+        ]
       }
-    }
+    },
+    "cardHint": "Click a card to spin it and see the career",
+    "cardClose": "Close"
   },
   "ComingSoon": {
     "notice": "This page is coming soon.",
     "pages": {
+      "camp": {
+        "category": "CAMP",
+        "title": "Camp"
+      },
       "locationsFrankfurt": {
         "category": "LOCATION",
         "title": "Frankfurt Location"
@@ -271,6 +356,18 @@
         "title": "PRO EXPERIENCE",
         "desc": "A distinctive curriculum\nshaped by professional experience"
       }
+    }
+  },
+  "News": {
+    "heading": "NEWS",
+    "empty": "No news yet.",
+    "player": "Player",
+    "back": "Back to list",
+    "categories": {
+      "all": "All",
+      "transfer": "Transfers",
+      "national": "National Team Call-ups",
+      "etc": "Other"
     }
   }
 }

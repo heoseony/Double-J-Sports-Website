@@ -1,12 +1,14 @@
 {
   "Header": {
     "nav": {
+      "camp": "CAMP",
       "about": "ABOUT",
       "program": "PROGRAM",
       "coach": "COACHES",
       "location": "LOCATION",
       "gallery": "GALLERY",
-      "notice": "NOTICE"
+      "notice": "NOTICE",
+      "news": "NEWS"
     },
     "aboutChildren": {
       "greeting": "Willkommen",
@@ -21,6 +23,7 @@
   "Hero": {
     "bodyLine1": "Vom ersten Ballkontakt bis zum nächsten Schritt in Richtung Profifußball.",
     "bodyLine2": "Wir trainieren dich passend zu deinem Ziel und deinem Niveau.",
+    "eyebrow": "JUGEND- & PROFISPIELER-AKADEMIE IN DEUTSCHLAND",
     "cta": "Probetraining anfragen →"
   },
   "HomePrograms": {
@@ -55,6 +58,52 @@
     }
   },
   "ProgramsPage": {
+    "view": {
+      "lead1": "Vom ersten Schritt bis zur Vorbereitung auf die Profibühne",
+      "lead2": "bieten wir strukturierte Programme für jede Entwicklungsstufe.",
+      "introLabel": "Über das Programm",
+      "targetLabel": "Zielgruppe",
+      "cta": "Probetraining anfragen",
+      "more": "Mehr erfahren",
+      "sub": "Programme",
+      "pro": {
+        "title": "Pro",
+        "head": "Von Profis für künftige Profis",
+        "desc": "Ein professionelles Trainingsprogramm für Spieler mit dem Ziel Profifußball.",
+        "intro": "Von Profis für künftige Profis. Ein professionelles Trainingsprogramm für Spieler mit dem Ziel Profifußball.",
+        "target": "Spieler mit dem Ziel Profifußball",
+        "cta": "Eignungstest anfragen"
+      },
+      "academy": {
+        "title": "Akademie",
+        "head": "Strukturiertes Wachstum – von den Grundlagen bis zum Spiel",
+        "desc": "Ein Jugendfußball-Programm, das Spieler mit einem strukturierten Curriculum von den Grundlagen bis zum Wettkampf entwickelt."
+      },
+      "kids": {
+        "title": "Kids",
+        "desc": "Ein Jugendprogramm, in dem Kinder mit Spaß Grundlagen und Teamgeist lernen",
+        "target": "Kinder und Jugendliche"
+      },
+      "elite": {
+        "title": "Elite",
+        "desc": "Ein vertiefendes Programm, das auf soliden Grundlagen Technik und Spielerfahrung aufbaut"
+      },
+      "hobby": {
+        "title": "Freizeitgruppen",
+        "head": "Mit Freude spielen, gemeinsam wachsen",
+        "desc": "Ein Fußballprogramm für Erwachsene, die gemeinsam Spaß am Spiel und an Bewegung haben."
+      },
+      "women": {
+        "title": "Frauen-Freizeitgruppe",
+        "desc": "Ein Programm für erwachsene Frauen, die gemeinsam Spaß am Fußball und an Bewegung haben",
+        "target": "Erwachsene Frauen"
+      },
+      "men": {
+        "title": "Männer-Freizeitgruppe",
+        "desc": "Ein Programm für erwachsene Männer, die gemeinsam Spaß am Fußball und an Bewegung haben",
+        "target": "Erwachsene Männer"
+      }
+    },
     "heading1": "Das passende Programm",
     "heading2": "für dein Niveau und deine Ziele",
     "items": {
@@ -143,6 +192,9 @@
     "h2Line2": "oder welches Ziel du hast –",
     "h2Line3": "gutes Training sollte allen offenstehen.",
     "body2": "Unsere Trainer bringen Erfahrung als ehemalige Profispieler und als aktive Coaches in Europa mit. Diese Erfahrung geben wir direkt an dich weiter: von soliden Grundlagen über spielnahes Training bis zur professionellen Spielerentwicklung – immer abgestimmt auf dein Niveau und deine Ziele.",
+    "lead": "Die Double J Sports Academy bietet strukturierte Fußballausbildung\nfür jedes Niveau und jedes Ziel – vom Kind, das zum ersten Mal einen Ball berührt,\nbis zum Spieler mit Profi-Ambitionen.",
+    "lead2": "Ein Umfeld, in dem man gutes Training erlebt und auf seine Ziele hinwächst.\nDouble J steht allen offen –\nein Ort, um durch Fußball weiter zu wachsen.",
+    "fullTitle": "Vollständige Begrüßung",
     "closingBody": "Trainiere auf die Art eines Profis\nund wachse mit deinem eigenen Fußball."
   },
   "Gallery": {
@@ -169,6 +221,7 @@
     "heroLine2": "Coaching, das dich weiterbringt.",
     "credentialsLabel": "Werdegang & Karriere",
     "staffHeading": "Trainerteam",
+    "staffLabel": "COACHING STAFF",
     "leaders": {
       "jungYeonUng": {
         "name": "Yeonwoong Jung",
@@ -189,7 +242,7 @@
       },
       "jungYeonHwang": {
         "name": "Yeonhwang Jung",
-        "role": "Cheftrainer",
+        "role": "Gesamtleiter",
         "career": [
           "Jeonbuk Hyundai Motors U-12 (Südkorea K League 1)",
           "Daejeon Citizen U-15 (Südkorea K League 1)",
@@ -205,21 +258,53 @@
     "coaches": {
       "jungChiHyun": {
         "name": "Chihyun Jung",
-        "role": "Trainer"
+        "role": "Trainer",
+        "career": [
+          "Joan KJ FC U15",
+          "Ratingen 0419 U17",
+          "VFB Hilden U19",
+          "Turu Düsseldorf",
+          "ETB SW Essen",
+          "FC Porz (aktuell)"
+        ]
       },
       "choHoon": {
         "name": "Hoon Cho",
-        "role": "Trainer"
+        "role": "Trainer",
+        "career": [
+          "FC Seoul Dae-Dong U13 (Spieler)",
+          "FC Yeong Seo U16 (Spieler)",
+          "FC SKD U18 (Spieler)",
+          "TSV Meerbusch U19 (Deutschland, Spieler / 2018–2019)",
+          "DSV Duisburger Landesliga (Deutschland, Spieler / 2019–2020)",
+          "SC Kappeln-Erft U15 (Deutschland, Co-Trainer / 2020–2021)",
+          "SC Düsseldorf West Oberliga (Deutschland, Spieler / 2021–2022)",
+          "Fußballteam der Konkuk-Universität, Videoanalyst (Südkorea, 02.02.2024–29.02.2024)",
+          "Fortuna Düsseldorf U16 (Deutschland, Videoanalyst / 2025–2026)",
+          "Fortuna Düsseldorf U19 (Deutschland, Videoanalyst / seit 01.07.2026)",
+          "KFA (Koreanischer Fußballverband) Match Analyst Level 1 Zertifikat"
+        ]
       },
       "peter": {
         "name": "Peter",
-        "role": "Trainer"
+        "role": "Trainer",
+        "career": [
+          "North Atletico U19",
+          "Sherwood Park Phoenix FC Futsal",
+          "VFB Unterliederbach Herren (aktuell)"
+        ]
       }
-    }
+    },
+    "cardHint": "Karte anklicken: Sie dreht sich und zeigt die Laufbahn",
+    "cardClose": "Schließen"
   },
   "ComingSoon": {
     "notice": "Diese Seite wird bald verfügbar sein.",
     "pages": {
+      "camp": {
+        "category": "CAMP",
+        "title": "Camp"
+      },
       "locationsFrankfurt": {
         "category": "LOCATION",
         "title": "Standort Frankfurt"
@@ -271,6 +356,18 @@
         "title": "PRO EXPERIENCE",
         "desc": "Ein einzigartiges Trainingskonzept,\ngeprägt von Profi-Erfahrung"
       }
+    }
+  },
+  "News": {
+    "heading": "NEWS",
+    "empty": "Noch keine Neuigkeiten.",
+    "player": "Spieler",
+    "back": "Zur Übersicht",
+    "categories": {
+      "all": "Alle",
+      "transfer": "Wechsel",
+      "national": "Nationalmannschaft",
+      "etc": "Sonstiges"
     }
   }
 }

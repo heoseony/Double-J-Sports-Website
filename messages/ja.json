@@ -1,12 +1,14 @@
 {
   "Header": {
     "nav": {
+      "camp": "CAMP",
       "about": "ABOUT",
       "program": "PROGRAM",
       "coach": "COACHES",
       "location": "LOCATION",
       "gallery": "GALLERY",
-      "notice": "NOTICE"
+      "notice": "NOTICE",
+      "news": "NEWS"
     },
     "aboutChildren": {
       "greeting": "ご挨拶",
@@ -21,6 +23,7 @@
   "Hero": {
     "bodyLine1": "初めてボールに触れる子どもから、プロを目指して次のステップへ進む選手まで。",
     "bodyLine2": "ダブルジェイは、一人ひとりの目標とレベルに合わせたトレーニングを提供します。",
+    "eyebrow": "ドイツ現地 ユース・プロ選手育成アカデミー",
     "cta": "体験トレーニングに申し込む →"
   },
   "HomePrograms": {
@@ -55,6 +58,52 @@
     }
   },
   "ProgramsPage": {
+    "view": {
+      "lead1": "初めての一歩からプロの舞台を目指す過程まで、",
+      "lead2": "選手の成長段階に合わせた体系的なプログラムを提供します。",
+      "introLabel": "プログラム紹介",
+      "targetLabel": "対象",
+      "cta": "体験トレーニングに申し込む",
+      "more": "詳しく見る",
+      "sub": "詳細プログラム",
+      "pro": {
+        "title": "プロ",
+        "head": "プロが育てるプロ",
+        "desc": "プロの舞台を目指す選手のための専門トレーニングプログラムです。",
+        "intro": "プロが育てるプロ。プロの舞台を目指す選手のための専門トレーニングプログラムです。",
+        "target": "プロの舞台を目指す選手",
+        "cta": "テストに申し込む"
+      },
+      "academy": {
+        "title": "アカデミー",
+        "head": "基礎から実戦まで、体系的な成長",
+        "desc": "基本から実戦まで、体系的なカリキュラムで成長するユース向けサッカープログラムです。"
+      },
+      "kids": {
+        "title": "キッズクラス",
+        "desc": "サッカーを楽しみながら基本と協調性を学ぶユース向けプログラム",
+        "target": "ジュニア世代"
+      },
+      "elite": {
+        "title": "エリートクラス",
+        "desc": "基本をもとに技術と実戦経験を伸ばす発展プログラム"
+      },
+      "hobby": {
+        "title": "趣味クラス",
+        "head": "楽しみながら、一緒に成長",
+        "desc": "サッカーを楽しみながら一緒に運動する成人向けプログラムです。"
+      },
+      "women": {
+        "title": "女性趣味クラス",
+        "desc": "サッカーを楽しみながら一緒に運動する成人女性向けプログラム",
+        "target": "成人女性"
+      },
+      "men": {
+        "title": "男性趣味クラス",
+        "desc": "サッカーを楽しみながら一緒に運動する成人男性向けプログラム",
+        "target": "成人男性"
+      }
+    },
     "heading1": "レベルと目標に合わせた",
     "heading2": "ダブルジェイのプログラム",
     "items": {
@@ -143,6 +192,9 @@
     "h2Line2": "質の高いトレーニングを受ける機会は、",
     "h2Line3": "誰にでもあるべきだと考えています。",
     "body2": "プロ選手出身の指導者と、ヨーロッパで現役として活躍するコーチ陣の経験をもとに、\n確かな基礎から実戦的なトレーニング、本格的な選手育成まで、\n一人ひとりのレベルと目標に合わせて指導します。",
+    "lead": "ダブルジェイスポーツアカデミーは、\n初めてボールに触れる子どもからプロを目指す選手まで、\nそれぞれの目標とレベルに合わせた体系的なサッカー教育を提供します。",
+    "lead2": "良いトレーニングを経験し、目標に向かって成長できる環境。\nダブルジェイは誰にでも開かれた、\nサッカーでさらに大きく成長できる場所です。",
+    "fullTitle": "ご挨拶（全文）",
     "closingBody": "プロのやり方でトレーニングし、\n自分だけのサッカーで成長する。"
   },
   "Gallery": {
@@ -169,6 +221,7 @@
     "heroLine2": "成長へのアプローチも変わる。",
     "credentialsLabel": "経歴",
     "staffHeading": "コーチングスタッフ",
+    "staffLabel": "COACHING STAFF",
     "leaders": {
       "jungYeonUng": {
         "name": "ジョン・ヨンウン",
@@ -189,7 +242,7 @@
       },
       "jungYeonHwang": {
         "name": "ジョン・ヨンファン",
-        "role": "ヘッドコーチ",
+        "role": "総監督",
         "career": [
           "チョンブク・ヒョンデモータース U-12(韓国Kリーグ1)",
           "テジョン・シチズン U-15(韓国Kリーグ1)",
@@ -205,21 +258,53 @@
     "coaches": {
       "jungChiHyun": {
         "name": "ジョン・チヒョン",
-        "role": "コーチ"
+        "role": "コーチ",
+        "career": [
+          "Joan KJ FC U15",
+          "Ratingen 0419 U17",
+          "VFB Hilden U19",
+          "Turu Düsseldorf",
+          "ETB SW Essen",
+          "FC Porz(現在)"
+        ]
       },
       "choHoon": {
         "name": "チョ・フン",
-        "role": "コーチ"
+        "role": "コーチ",
+        "career": [
+          "FC Seoul Dae-Dong U13(選手)",
+          "FC Yeong Seo U16(選手)",
+          "FC SKD U18(選手)",
+          "TSV Meerbusch U19(ドイツ、選手 / 2018~2019)",
+          "DSV Duisburger Landesliga(ドイツ、選手 / 2019~2020)",
+          "SC Kappeln-Erft U15(ドイツ、アシスタントコーチ / 2020~2021)",
+          "SC Düsseldorf West Oberliga(ドイツ、選手 / 2021~2022)",
+          "建国大学サッカー部 ビデオアナリスト(韓国、2024.02.02~2024.02.29)",
+          "Fortuna Düsseldorf U16(ドイツ、ビデオアナリスト / 2025~2026)",
+          "Fortuna Düsseldorf U19(ドイツ、ビデオアナリスト / 2026.07.01~現在)",
+          "大韓サッカー協会(KFA) マッチアナリスト レベル1 資格"
+        ]
       },
       "peter": {
         "name": "Peter",
-        "role": "コーチ"
+        "role": "コーチ",
+        "career": [
+          "North Atletico U19",
+          "Sherwood Park Phoenix FC Futsal",
+          "VFB Unterliederbach Herren(現在)"
+        ]
       }
-    }
+    },
+    "cardHint": "カードを押すと360度回って経歴が見られます",
+    "cardClose": "閉じる"
   },
   "ComingSoon": {
     "notice": "このページは準備中です。",
     "pages": {
+      "camp": {
+        "category": "CAMP",
+        "title": "キャンプ"
+      },
       "locationsFrankfurt": {
         "category": "LOCATION",
         "title": "フランクフルト"
@@ -271,6 +356,18 @@
         "title": "PRO EXPERIENCE",
         "desc": "プロの経験から生まれた\n独自のカリキュラム"
       }
+    }
+  },
+  "News": {
+    "heading": "NEWS",
+    "empty": "ニュースはまだありません。",
+    "player": "選手",
+    "back": "一覧へ",
+    "categories": {
+      "all": "すべて",
+      "transfer": "移籍",
+      "national": "代表選出",
+      "etc": "その他"
     }
   }
 }

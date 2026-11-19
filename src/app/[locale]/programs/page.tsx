@@ -1,47 +1,44 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ProgramsView, { type ProgramsDict } from "@/components/ProgramsView";
 import { getTranslations } from "next-intl/server";
-
-const PROGRAM_KEYS = ["pro", "academy", "women", "men", "private"] as const;
 
 export default async function ProgramsPage() {
   const t = await getTranslations("ProgramsPage");
+  const v = (k: string) => t(`view.${k}`);
+
+  const dict: ProgramsDict = {
+    h1: t("heading1"),
+    h2: t("heading2"),
+    lead1: v("lead1"),
+    lead2: v("lead2"),
+    introLabel: v("introLabel"),
+    targetLabel: v("targetLabel"),
+    cta: v("cta"),
+    more: v("more"),
+    sub: v("sub"),
+    pro: {
+      title: v("pro.title"),
+      head: v("pro.head"),
+      desc: v("pro.desc"),
+      intro: v("pro.intro"),
+      target: v("pro.target"),
+      cta: v("pro.cta"),
+    },
+    academy: { title: v("academy.title"), head: v("academy.head"), desc: v("academy.desc") },
+    hobby: { title: v("hobby.title"), head: v("hobby.head"), desc: v("hobby.desc") },
+    programs: {
+      kids: { title: v("kids.title"), desc: v("kids.desc"), target: v("kids.target") },
+      elite: { title: v("elite.title"), desc: v("elite.desc") },
+      women: { title: v("women.title"), desc: v("women.desc"), target: v("women.target") },
+      men: { title: v("men.title"), desc: v("men.desc"), target: v("men.target") },
+    },
+  };
 
   return (
-    <div>
+    <div className="bg-[rgba(7,16,31,0.9)]">
       <Header />
-
-      <section className="px-6 py-16 md:px-16 md:py-24">
-        <p className="text-sm font-bold tracking-widest text-brand-blue">PROGRAM</p>
-        <h1 className="mt-3 text-4xl font-black leading-tight text-gray-900 md:text-5xl">
-          {t("heading1")}
-          <br />
-          {t("heading2")}
-        </h1>
-      </section>
-
-      <section className="divide-y divide-gray-100 border-t border-gray-100">
-        {PROGRAM_KEYS.map((key) => (
-          <div
-            key={key}
-            className="grid grid-cols-1 gap-4 px-6 py-12 md:grid-cols-[260px_1fr] md:gap-10 md:px-16 md:py-20"
-          >
-            <div>
-              <p className="text-xs font-bold tracking-widest text-gray-400">
-                {t(`items.${key}.subtitle`)}
-              </p>
-              <div className="mt-1 flex items-center gap-2">
-                <h2 className="text-2xl font-black text-brand-navy md:text-3xl">
-                  {t(`items.${key}.title`)}
-                </h2>
-              </div>
-            </div>
-            <p className="whitespace-pre-line text-base leading-relaxed text-gray-600 md:text-lg">
-              {t(`items.${key}.desc`)}
-            </p>
-          </div>
-        ))}
-      </section>
+      <ProgramsView dict={dict} />
       <Footer />
     </div>
   );

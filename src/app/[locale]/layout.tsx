@@ -46,8 +46,10 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
+        <script id="dj-embed" dangerouslySetInnerHTML={{ __html: "try{var d=document.documentElement,p=location.pathname,m=p.match(/^\\/(en|de|ja)(\\/.*)?$/),l=m?'/'+m[1]:'',r=m?(m[2]||'/'):p;if(self!==top){d.classList.add('dj-embed');if(r==='/'||r==='')top.location.replace(l+'/')}else if(r!=='/'&&r!==''&&r.indexOf('admin')<0){location.replace(l+'/?panel='+encodeURIComponent(r+location.hash))}}catch(e){}" }} />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
