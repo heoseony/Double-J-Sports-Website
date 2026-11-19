@@ -88,10 +88,20 @@
         "title": "Elite",
         "desc": "Ein vertiefendes Programm, das auf soliden Grundlagen Technik und Spielerfahrung aufbaut"
       },
-      "adult": {
-        "title": "Erwachsenen-Freizeitgruppe",
-        "desc": "Ein Programm für erwachsene Frauen und Männer, die gemeinsam Spaß am Fußball und an Bewegung haben",
-        "target": "Erwachsene Frauen und Männer"
+      "hobby": {
+        "title": "Freizeitgruppen",
+        "head": "Mit Freude spielen, gemeinsam wachsen",
+        "desc": "Ein Fußballprogramm für Erwachsene, die gemeinsam Spaß am Spiel und an Bewegung haben."
+      },
+      "women": {
+        "title": "Frauen-Freizeitgruppe",
+        "desc": "Ein Programm für erwachsene Frauen, die gemeinsam Spaß am Fußball und an Bewegung haben",
+        "target": "Erwachsene Frauen"
+      },
+      "men": {
+        "title": "Männer-Freizeitgruppe",
+        "desc": "Ein Programm für erwachsene Männer, die gemeinsam Spaß am Fußball und an Bewegung haben",
+        "target": "Erwachsene Männer"
       }
     },
     "heading1": "Das passende Programm",

@@ -88,10 +88,20 @@
         "title": "Elite",
         "desc": "An advanced program that builds technique and match experience on top of strong fundamentals"
       },
-      "adult": {
-        "title": "Adult Recreational",
-        "desc": "A program for adult men and women who enjoy football and staying active together",
-        "target": "Adult men and women"
+      "hobby": {
+        "title": "Recreational",
+        "head": "Enjoy the game, grow together",
+        "desc": "An adult football program for those who love playing and staying active together."
+      },
+      "women": {
+        "title": "Women's Recreational",
+        "desc": "A program for adult women who enjoy football and staying active together",
+        "target": "Adult women"
+      },
+      "men": {
+        "title": "Men's Recreational",
+        "desc": "A program for adult men who enjoy football and staying active together",
+        "target": "Adult men"
       }
     },
     "heading1": "A Program Built",

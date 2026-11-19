@@ -26,10 +26,12 @@ export default async function ProgramsPage() {
       cta: v("pro.cta"),
     },
     academy: { title: v("academy.title"), head: v("academy.head"), desc: v("academy.desc") },
+    hobby: { title: v("hobby.title"), head: v("hobby.head"), desc: v("hobby.desc") },
     programs: {
       kids: { title: v("kids.title"), desc: v("kids.desc"), target: v("kids.target") },
       elite: { title: v("elite.title"), desc: v("elite.desc") },
-      adult: { title: v("adult.title"), desc: v("adult.desc"), target: v("adult.target") },
+      women: { title: v("women.title"), desc: v("women.desc"), target: v("women.target") },
+      men: { title: v("men.title"), desc: v("men.desc"), target: v("men.target") },
     },
   };
 

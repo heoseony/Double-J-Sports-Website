@@ -5,7 +5,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ACADEMY_PROGRAMS, PRO_IMAGE, type ProgramKey } from "@/data/programs";
+import { ACADEMY_PROGRAMS, HOBBY_PROGRAMS, PRO_IMAGE, type ProgramKey, type ProgramMeta } from "@/data/programs";
 
 const BOOKING_URL = "https://double-j-sports.vercel.app";
 const GOLD = "#DDBB72";
@@ -22,6 +22,7 @@ export type ProgramsDict = {
   sub: string;
   pro: { title: string; head: string; desc: string; intro: string; target: string; cta: string };
   academy: { title: string; head: string; desc: string };
+  hobby: { title: string; head: string; desc: string };
   programs: Record<ProgramKey, { title: string; desc: string; target?: string }>;
 };
 
@@ -78,12 +79,22 @@ function CtaButton({ label }: { label: string }) {
   );
 }
 
-export default function ProgramsView({ dict }: { dict: ProgramsDict }) {
-  const [open, setOpen] = useState<"pro" | "academy" | null>("academy");
-  const [sel, setSel] = useState<ProgramKey | null>(null);
-  const [shown, setShown] = useState<ProgramKey>("kids"); // 접히는 동안에도 내용 유지
+const RING =
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B82C4]";
+const shell = (on: boolean) =>
+  `rounded-lg border backdrop-blur-[2px] transition-colors duration-300 ${
+    on ? "border-[#DDBB72]/55 bg-[rgba(14,28,56,0.72)]" : "border-white/15 bg-[rgba(10,22,46,0.55)] hover:border-white/35"
+  }`;
+const body = (on: boolean) =>
+  `grid transition-[grid-template-rows] duration-300 ease-out ${on ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`;
+const inner = (on: boolean) => `overflow-hidden ${on ? "visible" : "invisible delay-300"}`;
 
-  const toggle = (k: "pro" | "academy") => setOpen((cur) => (cur === k ? null : k));
+type Dict = ProgramsDict;
+
+// 세부 프로그램 카드 묶음 + 펼쳐지는 자세히 보기 (아카데미 / 취미반 공용)
+function ProgramGroup({ items, dict, idPrefix }: { items: ProgramMeta[]; dict: Dict; idPrefix: string }) {
+  const [sel, setSel] = useState<ProgramKey | null>(null);
+  const [shown, setShown] = useState<ProgramKey>(items[0].key); // 접히는 동안에도 내용 유지
   const pick = (k: ProgramKey) => {
     if (sel === k) {
       setSel(null);
@@ -92,19 +103,118 @@ export default function ProgramsView({ dict }: { dict: ProgramsDict }) {
       setShown(k);
     }
   };
-
-  const ring =
-    "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B82C4]";
-  const shell = (on: boolean) =>
-    `rounded-lg border backdrop-blur-[2px] transition-colors duration-300 ${
-      on ? "border-[#DDBB72]/55 bg-[rgba(14,28,56,0.72)]" : "border-white/15 bg-[rgba(10,22,46,0.55)] hover:border-white/35"
-    }`;
-  const body = (on: boolean) =>
-    `grid transition-[grid-template-rows] duration-300 ease-out ${on ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`;
-  const inner = (on: boolean) => `overflow-hidden ${on ? "visible" : "invisible delay-300"}`;
-
   const sp = dict.programs[shown];
-  const spMeta = ACADEMY_PROGRAMS.find((p) => p.key === shown)!;
+  const spMeta = items.find((p) => p.key === shown)!;
+  const detailId = `${idPrefix}-detail`;
+
+  return (
+    <>
+      <div className="mb-4 flex items-center gap-4">
+        <span className="text-sm font-bold text-white">{dict.sub}</span>
+        <span className="h-px flex-1 bg-white/15" />
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {items.map((p) => {
+          const on = sel === p.key;
+          const d = dict.programs[p.key];
+          return (
+            <button
+              key={p.key}
+              type="button"
+              aria-expanded={on}
+              aria-controls={detailId}
+              onClick={() => pick(p.key)}
+              className={`group flex min-h-[112px] overflow-hidden rounded-md border text-left transition-colors duration-200 ${RING} ${
+                on ? "border-[#DDBB72]/60 bg-[rgba(18,36,70,0.9)]" : "border-white/15 bg-[rgba(10,22,46,0.7)] hover:border-white/40"
+              }`}
+            >
+              <span className="relative block w-[36%] shrink-0 bg-gradient-to-br from-[#16305c] to-[#0b1a33]">
+                {p.image && (
+                  <Image src={p.image} alt="" fill sizes="(min-width: 768px) 140px, 36vw" className="object-cover" style={{ objectPosition: p.objectPosition }} />
+                )}
+              </span>
+              <span className="flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-4 py-4">
+                <span className="text-lg font-black text-white">{d.title}</span>
+                <span className="break-keep text-[13px] leading-[1.6] text-white/70">{d.desc}</span>
+                <span className="mt-1 text-xs font-semibold text-white/55 transition-colors group-hover:text-[#DDBB72]">{dict.more} →</span>
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
+      <div id={detailId} role="region" aria-label={sp.title} className={body(sel !== null)}>
+        <div className={inner(sel !== null)}>
+          <div className="mt-4 rounded-md border border-white/15 bg-[rgba(10,22,46,0.7)] p-6 md:p-8">
+            <div className="grid gap-6 md:grid-cols-[minmax(0,260px)_1fr] md:gap-10">
+              <div className="relative hidden aspect-[4/3] overflow-hidden rounded-md bg-gradient-to-br from-[#16305c] to-[#0b1a33] md:block">
+                {(spMeta.detailImage || spMeta.image) && (
+                  <Image src={spMeta.detailImage?.src ?? spMeta.image!} alt="" fill sizes="260px" className="object-cover" style={{ objectPosition: spMeta.detailImage?.objectPosition ?? spMeta.objectPosition }} />
+                )}
+              </div>
+              <div className="flex min-w-0 flex-col justify-center gap-5">
+                <p className="text-xl font-black text-white">{sp.title}</p>
+                <Field label={dict.introLabel} text={sp.desc} />
+                {spMeta.hasTarget && sp.target && <Field label={dict.targetLabel} text={sp.target} />}
+                <div>
+                  <CtaButton label={dict.cta} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+// 아코디언 한 칸 (제목 줄 + 펼쳐지는 내용)
+function Section({
+  id,
+  open,
+  onToggle,
+  title,
+  head,
+  desc,
+  children,
+}: {
+  id: string;
+  open: boolean;
+  onToggle: () => void;
+  title: string;
+  head: string;
+  desc: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className={shell(open)}>
+      <button
+        type="button"
+        id={`${id}-btn`}
+        aria-expanded={open}
+        aria-controls={`${id}-panel`}
+        onClick={onToggle}
+        className={`flex w-full flex-wrap items-center gap-x-5 gap-y-3 rounded-lg px-6 py-6 text-left md:flex-nowrap md:gap-8 md:px-8 ${RING}`}
+      >
+        <span className="order-1 flex-1 text-[22px] font-black text-white md:w-[170px] md:flex-none md:shrink-0 md:text-[28px]">{title}</span>
+        <span className="order-2 hidden h-12 w-px shrink-0 bg-white/20 md:block" />
+        <span className="order-3 min-w-0 basis-full break-keep md:flex-1 md:basis-auto">
+          <span className="block text-base font-bold md:text-xl" style={{ color: GOLD }}>{head}</span>
+          <span className="mt-1 block text-[13px] leading-relaxed text-white/70 md:text-[15px]">{desc}</span>
+        </span>
+        <Chevron open={open} />
+      </button>
+      <div id={`${id}-panel`} role="region" aria-labelledby={`${id}-btn`} className={body(open)}>
+        <div className={inner(open)}>{children}</div>
+      </div>
+    </div>
+  );
+}
+
+export default function ProgramsView({ dict }: { dict: ProgramsDict }) {
+  const [open, setOpen] = useState<"pro" | "academy" | "hobby" | null>("academy");
+  const toggle = (k: "pro" | "academy" | "hobby") => setOpen((cur) => (cur === k ? null : k));
 
   return (
     <main className="text-white">
@@ -129,124 +239,36 @@ export default function ProgramsView({ dict }: { dict: ProgramsDict }) {
 
       <section className="space-y-4 px-6 pb-24 md:px-16 md:pb-32">
         {/* PRO */}
-        <div className={shell(open === "pro")}>
-          <button
-            type="button"
-            id="prog-pro-btn"
-            aria-expanded={open === "pro"}
-            aria-controls="prog-pro-panel"
-            onClick={() => toggle("pro")}
-            className={`flex w-full flex-wrap items-center gap-x-5 gap-y-3 rounded-lg px-6 py-6 text-left md:flex-nowrap md:gap-8 md:px-8 ${ring}`}
-          >
-            <span className="order-1 flex-1 text-[22px] font-black text-white md:w-[170px] md:flex-none md:shrink-0 md:text-[28px]">{dict.pro.title}</span>
-            <span className="order-2 hidden h-12 w-px shrink-0 bg-white/20 md:block" />
-            <span className="order-3 min-w-0 basis-full break-keep md:flex-1 md:basis-auto">
-              <span className="block text-base font-bold md:text-xl" style={{ color: GOLD }}>{dict.pro.head}</span>
-              <span className="mt-1 block text-[13px] leading-relaxed text-white/70 md:text-[15px]">{dict.pro.desc}</span>
-            </span>
-            <Chevron open={open === "pro"} />
-          </button>
-          <div id="prog-pro-panel" role="region" aria-labelledby="prog-pro-btn" className={body(open === "pro")}>
-            <div className={inner(open === "pro")}>
-              <div className="mx-6 border-t border-white/10 pb-8 pt-6 md:mx-8">
-                <div className="grid gap-6 md:grid-cols-[minmax(0,340px)_1fr] md:gap-10">
-                  <div className="relative aspect-[16/10] overflow-hidden rounded-md">
-                    <Image src={PRO_IMAGE.src} alt="" fill sizes="(min-width: 768px) 340px, 100vw" className="object-cover" style={{ objectPosition: PRO_IMAGE.objectPosition }} />
-                  </div>
-                  <div className="flex min-w-0 flex-col justify-center gap-5">
-                    <Field label={dict.introLabel} text={dict.pro.intro} />
-                    <Field label={dict.targetLabel} text={dict.pro.target} />
-                    <div>
-                      <CtaButton label={dict.pro.cta} />
-                    </div>
-                  </div>
-                </div>
+        <Section id="prog-pro" open={open === "pro"} onToggle={() => toggle("pro")} title={dict.pro.title} head={dict.pro.head} desc={dict.pro.desc}>
+        <div className="mx-6 border-t border-white/10 pb-8 pt-6 md:mx-8">
+          <div className="grid gap-6 md:grid-cols-[minmax(0,340px)_1fr] md:gap-10">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-md">
+              <Image src={PRO_IMAGE.src} alt="" fill sizes="(min-width: 768px) 340px, 100vw" className="object-cover" style={{ objectPosition: PRO_IMAGE.objectPosition }} />
+            </div>
+            <div className="flex min-w-0 flex-col justify-center gap-5">
+              <Field label={dict.introLabel} text={dict.pro.intro} />
+              <Field label={dict.targetLabel} text={dict.pro.target} />
+              <div>
+                <CtaButton label={dict.pro.cta} />
               </div>
             </div>
           </div>
         </div>
+        </Section>
 
         {/* ACADEMY */}
-        <div className={shell(open === "academy")}>
-          <button
-            type="button"
-            id="prog-academy-btn"
-            aria-expanded={open === "academy"}
-            aria-controls="prog-academy-panel"
-            onClick={() => toggle("academy")}
-            className={`flex w-full flex-wrap items-center gap-x-5 gap-y-3 rounded-lg px-6 py-6 text-left md:flex-nowrap md:gap-8 md:px-8 ${ring}`}
-          >
-            <span className="order-1 flex-1 text-[22px] font-black text-white md:w-[170px] md:flex-none md:shrink-0 md:text-[28px]">{dict.academy.title}</span>
-            <span className="order-2 hidden h-12 w-px shrink-0 bg-white/20 md:block" />
-            <span className="order-3 min-w-0 basis-full break-keep md:flex-1 md:basis-auto">
-              <span className="block text-base font-bold md:text-xl" style={{ color: GOLD }}>{dict.academy.head}</span>
-              <span className="mt-1 block text-[13px] leading-relaxed text-white/70 md:text-[15px]">{dict.academy.desc}</span>
-            </span>
-            <Chevron open={open === "academy"} />
-          </button>
-          <div id="prog-academy-panel" role="region" aria-labelledby="prog-academy-btn" className={body(open === "academy")}>
-            <div className={inner(open === "academy")}>
-              <div className="mx-6 border-t border-white/10 pb-8 pt-6 md:mx-8">
-                <div className="mb-4 flex items-center gap-4">
-                  <span className="text-sm font-bold text-white">{dict.sub}</span>
-                  <span className="h-px flex-1 bg-white/15" />
-                </div>
-
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-                  {ACADEMY_PROGRAMS.map((p) => {
-                    const on = sel === p.key;
-                    const d = dict.programs[p.key];
-                    return (
-                      <button
-                        key={p.key}
-                        type="button"
-                        aria-expanded={on}
-                        aria-controls="prog-detail"
-                        onClick={() => pick(p.key)}
-                        className={`group flex min-h-[112px] overflow-hidden rounded-md border text-left transition-colors duration-200 ${ring} ${
-                          on ? "border-[#DDBB72]/60 bg-[rgba(18,36,70,0.9)]" : "border-white/15 bg-[rgba(10,22,46,0.7)] hover:border-white/40"
-                        }`}
-                      >
-                        <span className="relative block w-[36%] shrink-0 bg-gradient-to-br from-[#16305c] to-[#0b1a33]">
-                          {p.image && (
-                            <Image src={p.image} alt="" fill sizes="(min-width: 768px) 140px, 36vw" className="object-cover" style={{ objectPosition: p.objectPosition }} />
-                          )}
-                        </span>
-                        <span className="flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-4 py-4">
-                          <span className="text-lg font-black text-white">{d.title}</span>
-                          <span className="break-keep text-[13px] leading-[1.6] text-white/70">{d.desc}</span>
-                          <span className="mt-1 text-xs font-semibold text-white/55 transition-colors group-hover:text-[#DDBB72]">{dict.more} →</span>
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-
-                <div id="prog-detail" role="region" aria-label={dict.programs[shown].title} className={`${body(sel !== null)}`}>
-                  <div className={inner(sel !== null)}>
-                    <div className="mt-4 rounded-md border border-white/15 bg-[rgba(10,22,46,0.7)] p-6 md:p-8">
-                      <div className="grid gap-6 md:grid-cols-[minmax(0,260px)_1fr] md:gap-10">
-                        <div className="relative hidden aspect-[4/3] overflow-hidden rounded-md bg-gradient-to-br from-[#16305c] to-[#0b1a33] md:block">
-                          {(spMeta.detailImage || spMeta.image) && (
-                            <Image src={spMeta.detailImage?.src ?? spMeta.image!} alt="" fill sizes="260px" className="object-cover" style={{ objectPosition: spMeta.detailImage?.objectPosition ?? spMeta.objectPosition }} />
-                          )}
-                        </div>
-                        <div className="flex min-w-0 flex-col justify-center gap-5">
-                          <p className="text-xl font-black text-white">{sp.title}</p>
-                          <Field label={dict.introLabel} text={sp.desc} />
-                          {spMeta.hasTarget && sp.target && <Field label={dict.targetLabel} text={sp.target} />}
-                          <div>
-                            <CtaButton label={dict.cta} />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <Section id="prog-academy" open={open === "academy"} onToggle={() => toggle("academy")} title={dict.academy.title} head={dict.academy.head} desc={dict.academy.desc}>
+          <div className="mx-6 border-t border-white/10 pb-8 pt-6 md:mx-8">
+            <ProgramGroup items={ACADEMY_PROGRAMS} dict={dict} idPrefix="prog-academy" />
           </div>
-        </div>
+        </Section>
+
+        {/* 취미반 (여성 / 남성) */}
+        <Section id="prog-hobby" open={open === "hobby"} onToggle={() => toggle("hobby")} title={dict.hobby.title} head={dict.hobby.head} desc={dict.hobby.desc}>
+          <div className="mx-6 border-t border-white/10 pb-8 pt-6 md:mx-8">
+            <ProgramGroup items={HOBBY_PROGRAMS} dict={dict} idPrefix="prog-hobby" />
+          </div>
+        </Section>
       </section>
     </main>
   );

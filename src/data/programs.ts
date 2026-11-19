@@ -2,7 +2,7 @@
 // 글(제목·소개 등)은 messages/*.json 의 ProgramsPage.view 에 4개 언어로 들어 있어요.
 // PRO 와 엘리트반 구분이 바뀌면 이 파일과 messages 의 해당 항목만 고치면 됩니다.
 
-export type ProgramKey = "kids" | "elite" | "adult";
+export type ProgramKey = "kids" | "elite" | "women" | "men";
 
 export type ProgramMeta = {
   key: ProgramKey;
@@ -17,7 +17,12 @@ export const PRO_IMAGE = { src: "/images/program-pro.jpg", objectPosition: "50% 
 export const ACADEMY_PROGRAMS: ProgramMeta[] = [
   { key: "kids", image: "/images/greeting-1.jpg", objectPosition: "50% 35%", detailImage: { src: "/images/program-kids.jpg", objectPosition: "50% 60%" }, hasTarget: true },
   { key: "elite", image: "/images/greeting-kid.jpg", objectPosition: "50% 28%", detailImage: { src: "/images/program-elite.webp", objectPosition: "50% 50%" }, hasTarget: false },
-  { key: "adult", image: "/images/program-adult.jpg", objectPosition: "50% 40%", hasTarget: true },
+];
+
+// 취미반: 아카데미와 따로 분리. 여성/남성 사진은 같은 단체사진을 임시로 같이 써요.
+export const HOBBY_PROGRAMS: ProgramMeta[] = [
+  { key: "women", image: "/images/program-adult.jpg", objectPosition: "50% 40%", hasTarget: true },
+  { key: "men", image: "/images/program-adult.jpg", objectPosition: "50% 40%", hasTarget: true },
 ];
 
 // ──────────────────────────────────────────────────────────────
