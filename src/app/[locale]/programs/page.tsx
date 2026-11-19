@@ -23,6 +23,7 @@ export default async function ProgramsPage() {
       desc: v("pro.desc"),
       intro: v("pro.intro"),
       target: v("pro.target"),
+      cta: v("pro.cta"),
     },
     academy: { title: v("academy.title"), head: v("academy.head"), desc: v("academy.desc") },
     programs: {

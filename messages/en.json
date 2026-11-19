@@ -71,7 +71,8 @@
         "head": "Made by pros, for future pros",
         "desc": "A specialized training program for players aiming for the professional game.",
         "intro": "Made by pros, for future pros. A specialized training program for players aiming for the professional game.",
-        "target": "Players aiming for the professional game"
+        "target": "Players aiming for the professional game",
+        "cta": "Apply for a Test"
       },
       "academy": {
         "title": "Academy",

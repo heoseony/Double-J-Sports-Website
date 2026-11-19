@@ -20,7 +20,7 @@ export type ProgramsDict = {
   cta: string;
   more: string;
   sub: string;
-  pro: { title: string; head: string; desc: string; intro: string; target: string };
+  pro: { title: string; head: string; desc: string; intro: string; target: string; cta: string };
   academy: { title: string; head: string; desc: string };
   programs: Record<ProgramKey, { title: string; desc: string; target?: string }>;
 };
@@ -157,7 +157,7 @@ export default function ProgramsView({ dict }: { dict: ProgramsDict }) {
                     <Field label={dict.introLabel} text={dict.pro.intro} />
                     <Field label={dict.targetLabel} text={dict.pro.target} />
                     <div>
-                      <CtaButton label={dict.cta} />
+                      <CtaButton label={dict.pro.cta} />
                     </div>
                   </div>
                 </div>
