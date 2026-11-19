@@ -1323,15 +1323,6 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   color: rgba(255,255,255,.88);
   text-shadow: 0 1px 10px rgba(0,0,0,.6);
 }
-.intro-scene-eyebrow::before {
-  content: "";
-  display: inline-block;
-  width: clamp(24px, 2.6vw, 40px);
-  height: 2px;
-  margin-right: 14px;
-  vertical-align: middle;
-  background: #E6030E;
-}
 .intro-scene-p {
   margin: 22px 0 0 auto;
   font-size: clamp(13px, 1.2vw, 18px);
