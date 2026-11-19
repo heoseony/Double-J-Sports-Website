@@ -235,6 +235,7 @@ export default function IntroHero() {
             <div className="intro-scene-clouds" aria-hidden="true"><i /><i /><i /><i /><i /></div>
             <img className="intro-scene-art" src="/images/intro/academy.webp" alt="Double J Sports Academy" draggable={false} />
             <div className="intro-scene-copy">
+              <p className="intro-scene-eyebrow">{t("eyebrow")}</p>
               <h1 className="intro-scene-h">TRAIN LIKE A PRO<br />GROW YOUR WAY</h1>
               <p className="intro-scene-p">{t("bodyLine1")}<br />{t("bodyLine2")}</p>
             </div>
