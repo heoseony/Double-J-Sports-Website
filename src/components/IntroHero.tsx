@@ -249,6 +249,7 @@ export default function IntroHero() {
               <p className="intro-scene-eyebrow">{t("eyebrow")}</p>
               <h1 className="intro-scene-h">TRAIN LIKE A PRO<br />GROW YOUR WAY</h1>
               <p className="intro-scene-p">{t("bodyLine1")}<br />{t("bodyLine2")}</p>
+              <button className="intro-cta intro-cta-inline" type="button" onClick={() => setModalOpen(true)}>{t("cta")}</button>
             </div>
           </div>
           <div className="intro-hint">SCROLL</div>

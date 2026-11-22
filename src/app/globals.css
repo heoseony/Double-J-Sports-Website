@@ -1851,3 +1851,11 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   .intro-scene-p { margin: 14px -8px 0; max-width: none; white-space: nowrap; font-size: min(2.6vw, 12px); letter-spacing: -.02em; line-height: 1.75; }
   .intro-cta.intro-scene-cta.intro-cta-top { left: 50%; right: auto; top: auto; bottom: max(64px, calc(env(safe-area-inset-bottom, 0px) + 56px)); transform: translateX(-50%); padding: 12px 24px; font-size: 13.5px; }
 }
+
+/* 체험수업신청하기: 웹은 기존(화면 고정), 모바일은 문구 바로 아래에 두고 스크롤하면 같이 올라감 */
+.intro-cta.intro-cta-inline { display: none; }
+@media (max-width: 900px) {
+  .intro-cta.intro-cta-top { display: none !important; }
+  .intro-scene-copy .intro-cta.intro-cta-inline { display: inline-block; position: static; margin: 22px auto 0; transform: none; padding: 12px 24px; font-size: 13.5px; pointer-events: auto; opacity: 1; visibility: visible; }
+  .intro-scene-copy { bottom: 110px; }
+}
