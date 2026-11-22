@@ -144,13 +144,13 @@ function ProgramGroup({ items, dict, idPrefix }: { items: ProgramMeta[]; dict: D
           const on = sel === p.key;
           const d = dict.programs[p.key];
           return (
-            <div key={p.key} className="min-w-0">
+            <div key={p.key} className="min-w-0 md:flex md:flex-col">
             <button
               type="button"
               aria-expanded={on}
               aria-controls={detailId}
               onClick={() => pick(p.key)}
-              className={`group flex min-h-[112px] overflow-hidden rounded-md border text-left transition-colors duration-200 ${RING} ${
+              className={`group flex min-h-[150px] overflow-hidden rounded-md border md:flex-1 text-left transition-colors duration-200 ${RING} ${
                 on ? "border-[#DDBB72]/60 bg-[rgba(18,36,70,0.9)]" : "border-white/15 bg-[rgba(10,22,46,0.7)] hover:border-white/40"
               }`}
             >

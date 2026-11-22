@@ -16,6 +16,7 @@ type Props = {
   label: string;
   hint: string;
   credentials: string;
+  soon: string; // 경력 정보가 아직 없는 코치에게 보여줄 문구
   closeLabel: string;
   jump?: { i: number; n: number } | null; // 바깥(왼쪽 메뉴 COACHES 재클릭 등)에서 카드 화면으로 되돌리기
   onView?: (i: number | null) => void;
@@ -23,7 +24,7 @@ type Props = {
 
 const STEP = 46; // 카드 사이 각도
 
-export default function CoachCarousel({ open, onClose, items, label, hint, credentials, closeLabel, jump, onView }: Props) {
+export default function CoachCarousel({ open, onClose, items, label, hint, credentials, soon, closeLabel, jump, onView }: Props) {
   const N = items.length;
   const onCloseRef = useRef(onClose);
   onCloseRef.current = onClose;
@@ -232,8 +233,14 @@ export default function CoachCarousel({ open, onClose, items, label, hint, crede
                         <div className="intro-cc-role">{c.role}</div>
                         <div className={c.name.length >= 9 ? "intro-cc-name intro-cc-name-long" : "intro-cc-name"}>{c.name}</div>
                         <div className="intro-cc-ln" />
-                        <div className="intro-cc-hd">{credentials}</div>
-                        <ul>{c.career.map((l) => <li key={l}>{l}</li>)}</ul>
+                        {c.career.length > 0 ? (
+                          <>
+                            <div className="intro-cc-hd">{credentials}</div>
+                            <ul>{c.career.map((l) => <li key={l}>{l}</li>)}</ul>
+                          </>
+                        ) : (
+                          <div className="intro-cc-hd">{soon}</div>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -270,12 +277,18 @@ export default function CoachCarousel({ open, onClose, items, label, hint, crede
                     <div className="intro-cc-role">{c.role}</div>
                     <div className={c.name.length >= 9 ? "intro-cc-name intro-cc-name-long" : "intro-cc-name"}>{c.name}</div>
                     <div className="intro-cc-ln" />
-                    <div className="intro-cc-hd">{credentials}</div>
-                    <ul>
-                      {c.career.map((l) => (
-                        <li key={l}>{l}</li>
-                      ))}
-                    </ul>
+                    {c.career.length > 0 ? (
+                      <>
+                        <div className="intro-cc-hd">{credentials}</div>
+                        <ul>
+                          {c.career.map((l) => (
+                            <li key={l}>{l}</li>
+                          ))}
+                        </ul>
+                      </>
+                    ) : (
+                      <div className="intro-cc-hd">{soon}</div>
+                    )}
                   </div>
                 </div>
               </div>

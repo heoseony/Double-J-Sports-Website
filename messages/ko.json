@@ -297,7 +297,8 @@
       }
     },
     "cardHint": "카드를 누르면 360도 돌아가며 경력이 보여요",
-    "cardClose": "닫기"
+    "cardClose": "닫기",
+    "careerSoon": "경력 정보는 준비 중이에요"
   },
   "ComingSoon": {
     "notice": "페이지 준비중입니다.",

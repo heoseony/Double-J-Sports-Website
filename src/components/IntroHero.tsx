@@ -292,6 +292,7 @@ export default function IntroHero() {
         label={locale === "ko" ? ct("staffLabel") : th("nav.coach")}
         hint={ct("cardHint")}
         credentials={ct("credentialsLabel")}
+        soon={ct("careerSoon")}
         closeLabel={ct("cardClose")}
         jump={coachPick}
         onView={setCoachSel}

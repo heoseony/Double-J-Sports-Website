@@ -266,24 +266,24 @@
           "VFB Hilden U19",
           "Turu Düsseldorf",
           "ETB SW Essen",
-          "FC Porz (current)"
+          "(current) FC Porz"
         ]
       },
       "choHoon": {
         "name": "Hoon Cho",
         "role": "Coach",
         "career": [
-          "FC Seoul Dae-Dong U13 (Player)",
-          "FC Yeong Seo U16 (Player)",
-          "FC SKD U18 (Player)",
-          "TSV Meerbusch U19 (Germany, Player / 2018–2019)",
-          "DSV Duisburger Landesliga (Germany, Player / 2019–2020)",
-          "SC Kappeln-Erft U15 (Germany, Assistant Coach / 2020–2021)",
-          "SC Düsseldorf West Oberliga (Germany, Player / 2021–2022)",
-          "Konkuk University Football Team, Video Analyst (South Korea, 2 Feb 2024 – 29 Feb 2024)",
-          "Fortuna Düsseldorf U16 (Germany, Video Analyst / 2025–2026)",
-          "Fortuna Düsseldorf U19 (Germany, Video Analyst / 1 Jul 2026 – present)",
-          "KFA (Korea Football Association) Match Analyst Level 1 Certificate"
+          "FC Seoul Dae-Dong U13 (player)",
+          "FC Yeong Seo U16 (player)",
+          "FC SKD U18 (player)",
+          "TSV Meerbusch U19 (Germany, player / 2018~2019)",
+          "DSV Duisburger Landesliga (Germany, player / 2019~2020)",
+          "SC Kappeln-Erft U15 (Germany, assistant coach / 2020~2021)",
+          "SC Düsseldorf West Oberliga (Germany, player / 2021~2022)",
+          "Konkuk University football team video analyst (South Korea, 2024.02.02~2024.02.29)",
+          "Fortuna Düsseldorf U16 (Germany, video analyst / 2025~2026)",
+          "Fortuna Düsseldorf U19 (Germany, video analyst / 2026.07.01~present)",
+          "Korea Football Association (KFA) Match Analyst Level 1 licence"
         ]
       },
       "peter": {
@@ -292,12 +292,13 @@
         "career": [
           "North Atletico U19",
           "Sherwood Park Phoenix FC Futsal",
-          "VFB Unterliederbach Herren (current)"
+          "(current) VFB Unterliederbach Herren"
         ]
       }
     },
     "cardHint": "Click a card to spin it and see the career",
-    "cardClose": "Close"
+    "cardClose": "Close",
+    "careerSoon": "Profile coming soon"
   },
   "ComingSoon": {
     "notice": "This page is coming soon.",

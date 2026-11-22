@@ -1903,3 +1903,11 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
 }
 .intro-cc:not(.intro-cc-spin) .intro-cc-stage { visibility: hidden; transition: transform .9s cubic-bezier(.2,.7,.2,1) .1s, opacity .8s ease .1s, visibility 0s .9s; }
 .intro-cg-card, .intro-cc-card, .intro-cc-x { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+
+/* 패널 안 페이지(인사말·프로그램·코치진 등): 왼쪽 가장자리가 딱딱하게 끊기지 않고 배경으로 부드럽게 번지게 */
+@media (min-width: 901px) {
+  html.dj-embed body {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.12) 1.5%, rgba(0,0,0,.4) 3.5%, rgba(0,0,0,.75) 6%, #000 8.5%);
+    mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.12) 1.5%, rgba(0,0,0,.4) 3.5%, rgba(0,0,0,.75) 6%, #000 8.5%);
+  }
+}
