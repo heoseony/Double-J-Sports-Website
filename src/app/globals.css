@@ -1786,7 +1786,7 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   -webkit-mask-image: linear-gradient(to top, #000 0, rgba(0,0,0,.6) 40%, transparent 100%);
   mask-image: linear-gradient(to top, #000 0, rgba(0,0,0,.6) 40%, transparent 100%); }
 .intro-glow[data-mode="panel"] { opacity: .62; }
-.intro-glow[data-mode="coach"] { opacity: 0; }
+.intro-glow[data-mode="coach"] { opacity: .62; }
 .intro-root[data-panel="1"] .intro-scene, .intro-root[data-coach="1"] .intro-scene { opacity: 1 !important; transition: opacity .5s ease; transition-delay: 0s; }
 .intro-scene .intro-scene-art, .intro-scene .intro-scene-clouds, .intro-scene .intro-scene-copy { transition: opacity .6s ease; }
 .intro-root[data-panel="1"] .intro-scene-art, .intro-root[data-panel="1"] .intro-scene-clouds, .intro-root[data-panel="1"] .intro-scene-copy,
@@ -1935,3 +1935,29 @@ html.dj-embed .bg-white { background-color: rgba(10, 22, 46, .55); backdrop-filt
   .intro-util.intro-util-open button:hover { background: rgba(255,255,255,.1); }
   .intro-util.intro-util-open button[aria-current="true"] { border: 0; border-radius: 0; background: rgba(255,255,255,.08); text-align: left; }
 }
+
+/* 언어 이름을 풀어 쓰고 글씨는 작게 */
+.intro-util button { font-size: 12px !important; letter-spacing: .02em !important; }
+@media (min-width: 701px) {
+  .intro-cc { background: none !important; }
+}
+@media (min-width: 901px) {
+  .intro-util button { padding: 9px 14px !important; }
+  .intro-util button[aria-current="true"] { min-width: 88px; }
+  .intro-util.intro-util-open { min-width: 100px; }
+  /* 코치 카드 화면도 비전·철학처럼 뒤로 잔디장이 비치는 그라데이션 */
+  .intro-cc::before {
+    background: linear-gradient(to right, rgba(7,16,31,.3) 0, rgba(7,16,31,.7) 14%, rgba(7,16,31,.8) 30%, rgba(7,16,31,.8) 100%);
+    backdrop-filter: none; -webkit-backdrop-filter: none;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.2) 35px, rgba(0,0,0,.55) 80px, rgba(0,0,0,.85) 130px, #000 180px);
+    mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.2) 35px, rgba(0,0,0,.55) 80px, rgba(0,0,0,.85) 130px, #000 180px);
+  }
+}
+
+/* 코치 화면에서도 뒤의 공·큰 글씨가 비치지 않게 (배경이 투명해졌으므로) */
+.intro-root[data-coach="1"] .intro-title,
+.intro-root[data-coach="1"] .intro-ball,
+.intro-root[data-coach="1"] .intro-ballshade,
+.intro-root[data-coach="1"] .intro-ball-lab { opacity: 0 !important; transition: opacity .6s ease; }
+.intro-root[data-coach="1"] .intro-word, .intro-root[data-coach="1"] .intro-hint,
+.intro-root[data-coach="1"] .intro-util { opacity: 0 !important; pointer-events: none; transition: opacity .6s ease; }

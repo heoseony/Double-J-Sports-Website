@@ -12,7 +12,7 @@ import CoachCarousel from "./CoachCarousel";
 import IntroPanel from "./IntroPanel";
 
 const LOCALES = ["ko", "en", "de", "ja"] as const;
-const LANG_SHORT: Record<(typeof LOCALES)[number], string> = { ko: "KO", en: "EN", de: "DE", ja: "JA" };
+const LANG_SHORT: Record<(typeof LOCALES)[number], string> = { ko: "한국어", en: "English", de: "Deutsch", ja: "日本語" };
 
 type SideLink = { key: string; href: string; children?: { key: string; href: string }[] };
 const SIDE_LINKS: SideLink[] = [
