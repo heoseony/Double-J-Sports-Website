@@ -1961,3 +1961,11 @@ html.dj-embed .bg-white { background-color: rgba(10, 22, 46, .55); backdrop-filt
 .intro-root[data-coach="1"] .intro-ball-lab { opacity: 0 !important; transition: opacity .6s ease; }
 .intro-root[data-coach="1"] .intro-word, .intro-root[data-coach="1"] .intro-hint,
 .intro-root[data-coach="1"] .intro-util { opacity: 0 !important; pointer-events: none; transition: opacity .6s ease; }
+
+/* 모바일 메인: 공 배경 그림의 위·아래 경계가 딱 잘려 보이지 않게 부드럽게 번지게 */
+@media (max-width: 700px) {
+  .intro-bg.intro-black {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, rgba(0,0,0,.35) 9%, #000 24%, #000 76%, rgba(0,0,0,.35) 91%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, rgba(0,0,0,.35) 9%, #000 24%, #000 76%, rgba(0,0,0,.35) 91%, transparent 100%);
+  }
+}
