@@ -1835,3 +1835,27 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   .intro-sidenav .intro-social { display: flex; gap: 14px; margin-left: auto; }
   .intro-sidenav .intro-social svg { width: 20px; height: 20px; }
 }
+
+/* 모바일 화면 구도: 로고 가운데, 메뉴 한 줄, 그림, 문구 가운데 정렬, 버튼 가운데 */
+@media (max-width: 900px) {
+  .intro-top { justify-content: center; }
+  .intro-top .intro-logo-btn { position: absolute; left: 50%; top: 16px; transform: translateX(-50%); }
+  .intro-sidenav { top: 92px; left: 10px; right: 10px; justify-content: center; gap: 4px 8px; font-size: 10.5px; letter-spacing: 0; }
+  .intro-sidenav .intro-social { display: none; }
+  .intro-sidenav a { padding: 8px 0; }
+  .intro-util { right: 10px; transform: scale(.8); transform-origin: right top; }
+  .intro-scene-art { top: 34%; width: min(104vw, 580px, 56vh); }
+  .intro-scene-copy { left: 18px; right: 18px; width: auto; bottom: 150px; text-align: center; }
+  .intro-scene-eyebrow { letter-spacing: .08em; font-size: 11.5px; margin-bottom: 10px; }
+  .intro-scene-h { font-size: clamp(24px, 7.4vw, 34px); }
+  .intro-scene-p { margin: 14px -8px 0; max-width: none; white-space: nowrap; font-size: min(2.6vw, 12px); letter-spacing: -.02em; line-height: 1.75; }
+  .intro-cta.intro-scene-cta.intro-cta-top { left: 50%; right: auto; top: auto; bottom: max(64px, calc(env(safe-area-inset-bottom, 0px) + 56px)); transform: translateX(-50%); padding: 12px 24px; font-size: 13.5px; }
+}
+
+/* 체험수업신청하기: 웹은 기존(화면 고정), 모바일은 문구 바로 아래에 두고 스크롤하면 같이 올라감 */
+.intro-cta.intro-cta-inline { display: none; }
+@media (max-width: 900px) {
+  .intro-cta.intro-cta-top { display: none !important; }
+  .intro-scene-copy .intro-cta.intro-cta-inline { display: inline-block; position: static; margin: 22px auto 0; transform: none; padding: 12px 24px; font-size: 13.5px; pointer-events: auto; opacity: 1; visibility: visible; }
+  .intro-scene-copy { bottom: 110px; }
+}
