@@ -91,6 +91,31 @@ const inner = (on: boolean) => `overflow-hidden ${on ? "visible" : "invisible de
 
 type Dict = ProgramsDict;
 
+// 자세히 보기 내용 상자 (웹: 카드 아래 전체 폭 / 모바일: 눌린 카드 바로 밑)
+function DetailBox({ sp, spMeta, dict, showImage }: { sp: Dict["programs"][ProgramKey]; spMeta: ProgramMeta; dict: Dict; showImage: boolean }) {
+  return (
+    <div className="mt-3 rounded-md border border-white/15 bg-[rgba(10,22,46,0.7)] p-6 md:mt-4 md:p-8">
+      <div className="grid gap-6 md:grid-cols-[minmax(0,260px)_1fr] md:gap-10">
+        {showImage && (
+          <div className="relative hidden aspect-[4/3] overflow-hidden rounded-md bg-gradient-to-br from-[#16305c] to-[#0b1a33] md:block">
+            {(spMeta.detailImage || spMeta.image) && (
+              <Image src={spMeta.detailImage?.src ?? spMeta.image!} alt="" fill sizes="260px" className="object-cover" style={{ objectPosition: spMeta.detailImage?.objectPosition ?? spMeta.objectPosition }} />
+            )}
+          </div>
+        )}
+        <div className="flex min-w-0 flex-col justify-center gap-5">
+          <p className="text-xl font-black text-white">{sp.title}</p>
+          <Field label={dict.introLabel} text={sp.desc} />
+          {spMeta.hasTarget && sp.target && <Field label={dict.targetLabel} text={sp.target} />}
+          <div>
+            <CtaButton label={dict.cta} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // 세부 프로그램 카드 묶음 + 펼쳐지는 자세히 보기 (아카데미 / 취미반 공용)
 function ProgramGroup({ items, dict, idPrefix }: { items: ProgramMeta[]; dict: Dict; idPrefix: string }) {
   const [sel, setSel] = useState<ProgramKey | null>(null);
@@ -119,13 +144,13 @@ function ProgramGroup({ items, dict, idPrefix }: { items: ProgramMeta[]; dict: D
           const on = sel === p.key;
           const d = dict.programs[p.key];
           return (
+            <div key={p.key} className="min-w-0 md:flex md:flex-col">
             <button
-              key={p.key}
               type="button"
               aria-expanded={on}
               aria-controls={detailId}
               onClick={() => pick(p.key)}
-              className={`group flex min-h-[112px] overflow-hidden rounded-md border text-left transition-colors duration-200 ${RING} ${
+              className={`group flex min-h-[150px] overflow-hidden rounded-md border md:flex-1 text-left transition-colors duration-200 ${RING} ${
                 on ? "border-[#DDBB72]/60 bg-[rgba(18,36,70,0.9)]" : "border-white/15 bg-[rgba(10,22,46,0.7)] hover:border-white/40"
               }`}
             >
@@ -140,28 +165,20 @@ function ProgramGroup({ items, dict, idPrefix }: { items: ProgramMeta[]; dict: D
                 <span className="mt-1 text-xs font-semibold text-white/55 transition-colors group-hover:text-[#DDBB72]">{dict.more} →</span>
               </span>
             </button>
+            <div className={`md:hidden ${body(on)}`}>
+              <div className={inner(on)}>
+                <DetailBox sp={d} spMeta={p} dict={dict} showImage={false} />
+              </div>
+            </div>
+            </div>
           );
         })}
       </div>
 
-      <div id={detailId} role="region" aria-label={sp.title} className={body(sel !== null)}>
-        <div className={inner(sel !== null)}>
-          <div className="mt-4 rounded-md border border-white/15 bg-[rgba(10,22,46,0.7)] p-6 md:p-8">
-            <div className="grid gap-6 md:grid-cols-[minmax(0,260px)_1fr] md:gap-10">
-              <div className="relative hidden aspect-[4/3] overflow-hidden rounded-md bg-gradient-to-br from-[#16305c] to-[#0b1a33] md:block">
-                {(spMeta.detailImage || spMeta.image) && (
-                  <Image src={spMeta.detailImage?.src ?? spMeta.image!} alt="" fill sizes="260px" className="object-cover" style={{ objectPosition: spMeta.detailImage?.objectPosition ?? spMeta.objectPosition }} />
-                )}
-              </div>
-              <div className="flex min-w-0 flex-col justify-center gap-5">
-                <p className="text-xl font-black text-white">{sp.title}</p>
-                <Field label={dict.introLabel} text={sp.desc} />
-                {spMeta.hasTarget && sp.target && <Field label={dict.targetLabel} text={sp.target} />}
-                <div>
-                  <CtaButton label={dict.cta} />
-                </div>
-              </div>
-            </div>
+      <div className="hidden md:block">
+        <div id={detailId} role="region" aria-label={sp.title} className={body(sel !== null)}>
+          <div className={inner(sel !== null)}>
+            <DetailBox sp={sp} spMeta={spMeta} dict={dict} showImage />
           </div>
         </div>
       </div>

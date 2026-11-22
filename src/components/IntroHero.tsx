@@ -12,7 +12,7 @@ import CoachCarousel from "./CoachCarousel";
 import IntroPanel from "./IntroPanel";
 
 const LOCALES = ["ko", "en", "de", "ja"] as const;
-const LANG_SHORT: Record<(typeof LOCALES)[number], string> = { ko: "KO", en: "EN", de: "DE", ja: "JA" };
+const LANG_SHORT: Record<(typeof LOCALES)[number], string> = { ko: "한국어", en: "English", de: "Deutsch", ja: "日本語" };
 
 type SideLink = { key: string; href: string; children?: { key: string; href: string }[] };
 const SIDE_LINKS: SideLink[] = [
@@ -39,6 +39,8 @@ export default function IntroHero() {
   const pathname = usePathname();
   const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // 모바일 전체 메뉴
+  const [langOpen, setLangOpen] = useState(false); // 모바일 언어 선택
 
   // 패널 안 페이지(프로그램 등)에서 "체험수업 신청하기"를 누르면 신청 창을 열어요.
   useEffect(() => {
@@ -141,17 +143,24 @@ export default function IntroHero() {
     };
   }, []);
 
+  const goLink = (l: (typeof SIDE_LINKS)[number]) => {
+    setMenuOpen(false);
+    if (l.key === "coach") {
+      if (coachOpen) setCoachPick({ i: -1, n: Date.now() });
+      else { setPanel(null); setCoachOpen(true); }
+    } else openPanel(l.href);
+  };
   return (
     <>
       <section ref={rootRef} className="intro-root intro-hero" data-panel={panel ? "1" : "0"} data-coach={coachOpen ? "1" : "0"}>
         <div ref={stageRef} className="intro-stage" data-scrolled="0">
-          <div className="intro-util">
+          <div className={`intro-util${langOpen ? " intro-util-open" : ""}`}>
             {LOCALES.map((code) => (
               <button
                 key={code}
                 type="button"
                 aria-current={locale === code}
-                onClick={() => router.replace(pathname, { locale: code })}
+                onClick={() => { if (code === locale) { setLangOpen((v) => !v); return; } setLangOpen(false); router.replace(pathname, { locale: code }); }}
               >
                 {LANG_SHORT[code]}
               </button>
@@ -257,6 +266,23 @@ export default function IntroHero() {
       </section>
       {/* 체험수업신청하기: 어떤 메뉴/패널이 열려도 그대로 위에 떠 있음 */}
       <button className="intro-cta intro-scene-cta intro-cta-top" data-on={sceneOn ? "1" : "0"} type="button" onClick={() => setModalOpen(true)}>{t("cta")}</button>
+      <button type="button" className="intro-burger" data-open={menuOpen ? "1" : "0"} aria-label="menu" aria-expanded={menuOpen} onClick={() => setMenuOpen((v) => !v)}><i /><i /><i /></button>
+      <div className="intro-mmenu" data-open={menuOpen ? "1" : "0"}>
+        <nav>
+          {SIDE_LINKS.map((l) => (
+            <div key={l.key} className="intro-mm-item">
+              <a href={l.href} onClick={(e) => { e.preventDefault(); goLink(l); }}>{th(`nav.${l.key}`)}</a>
+              {l.children && (
+                <div className="intro-mm-sub">
+                  {l.children.map((c) => (
+                    <a key={c.key} href={c.href} onClick={(e) => { e.preventDefault(); setMenuOpen(false); openPanel(c.href); }}>{th(`aboutChildren.${c.key}`)}</a>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
+      </div>
       <div className="intro-glow" data-mode={coachOpen ? "coach" : panel ? "panel" : "off"} aria-hidden="true" />
       <IntroPanel src={panelSrc} onClose={closePanel} closeLabel={ct("cardClose")} />
       <CoachCarousel
@@ -266,6 +292,7 @@ export default function IntroHero() {
         label={locale === "ko" ? ct("staffLabel") : th("nav.coach")}
         hint={ct("cardHint")}
         credentials={ct("credentialsLabel")}
+        soon={ct("careerSoon")}
         closeLabel={ct("cardClose")}
         jump={coachPick}
         onView={setCoachSel}

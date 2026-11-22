@@ -184,6 +184,7 @@
     "error": "送信に失敗しました。しばらくしてからもう一度お試しください。"
   },
   "GreetingPage": {
+    "eyebrow": "ABOUT DOUBLE J SPORTS",
     "h1Line1": "サッカーが好きな",
     "h1Line2": "すべての人に、",
     "h1Line3": "正しく学べる機会を。",
@@ -265,24 +266,24 @@
           "VFB Hilden U19",
           "Turu Düsseldorf",
           "ETB SW Essen",
-          "FC Porz(現在)"
+          "(現) FC Porz"
         ]
       },
       "choHoon": {
         "name": "チョ・フン",
         "role": "コーチ",
         "career": [
-          "FC Seoul Dae-Dong U13(選手)",
-          "FC Yeong Seo U16(選手)",
-          "FC SKD U18(選手)",
-          "TSV Meerbusch U19(ドイツ、選手 / 2018~2019)",
-          "DSV Duisburger Landesliga(ドイツ、選手 / 2019~2020)",
-          "SC Kappeln-Erft U15(ドイツ、アシスタントコーチ / 2020~2021)",
-          "SC Düsseldorf West Oberliga(ドイツ、選手 / 2021~2022)",
-          "建国大学サッカー部 ビデオアナリスト(韓国、2024.02.02~2024.02.29)",
-          "Fortuna Düsseldorf U16(ドイツ、ビデオアナリスト / 2025~2026)",
-          "Fortuna Düsseldorf U19(ドイツ、ビデオアナリスト / 2026.07.01~現在)",
-          "大韓サッカー協会(KFA) マッチアナリスト レベル1 資格"
+          "FC Seoul Dae-Dong U13 (選手)",
+          "FC Yeong Seo U16 (選手)",
+          "FC SKD U18 (選手)",
+          "TSV Meerbusch U19 (ドイツ, 選手 / 2018~2019)",
+          "DSV Duisburger Landesliga (ドイツ, 選手 / 2019~2020)",
+          "SC Kappeln-Erft U15 (ドイツ, コーチ / 2020~2021)",
+          "SC Düsseldorf West Oberliga (ドイツ, 選手 / 2021~2022)",
+          "建国大学サッカー部 ビデオアナリスト (韓国, 2024.02.02~2024.02.29)",
+          "Fortuna Düsseldorf U16 (ドイツ, ビデオアナリスト / 2025~2026)",
+          "Fortuna Düsseldorf U19 (ドイツ, ビデオアナリスト / 2026.07.01~現在)",
+          "大韓サッカー協会(KFA) Match Analyst Level 1 資格"
         ]
       },
       "peter": {
@@ -291,12 +292,13 @@
         "career": [
           "North Atletico U19",
           "Sherwood Park Phoenix FC Futsal",
-          "VFB Unterliederbach Herren(現在)"
+          "(現) VFB Unterliederbach Herren"
         ]
       }
     },
     "cardHint": "カードを押すと360度回って経歴が見られます",
-    "cardClose": "閉じる"
+    "cardClose": "閉じる",
+    "careerSoon": "プロフィールは準備中です"
   },
   "ComingSoon": {
     "notice": "このページは準備中です。",

@@ -36,7 +36,7 @@ export default async function ProgramsPage() {
   };
 
   return (
-    <div className="bg-[rgba(7,16,31,0.9)]">
+    <div>
       <Header />
       <ProgramsView dict={dict} />
       <Footer />

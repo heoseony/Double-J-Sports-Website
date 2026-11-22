@@ -7,12 +7,12 @@ export default async function GreetingPage() {
   const t = await getTranslations("GreetingPage");
 
   return (
-    <div className="bg-[rgba(7,16,31,0.9)]">
+    <div>
       <Header />
 
       <section className="relative grid grid-cols-1 items-start gap-14 px-6 pb-24 pt-16 md:px-16 md:pb-32 md:pt-24">
         <div className="relative z-10 md:max-w-[600px]">
-          <p className="text-xs font-semibold tracking-[0.3em] text-white/55 md:text-sm">ABOUT DOUBLE J SPORTS</p>
+          <p className="text-sm font-semibold tracking-[0.3em] text-white/55">{t("eyebrow")}</p>
 
           <h1 className="mt-8 text-[32px] font-black leading-[1.3] text-white md:text-[44px]">
             {t("h1Line1")} {t("h1Line2")}

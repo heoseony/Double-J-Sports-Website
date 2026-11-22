@@ -39,14 +39,14 @@ export default async function VisionPage() {
       </section>
 
       <section className="border-t border-gray-100 px-6 py-14 md:px-16">
-        <div className="grid grid-cols-1 gap-10 divide-y divide-gray-100 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
+        <div className="grid grid-cols-1 gap-0 divide-y divide-gray-100 sm:grid-cols-2 sm:gap-10 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
           {PILLAR_KEYS.map((key) => (
-            <div key={key} className="flex flex-col items-center gap-3 pt-8 text-center first:pt-0 sm:pt-0 lg:px-6 lg:first:pl-0 lg:last:pr-0">
+            <div key={key} className="flex flex-col items-center gap-4 py-12 text-center first:pt-0 last:pb-0 sm:py-0 lg:px-6 lg:first:pl-0 lg:last:pr-0">
               <div className="flex h-12 w-12 items-center justify-center">
                 {PILLAR_ICONS[key]}
               </div>
-              <p className="text-xs font-bold tracking-wide text-brand-navy">{t(`pillars.${key}.title`)}</p>
-              <p className="whitespace-pre-line text-xs leading-relaxed text-gray-500">
+              <p className="text-[13px] font-bold tracking-wide text-brand-navy sm:text-xs">{t(`pillars.${key}.title`)}</p>
+              <p className="whitespace-pre-line text-[13px] leading-[1.85] text-gray-500 sm:text-xs sm:leading-relaxed">
                 {t(`pillars.${key}.desc`)}
               </p>
             </div>
