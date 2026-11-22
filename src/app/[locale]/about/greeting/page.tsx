@@ -7,7 +7,7 @@ export default async function GreetingPage() {
   const t = await getTranslations("GreetingPage");
 
   return (
-    <div className="bg-[rgba(7,16,31,0.9)]">
+    <div>
       <Header />
 
       <section className="relative grid grid-cols-1 items-start gap-14 px-6 pb-24 pt-16 md:px-16 md:pb-32 md:pt-24">

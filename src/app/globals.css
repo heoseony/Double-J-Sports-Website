@@ -1911,3 +1911,27 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
     mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.12) 1.5%, rgba(0,0,0,.4) 3.5%, rgba(0,0,0,.75) 6%, #000 8.5%);
   }
 }
+
+/* 패널 안 코치진 페이지: 위 사진은 위·아래·왼쪽이 배경(잔디장)으로 번지고, 카드는 반투명 유리처럼 */
+@media (min-width: 901px) {
+  html.dj-embed section.bg-brand-navy {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 90px, #000 calc(100% - 140px), transparent 100%), linear-gradient(to right, transparent 0, #000 9%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 90px, #000 calc(100% - 140px), transparent 100%), linear-gradient(to right, transparent 0, #000 9%);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+  }
+}
+html.dj-embed .bg-white { background-color: rgba(10, 22, 46, .55); backdrop-filter: blur(2px); }
+
+/* 웹도 언어 선택을 모바일처럼: 지금 언어 한 칸만 보이고 누르면 목록이 펼쳐짐 */
+@media (min-width: 901px) {
+  .intro-util { display: block; z-index: 230; top: 22px; }
+  .intro-util button { display: none; width: 100%; text-align: left; padding: 11px 16px; font-size: 14px; letter-spacing: .06em; color: #fff; box-shadow: none; cursor: pointer; }
+  .intro-util button[aria-current="true"] { display: block; padding: 10px 16px; border: 1px solid rgba(255,255,255,.35); border-radius: 22px; background: rgba(8, 14, 30, .55); text-align: center; min-width: 84px; box-shadow: none; transition: border-color .2s ease, background .2s ease; }
+  .intro-util button[aria-current="true"]:hover { border-color: #fff; }
+  .intro-util button[aria-current="true"]::after { content: " ▾"; font-size: 11px; }
+  .intro-util.intro-util-open { background: rgba(8, 14, 30, .96); border: 1px solid rgba(255,255,255,.3); border-radius: 14px; overflow: hidden; min-width: 104px; }
+  .intro-util.intro-util-open button { display: block; }
+  .intro-util.intro-util-open button:hover { background: rgba(255,255,255,.1); }
+  .intro-util.intro-util-open button[aria-current="true"] { border: 0; border-radius: 0; background: rgba(255,255,255,.08); text-align: left; }
+}
