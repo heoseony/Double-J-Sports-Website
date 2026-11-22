@@ -165,6 +165,7 @@ export default function CoachCarousel({ open, onClose, items, label, hint, crede
 
     return () => {
       cancelAnimationFrame(raf);
+      cardRefs.current.forEach((c) => { if (c) c.style.pointerEvents = "none"; }); // 카드 화면으로 돌아올 때 보이지 않는 회전 카드가 터치를 가로채지 않게
       window.removeEventListener("keydown", onKey);
       window.removeEventListener("resize", render);
       cleanups.forEach((f) => f());
