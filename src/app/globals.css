@@ -1844,7 +1844,7 @@ body:not(:has(.dj-own)) p.tracking-widest.text-brand-blue {
   .intro-sidenav .intro-social { display: none; }
   .intro-sidenav a { padding: 8px 0; }
   .intro-util { right: 10px; transform: scale(.8); transform-origin: right top; }
-  .intro-scene-art { top: 35%; width: min(104vw, 580px); }
+  .intro-scene-art { top: 34%; width: min(104vw, 580px, 56vh); }
   .intro-scene-copy { left: 18px; right: 18px; width: auto; bottom: 150px; text-align: center; }
   .intro-scene-eyebrow { letter-spacing: .1em; font-size: 13px; margin-bottom: 14px; }
   .intro-scene-h { font-size: clamp(30px, 9.4vw, 44px); }
